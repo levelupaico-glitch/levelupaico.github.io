@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LevelUpAI Co — AI-Powered Email Outreach for Houston Small Businesses</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off-white:#f8f7f4;--black:#0d0d0d;
+  --gray-100:#f1f0ec;--gray-200:#e3e1da;--gray-400:#9a9890;--gray-600:#5c5a55;
+  --blue:#1a4fe0;--blue-light:#eaedff;--blue-mid:#4169e8;--accent:#0f3db5;
+  --warm:#fff8f0;--warm-border:#fde8cc;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+/* SCATTERED ICONS */
+.icons-bg{position:relative;overflow:hidden}
+.icons-bg > *:not(.scattered-icons){position:relative;z-index:1}
+.scattered-icons{position:absolute;top:0;left:0;right:0;bottom:0;pointer-events:none;z-index:0}
+.scattered-icon{position:absolute;font-size:1.5rem;opacity:0.28;animation:drift ease-in-out infinite alternate}
+@keyframes drift{0%{transform:translateY(0) rotate(-8deg)}100%{transform:translateY(-12px) rotate(8deg)}}
+.falling-emails{position:absolute;top:0;left:0;right:0;height:100%;pointer-events:none;overflow:hidden;z-index:2}
+.falling-email{position:absolute;top:-60px;font-size:1.4rem;opacity:0;animation:fall linear infinite}
+@keyframes fall{0%{transform:translateY(0) rotate(-15deg);opacity:0}8%{opacity:0.55}50%{opacity:0.4}75%{opacity:0.15}100%{transform:translateY(55vh) rotate(20deg);opacity:0}}
+
+/* SKYLINE */
+.skyline-bg{position:relative;overflow:hidden}
+.skyline-svg{position:absolute;bottom:0;left:0;right:0;width:100%;pointer-events:none;opacity:0.045;z-index:0}
+.skyline-bg > *:not(.skyline-svg):not(.falling-emails){position:relative;z-index:1}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-200);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--black);text-decoration:none;letter-spacing:-0.02em;display:flex;align-items:center;gap:0.5rem}
+.nav-logo-dot{width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.875rem;font-weight:400;color:var(--gray-600);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--black)}
+.nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem;border-radius:6px;font-weight:500!important;transition:background 0.2s!important}
+.nav-cta:hover{background:var(--accent)!important}
+
+/* HERO */
+.hero{padding:120px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.5rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{font-size:1.05rem;color:var(--gray-600);line-height:1.75;margin-bottom:2.5rem;font-weight:300}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--blue);color:var(--white);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block}
+.btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--black);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:1.5px solid var(--gray-200);cursor:pointer;transition:border-color 0.2s,transform 0.15s;display:inline-block}
+.btn-secondary:hover{border-color:var(--gray-600);transform:translateY(-1px)}
+
+/* HERO VISUAL */
+.hero-visual{position:relative}
+.hero-card{background:var(--white);border:1px solid var(--gray-200);border-radius:20px;padding:1.75rem;box-shadow:0 4px 40px rgba(26,79,224,0.08)}
+.hero-card-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:1.25rem}
+.hero-card-title{font-size:0.8rem;font-weight:600;color:var(--gray-600);text-transform:uppercase;letter-spacing:0.06em}
+.hero-live{display:flex;align-items:center;gap:0.4rem;font-size:0.75rem;color:#16a34a;font-weight:500}
+.hero-live-dot{width:6px;height:6px;background:#16a34a;border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.75rem;margin-bottom:0.75rem}
+.stat-box{background:var(--off-white);border-radius:12px;padding:1rem;text-align:center}
+.stat-box-num{font-family:'DM Serif Display',serif;font-size:1.9rem;color:var(--blue);display:block;line-height:1}
+.stat-box-label{font-size:0.72rem;color:var(--gray-600);margin-top:0.2rem;font-weight:400}
+.stat-box-wide{background:var(--blue);border-radius:12px;padding:1rem;display:flex;align-items:center;justify-content:space-between}
+.stat-box-wide-num{font-family:'DM Serif Display',serif;font-size:1.75rem;color:var(--white)}
+.stat-box-wide-label{font-size:0.75rem;color:rgba(255,255,255,0.7);text-align:right;max-width:120px}
+.hero-float{position:absolute;background:var(--white);border:1px solid var(--gray-200);border-radius:12px;padding:0.75rem 1rem;box-shadow:0 8px 24px rgba(0,0,0,0.08);font-size:0.8rem;font-weight:500;display:flex;align-items:center;gap:0.5rem;animation:float 4s ease-in-out infinite}
+.hero-float-1{top:-20px;right:-10px;animation-delay:0s}
+.hero-float-2{bottom:-16px;left:-16px;animation-delay:2s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.hero-float-icon{width:28px;height:28px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem}
+
+/* STATS BAR */
+.stats-bar{background:var(--gray-100);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:2rem}
+.stats-bar-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stats-bar-num{font-family:'DM Serif Display',serif;font-size:2.25rem;color:var(--blue);display:block;line-height:1}
+.stats-bar-label{font-size:0.85rem;color:var(--gray-600);margin-top:0.25rem;font-weight:300}
+
+/* SECTION COMMON */
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-eyebrow{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.75rem,3.5vw,2.75rem);line-height:1.15;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.25rem}
+.section-sub{font-size:1.05rem;color:var(--gray-600);font-weight:300;line-height:1.7;max-width:560px}
+
+/* HOW IT WORKS */
+.how{background:var(--off-white)}
+.how-header{margin-bottom:3.5rem}
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:grid;grid-template-columns:56px 1fr;gap:1.75rem;align-items:start;padding:2rem 0;border-bottom:1px solid var(--gray-200);opacity:0;transform:translateY(20px);transition:opacity 0.5s,transform 0.5s}
+.step.visible{opacity:1;transform:none}
+.step:last-child{border-bottom:none}
+.step-icon-wrap{width:52px;height:52px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;margin-top:0.2rem}
+.step-content h3{font-size:1.15rem;font-weight:600;color:var(--black);margin-bottom:0.4rem;margin-top:0.2rem}
+.step-content p{font-size:0.95rem;color:var(--gray-600);line-height:1.7;font-weight:300}
+.step-badge{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.4rem}
+
+/* DASHBOARD SECTION */
+.dashboard-section{background:var(--white)}
+.dashboard-wrap{margin-top:3rem;background:var(--gray-100);border-radius:20px;padding:1.5rem;border:1px solid var(--gray-200)}
+.dash-topbar{background:var(--black);border-radius:12px 12px 0 0;padding:0.75rem 1.25rem;display:flex;align-items:center;gap:0.5rem}
+.dash-dot{width:10px;height:10px;border-radius:50%}
+.dash-url{background:rgba(255,255,255,0.1);border-radius:4px;padding:0.2rem 0.75rem;font-size:0.7rem;color:rgba(255,255,255,0.5);margin-left:auto;font-family:monospace}
+.dash-body{background:#0f1117;border-radius:0 0 12px 12px;padding:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.dash-stat{background:#1a1d27;border:1px solid #2a2d3a;border-radius:10px;padding:1rem}
+.dash-stat-label{font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em}
+.dash-stat-val{font-size:1.6rem;font-weight:700;margin-top:0.2rem}
+.dash-stat-val.green{color:#10b981}
+.dash-stat-val.blue{color:#3b82f6}
+.dash-stat-val.amber{color:#f59e0b}
+.dash-stat-val.purple{color:#a855f7}
+.dash-charts{background:#0f1117;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;border-radius:12px}
+.dash-chart-card{background:#1a1d27;border:1px solid #2a2d3a;border-radius:10px;padding:1rem}
+.dash-chart-title{font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem}
+.dash-bars{display:flex;align-items:flex-end;gap:6px;height:60px}
+.dash-bar{border-radius:3px 3px 0 0;flex:1;transition:height 1s ease}
+.dash-table{background:#0f1117;padding:1.5rem;margin-top:1rem;border-radius:12px}
+.dash-table-head{display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr;gap:1rem;padding:0.5rem 0.75rem;border-bottom:1px solid #2a2d3a;margin-bottom:0.5rem}
+.dash-table-head span{font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em}
+.dash-table-row{display:grid;grid-template-columns:2fr 1.5fr 1fr 1fr;gap:1rem;padding:0.65rem 0.75rem;border-bottom:1px solid #1f2235}
+.dash-table-row span{font-size:0.78rem;color:#d1d5db}
+.dash-badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:0.65rem;font-weight:600}
+.dash-badge.drafted{background:#1e3a5f;color:#60a5fa}
+.dash-badge.sent{background:#1a3a2a;color:#34d399}
+
+/* PRICING */
+.pricing{background:var(--off-white)}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;transition:transform 0.2s,box-shadow 0.2s}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,79,224,0.1)}
+.pricing-card.featured{border-color:var(--blue);background:var(--black);color:var(--white)}
+.pricing-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:100px;white-space:nowrap}
+.pricing-plan{font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:0.5rem}
+.pricing-card.featured .pricing-plan{color:#6b8fff}
+.pricing-price{font-family:'DM Serif Display',serif;font-size:3rem;color:var(--black);line-height:1;margin-bottom:0.25rem}
+.pricing-card.featured .pricing-price{color:var(--white)}
+.pricing-period{font-size:0.85rem;color:var(--gray-400);margin-bottom:0.5rem}
+.pricing-setup{font-size:0.85rem;color:var(--gray-600);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--gray-200)}
+.pricing-card.featured .pricing-setup{color:rgba(255,255,255,0.45);border-color:rgba(255,255,255,0.1)}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+.pricing-features li{font-size:0.9rem;color:var(--gray-600);display:flex;gap:0.65rem;align-items:flex-start}
+.pricing-card.featured .pricing-features li{color:rgba(255,255,255,0.7)}
+.pricing-features li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.1rem}
+.pricing-card.featured .pricing-features li::before{color:#6b8fff}
+.pricing-btn{display:block;width:100%;text-align:center;padding:0.85rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;background:var(--blue);color:var(--white);transition:background 0.2s;cursor:pointer;border:none;font-family:'DM Sans',sans-serif}
+.pricing-btn:hover{background:var(--accent)}
+.pricing-card:not(.featured) .pricing-btn{background:var(--off-white);color:var(--black);border:1.5px solid var(--gray-200)}
+.pricing-card:not(.featured) .pricing-btn:hover{background:var(--gray-100)}
+
+/* CONTACT */
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-form-wrap{background:var(--white);border:1px solid var(--gray-200);border-radius:20px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,0.04)}
+.form-group{margin-bottom:1.25rem}
+label{display:block;font-size:0.85rem;font-weight:500;color:var(--black);margin-bottom:0.4rem}
+input,textarea,select{width:100%;padding:0.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.95rem;color:var(--black);background:var(--white);outline:none;transition:border-color 0.2s}
+input:focus,textarea:focus,select:focus{border-color:var(--blue)}
+textarea{resize:vertical;min-height:120px}
+select{appearance:none;cursor:pointer}
+.form-submit{width:100%;padding:0.9rem;background:var(--blue);color:var(--white);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background 0.2s,transform 0.15s;margin-top:0.5rem}
+.form-submit:hover{background:var(--accent);transform:translateY(-1px)}
+.contact-info-side{padding-top:0.5rem}
+.contact-info-side h3{font-family:'DM Serif Display',serif;font-size:1.9rem;line-height:1.2;margin-bottom:1rem;letter-spacing:-0.02em}
+.contact-info-side p{color:var(--gray-600);font-weight:300;line-height:1.7;margin-bottom:2rem}
+.contact-details{display:flex;flex-direction:column;gap:1rem}
+.contact-detail{display:flex;gap:0.75rem;align-items:flex-start}
+.contact-icon{width:40px;height:40px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-detail-label{font-size:0.72rem;color:var(--gray-400);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
+.contact-detail-val{color:var(--black);font-weight:400;font-size:0.9rem}
+
+/* FOOTER */
+footer{background:var(--black);color:rgba(255,255,255,0.4);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+footer p{font-size:0.8rem}
+
+/* ANIMATIONS */
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:none}
+
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr}
+  .hero-visual{display:none}
+  .pricing-grid{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .stats-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .dash-body{grid-template-columns:1fr 1fr}
+  .dash-charts{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo"><span class="nav-logo-dot"></span>LevelUpAI Co</a>
+  <div class="nav-links">
+    <a href="#how">How it works</a>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact" class="nav-cta">Get started</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section style="padding:0" class="skyline-bg">
+<svg class="skyline-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <!-- Houston skyline silhouette -->
+  <!-- JPMorgan Chase Tower -->
+  <rect x="80" y="40" width="38" height="280" fill="#1a4fe0"/>
+  <rect x="88" y="20" width="22" height="30" fill="#1a4fe0"/>
+  <rect x="95" y="10" width="8" height="20" fill="#1a4fe0"/>
+  <!-- windows -->
+  <rect x="84" y="50" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="94" y="50" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="104" y="50" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="84" y="62" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="94" y="62" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="84" y="74" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="94" y="74" width="6" height="4" fill="white" opacity="0.3"/>
+  <rect x="104" y="74" width="6" height="4" fill="white" opacity="0.3"/>
+  <!-- Williams Tower -->
+  <rect x="140" y="80" width="44" height="240" fill="#1a4fe0"/>
+  <rect x="148" y="60" width="28" height="28" fill="#1a4fe0"/>
+  <rect x="156" y="45" width="12" height="22" fill="#1a4fe0"/>
+  <rect x="144" y="90" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="155" y="90" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="166" y="90" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="144" y="104" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="155" y="104" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="166" y="104" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="144" y="118" width="7" height="5" fill="white" opacity="0.3"/>
+  <rect x="166" y="118" width="7" height="5" fill="white" opacity="0.3"/>
+  <!-- shorter building -->
+  <rect x="200" y="140" width="30" height="180" fill="#1a4fe0"/>
+  <rect x="204" y="150" width="5" height="4" fill="white" opacity="0.2"/>
+  <rect x="213" y="150" width="5" height="4" fill="white" opacity="0.2"/>
+  <rect x="222" y="150" width="5" height="4" fill="white" opacity="0.2"/>
+  <!-- Pennzoil Place left -->
+  <rect x="244" y="100" width="36" height="220" fill="#1a4fe0"/>
+  <polygon points="244,100 262,60 280,100" fill="#1a4fe0"/>
+  <rect x="248" y="110" width="6" height="5" fill="white" opacity="0.25"/>
+  <rect x="258" y="110" width="6" height="5" fill="white" opacity="0.25"/>
+  <rect x="268" y="110" width="6" height="5" fill="white" opacity="0.25"/>
+  <rect x="248" y="124" width="6" height="5" fill="white" opacity="0.25"/>
+  <rect x="268" y="124" width="6" height="5" fill="white" opacity="0.25"/>
+  <!-- Pennzoil Place right -->
+  <rect x="286" y="110" width="36" height="210" fill="#1a4fe0"/>
+  <polygon points="286,110 304,65 322,110" fill="#1a4fe0"/>
+  <rect x="290" y="120" width="6" height="5" fill="white" opacity="0.25"/>
+  <rect x="300" y="120" width="6" height="5" fill="white" opacity="0.25"/>
+  <rect x="310" y="120" width="6" height="5" fill="white" opacity="0.25"/>
+  <!-- small building -->
+  <rect x="330" y="160" width="24" height="160" fill="#1a4fe0"/>
+  <!-- 600 Travis -->
+  <rect x="366" y="70" width="50" height="250" fill="#1a4fe0"/>
+  <rect x="374" y="50" width="34" height="28" fill="#1a4fe0"/>
+  <rect x="382" y="35" width="18" height="22" fill="#1a4fe0"/>
+  <rect x="370" y="80" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="382" y="80" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="394" y="80" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="370" y="96" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="382" y="96" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="394" y="96" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="370" y="112" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="394" y="112" width="8" height="6" fill="white" opacity="0.2"/>
+  <!-- filler buildings -->
+  <rect x="428" y="150" width="28" height="170" fill="#1a4fe0"/>
+  <rect x="462" y="130" width="22" height="190" fill="#1a4fe0"/>
+  <rect x="490" y="170" width="18" height="150" fill="#1a4fe0"/>
+  <!-- One Shell Plaza -->
+  <rect x="516" y="55" width="46" height="265" fill="#1a4fe0"/>
+  <rect x="524" y="35" width="30" height="26" fill="#1a4fe0"/>
+  <rect x="530" y="18" width="18" height="24" fill="#1a4fe0"/>
+  <rect x="536" y="8" width="6" height="16" fill="#1a4fe0"/>
+  <rect x="520" y="65" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="532" y="65" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="544" y="65" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="520" y="80" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="544" y="80" width="8" height="6" fill="white" opacity="0.2"/>
+  <!-- filler -->
+  <rect x="570" y="145" width="32" height="175" fill="#1a4fe0"/>
+  <rect x="608" y="160" width="20" height="160" fill="#1a4fe0"/>
+  <!-- Chevron Tower area -->
+  <rect x="636" y="90" width="42" height="230" fill="#1a4fe0"/>
+  <rect x="644" y="72" width="26" height="24" fill="#1a4fe0"/>
+  <rect x="650" y="56" width="14" height="22" fill="#1a4fe0"/>
+  <rect x="640" y="100" width="7" height="5" fill="white" opacity="0.2"/>
+  <rect x="651" y="100" width="7" height="5" fill="white" opacity="0.2"/>
+  <rect x="662" y="100" width="7" height="5" fill="white" opacity="0.2"/>
+  <rect x="640" y="114" width="7" height="5" fill="white" opacity="0.2"/>
+  <rect x="662" y="114" width="7" height="5" fill="white" opacity="0.2"/>
+  <!-- filler -->
+  <rect x="684" y="155" width="26" height="165" fill="#1a4fe0"/>
+  <rect x="716" y="170" width="22" height="150" fill="#1a4fe0"/>
+  <!-- Houston City Hall silhouette -->
+  <rect x="744" y="180" width="60" height="140" fill="#1a4fe0"/>
+  <rect x="752" y="165" width="44" height="20" fill="#1a4fe0"/>
+  <rect x="760" y="150" width="28" height="20" fill="#1a4fe0"/>
+  <!-- more towers right side -->
+  <rect x="820" y="120" width="36" height="200" fill="#1a4fe0"/>
+  <rect x="828" y="100" width="20" height="26" fill="#1a4fe0"/>
+  <rect x="824" y="130" width="6" height="5" fill="white" opacity="0.2"/>
+  <rect x="834" y="130" width="6" height="5" fill="white" opacity="0.2"/>
+  <rect x="844" y="130" width="6" height="5" fill="white" opacity="0.2"/>
+  <rect x="862" y="155" width="28" height="165" fill="#1a4fe0"/>
+  <rect x="896" y="170" width="22" height="150" fill="#1a4fe0"/>
+  <!-- Enterprise Plaza area -->
+  <rect x="924" y="85" width="44" height="235" fill="#1a4fe0"/>
+  <rect x="932" y="65" width="28" height="26" fill="#1a4fe0"/>
+  <rect x="938" y="48" width="16" height="22" fill="#1a4fe0"/>
+  <rect x="928" y="95" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="940" y="95" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="952" y="95" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="928" y="110" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="952" y="110" width="8" height="6" fill="white" opacity="0.2"/>
+  <!-- filler -->
+  <rect x="974" y="150" width="28" height="170" fill="#1a4fe0"/>
+  <rect x="1008" y="165" width="22" height="155" fill="#1a4fe0"/>
+  <rect x="1036" y="140" width="32" height="180" fill="#1a4fe0"/>
+  <!-- Wells Fargo Plaza -->
+  <rect x="1076" y="65" width="48" height="255" fill="#1a4fe0"/>
+  <rect x="1084" y="45" width="32" height="26" fill="#1a4fe0"/>
+  <rect x="1090" y="28" width="20" height="22" fill="#1a4fe0"/>
+  <rect x="1094" y="14" width="8" height="18" fill="#1a4fe0"/>
+  <rect x="1080" y="75" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="1092" y="75" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="1104" y="75" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="1080" y="90" width="8" height="6" fill="white" opacity="0.2"/>
+  <rect x="1104" y="90" width="8" height="6" fill="white" opacity="0.2"/>
+  <!-- filler right -->
+  <rect x="1132" y="155" width="26" height="165" fill="#1a4fe0"/>
+  <rect x="1164" y="170" width="20" height="150" fill="#1a4fe0"/>
+  <rect x="1190" y="145" width="30" height="175" fill="#1a4fe0"/>
+  <rect x="1226" y="160" width="24" height="160" fill="#1a4fe0"/>
+  <rect x="1256" y="130" width="36" height="190" fill="#1a4fe0"/>
+  <rect x="1264" y="110" width="20" height="26" fill="#1a4fe0"/>
+  <rect x="1298" y="165" width="22" height="155" fill="#1a4fe0"/>
+  <rect x="1326" y="150" width="28" height="170" fill="#1a4fe0"/>
+  <rect x="1360" y="140" width="34" height="180" fill="#1a4fe0"/>
+  <rect x="1368" y="120" width="18" height="26" fill="#1a4fe0"/>
+  <!-- ground line -->
+  <rect x="0" y="318" width="1440" height="4" fill="#1a4fe0"/>
+</svg>
+  <div class="hero">
+    <div>
+      <span class="hero-eyebrow">🤖 Houston, Texas</span>
+      <h1>Level up your business with <em>AI outreach</em></h1>
+      <p class="hero-sub">Done-for-you AI email outreach that finds leads, writes personalized emails, and gets replies from potential clients — while you focus on running your business.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Get started today</a>
+        <a href="#how" class="btn-secondary">See how it works →</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div style="position:relative">
+        <div class="hero-float hero-float-1">
+          <div class="hero-float-icon" style="background:#e8fff4">✅</div>
+          <span style="color:#16a34a">55 leads found</span>
+        </div>
+        <div class="hero-float hero-float-2">
+          <div class="hero-float-icon" style="background:#eaedff">📧</div>
+          <span style="color:var(--blue)">3 emails sent today</span>
+        </div>
+        <div class="hero-card">
+          <div class="hero-card-header">
+            <span class="hero-card-title">Today's run</span>
+            <span class="hero-live"><span class="hero-live-dot"></span>Live</span>
+          </div>
+          <div class="stat-box-wide" style="margin-bottom:0.75rem">
+            <span class="stat-box-wide-num" id="hero-counter">0</span>
+            <span class="stat-box-wide-label">Verified leads found this run</span>
+          </div>
+          <div class="stat-grid">
+            <div class="stat-box">
+              <span class="stat-box-num" style="font-size:1.4rem">100%</span>
+              <span class="stat-box-label">Done for you</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box-num" style="font-size:1.4rem">24/7</span>
+              <span class="stat-box-label">Backup protection</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box-num" style="font-size:1.4rem">AI</span>
+              <span class="stat-box-label">Written emails</span>
+            </div>
+            <div class="stat-box">
+              <span class="stat-box-num" style="font-size:1.4rem">0</span>
+              <span class="stat-box-label">Manual work needed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</section>
+
+<!-- STATS BAR -->
+<div class="stats-bar">
+  <div class="stats-bar-inner">
+    <div>
+      <span class="stats-bar-num counter" data-target="55">0</span>
+      <div class="stats-bar-label">Leads found per run</div>
+    </div>
+    <div>
+      <span class="stats-bar-num counter" data-target="8">0</span>
+      <div class="stats-bar-label">Industries targeted</div>
+    </div>
+    <div>
+      <span class="stats-bar-num">100%</span>
+      <div class="stats-bar-label">Done for you</div>
+    </div>
+    <div>
+      <span class="stats-bar-num">24/7</span>
+      <div class="stats-bar-label">Backup protection</div>
+    </div>
+  </div>
+</div>
+
+<!-- HOW IT WORKS -->
+<section class="how skyline-bg" id="how">
+<svg class="skyline-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <rect x="80" y="40" width="38" height="280" fill="#1a4fe0"/>
+  <rect x="88" y="20" width="22" height="30" fill="#1a4fe0"/>
+  <rect x="95" y="10" width="8" height="20" fill="#1a4fe0"/>
+  <rect x="140" y="80" width="44" height="240" fill="#1a4fe0"/>
+  <rect x="148" y="60" width="28" height="28" fill="#1a4fe0"/>
+  <rect x="156" y="45" width="12" height="22" fill="#1a4fe0"/>
+  <rect x="200" y="140" width="30" height="180" fill="#1a4fe0"/>
+  <rect x="244" y="100" width="36" height="220" fill="#1a4fe0"/>
+  <polygon points="244,100 262,60 280,100" fill="#1a4fe0"/>
+  <rect x="286" y="110" width="36" height="210" fill="#1a4fe0"/>
+  <polygon points="286,110 304,65 322,110" fill="#1a4fe0"/>
+  <rect x="330" y="160" width="24" height="160" fill="#1a4fe0"/>
+  <rect x="366" y="70" width="50" height="250" fill="#1a4fe0"/>
+  <rect x="374" y="50" width="34" height="28" fill="#1a4fe0"/>
+  <rect x="382" y="35" width="18" height="22" fill="#1a4fe0"/>
+  <rect x="428" y="150" width="28" height="170" fill="#1a4fe0"/>
+  <rect x="462" y="130" width="22" height="190" fill="#1a4fe0"/>
+  <rect x="490" y="170" width="18" height="150" fill="#1a4fe0"/>
+  <rect x="516" y="55" width="46" height="265" fill="#1a4fe0"/>
+  <rect x="524" y="35" width="30" height="26" fill="#1a4fe0"/>
+  <rect x="530" y="18" width="18" height="24" fill="#1a4fe0"/>
+  <rect x="536" y="8" width="6" height="16" fill="#1a4fe0"/>
+  <rect x="570" y="145" width="32" height="175" fill="#1a4fe0"/>
+  <rect x="608" y="160" width="20" height="160" fill="#1a4fe0"/>
+  <rect x="636" y="90" width="42" height="230" fill="#1a4fe0"/>
+  <rect x="644" y="72" width="26" height="24" fill="#1a4fe0"/>
+  <rect x="650" y="56" width="14" height="22" fill="#1a4fe0"/>
+  <rect x="684" y="155" width="26" height="165" fill="#1a4fe0"/>
+  <rect x="716" y="170" width="22" height="150" fill="#1a4fe0"/>
+  <rect x="744" y="180" width="60" height="140" fill="#1a4fe0"/>
+  <rect x="752" y="165" width="44" height="20" fill="#1a4fe0"/>
+  <rect x="760" y="150" width="28" height="20" fill="#1a4fe0"/>
+  <rect x="820" y="120" width="36" height="200" fill="#1a4fe0"/>
+  <rect x="828" y="100" width="20" height="26" fill="#1a4fe0"/>
+  <rect x="862" y="155" width="28" height="165" fill="#1a4fe0"/>
+  <rect x="896" y="170" width="22" height="150" fill="#1a4fe0"/>
+  <rect x="924" y="85" width="44" height="235" fill="#1a4fe0"/>
+  <rect x="932" y="65" width="28" height="24" fill="#1a4fe0"/>
+  <rect x="938" y="48" width="16" height="22" fill="#1a4fe0"/>
+  <rect x="974" y="150" width="28" height="170" fill="#1a4fe0"/>
+  <rect x="1008" y="165" width="22" height="155" fill="#1a4fe0"/>
+  <rect x="1036" y="140" width="32" height="180" fill="#1a4fe0"/>
+  <rect x="1076" y="65" width="48" height="255" fill="#1a4fe0"/>
+  <rect x="1084" y="45" width="32" height="26" fill="#1a4fe0"/>
+  <rect x="1090" y="28" width="20" height="22" fill="#1a4fe0"/>
+  <rect x="1094" y="14" width="8" height="18" fill="#1a4fe0"/>
+  <rect x="1132" y="155" width="26" height="165" fill="#1a4fe0"/>
+  <rect x="1164" y="170" width="20" height="150" fill="#1a4fe0"/>
+  <rect x="1190" y="145" width="30" height="175" fill="#1a4fe0"/>
+  <rect x="1226" y="160" width="24" height="160" fill="#1a4fe0"/>
+  <rect x="1256" y="130" width="36" height="190" fill="#1a4fe0"/>
+  <rect x="1264" y="110" width="20" height="26" fill="#1a4fe0"/>
+  <rect x="1298" y="165" width="22" height="155" fill="#1a4fe0"/>
+  <rect x="1326" y="150" width="28" height="170" fill="#1a4fe0"/>
+  <rect x="1360" y="140" width="34" height="180" fill="#1a4fe0"/>
+  <rect x="1368" y="120" width="18" height="26" fill="#1a4fe0"/>
+  <rect x="0" y="318" width="1440" height="4" fill="#1a4fe0"/>
+</svg>
+<div class="falling-emails" id="falling-emails"></div>
+  <div class="container">
+    <div class="how-header fade-in">
+      <div class="section-eyebrow">How it works</div>
+      <h2 class="section-title">Seven steps from search<br>to signed client</h2>
+      <p class="section-sub">Our system handles the entire outreach process automatically — from finding the right businesses to landing in their inbox.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon-wrap">🔍</div>
+        <div class="step-content">
+          <span class="step-badge">Lead discovery</span>
+          <h3>Find your clients</h3>
+          <p>We search Google Maps and the web to find businesses in your target market using smart filters — no manual prospecting needed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">✅</div>
+        <div class="step-content">
+          <span class="step-badge">Email verification</span>
+          <h3>Verified emails only</h3>
+          <p>We scrape and verify every email address, filtering out invalid, inactive, and spam trap addresses to protect your sender reputation.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">🤖</div>
+        <div class="step-content">
+          <span class="step-badge">AI writing</span>
+          <h3>AI-written emails</h3>
+          <p>Our AI drafts personalized outreach emails for each lead. Test multiple templates to see which one gets the best response rate.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">📬</div>
+        <div class="step-content">
+          <span class="step-badge">Direct delivery</span>
+          <h3>Replies go straight to you</h3>
+          <p>When a potential client responds, the email lands directly in your inbox — ready for you to close the deal.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">📊</div>
+        <div class="step-content">
+          <span class="step-badge">Analytics</span>
+          <h3>Full analytics dashboard</h3>
+          <p>Track reply rates, best sending times, and top-performing subject lines — all in one place with a full leads table showing every potential client and their info.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">💰</div>
+        <div class="step-content">
+          <span class="step-badge">You close it</span>
+          <h3>You close, you earn</h3>
+          <p>We handle the outreach. You handle the conversation and close the sale.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">🛡️</div>
+        <div class="step-content">
+          <span class="step-badge">Always-on protection</span>
+          <h3>Built-in backup protection</h3>
+          <p>If your sending email gets flagged, our system pulls it into recovery mode and activates backup emails instantly — keeping your outreach running 24/7.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DASHBOARD PREVIEW -->
+<section class="dashboard-section" id="dashboard">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-eyebrow">Your command center</div>
+      <h2 class="section-title">Everything in one dashboard</h2>
+      <p class="section-sub">Track every lead, every email, every reply — with full analytics so you always know what's working.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem" class="fade-in">
+
+      <!-- LEFT: Stats + Charts -->
+      <div class="dashboard-wrap" style="margin-top:0">
+        <div class="dash-topbar">
+          <div class="dash-dot" style="background:#ff5f57"></div>
+          <div class="dash-dot" style="background:#ffbd2e"></div>
+          <div class="dash-dot" style="background:#28c840"></div>
+          <div class="dash-url">Analytics</div>
+        </div>
+        <div class="dash-body">
+          <div class="dash-stat">
+            <div class="dash-stat-label">Total Leads</div>
+            <div class="dash-stat-val" style="color:#fff" id="d1">0</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-label">Emails Sent</div>
+            <div class="dash-stat-val green" id="d2">0</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-label">Drafts Ready</div>
+            <div class="dash-stat-val blue" id="d3">0</div>
+          </div>
+          <div class="dash-stat">
+            <div class="dash-stat-label">Reply Rate</div>
+            <div class="dash-stat-val purple" id="d4">0%</div>
+          </div>
+        </div>
+        <div class="dash-charts">
+          <div class="dash-chart-card">
+            <div class="dash-chart-title">Emails sent per day</div>
+            <div class="dash-bars">
+              <div class="dash-bar" style="background:#3b82f6;height:30%"></div>
+              <div class="dash-bar" style="background:#3b82f6;height:50%"></div>
+              <div class="dash-bar" style="background:#3b82f6;height:40%"></div>
+              <div class="dash-bar" style="background:#3b82f6;height:70%"></div>
+              <div class="dash-bar" style="background:#3b82f6;height:60%"></div>
+              <div class="dash-bar" style="background:#3b82f6;height:90%"></div>
+              <div class="dash-bar" style="background:#60a5fa;height:75%"></div>
+            </div>
+          </div>
+          <div class="dash-chart-card">
+            <div class="dash-chart-title">Reply rate by industry</div>
+            <div class="dash-bars">
+              <div class="dash-bar" style="background:#10b981;height:45%"></div>
+              <div class="dash-bar" style="background:#10b981;height:60%"></div>
+              <div class="dash-bar" style="background:#10b981;height:35%"></div>
+              <div class="dash-bar" style="background:#10b981;height:80%"></div>
+              <div class="dash-bar" style="background:#10b981;height:55%"></div>
+              <div class="dash-bar" style="background:#10b981;height:70%"></div>
+              <div class="dash-bar" style="background:#10b981;height:40%"></div>
+              <div class="dash-bar" style="background:#34d399;height:65%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Leads Table -->
+      <div class="dashboard-wrap" style="margin-top:0">
+        <div class="dash-topbar">
+          <div class="dash-dot" style="background:#ff5f57"></div>
+          <div class="dash-dot" style="background:#ffbd2e"></div>
+          <div class="dash-dot" style="background:#28c840"></div>
+          <div class="dash-url">Leads</div>
+        </div>
+        <div style="background:#0f1117;border-radius:0 0 12px 12px;padding:1rem">
+          <div style="background:#1a1d27;border-radius:8px;padding:0.6rem 0.75rem;margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem">
+            <span style="font-size:0.65rem;color:#6b7280">🔍</span>
+            <span style="font-size:0.72rem;color:#4b5563">Search by name or email...</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.4rem 0.5rem;border-bottom:1px solid #2a2d3a;margin-bottom:0.25rem">
+            <span style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em">Company</span>
+            <span style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em">Email</span>
+            <span style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em">Industry</span>
+            <span style="font-size:0.6rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em">Status</span>
+          </div>
+          <!-- rows -->
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">State Roofing Co.</span>
+            <span style="font-size:0.68rem;color:#60a5fa">josh@stateroofing.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Roofing</span>
+            <span class="dash-badge drafted" style="font-size:0.6rem">Drafted</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">MET Plumbing LLC</span>
+            <span style="font-size:0.68rem;color:#60a5fa">csr@metplumbing.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Plumbing</span>
+            <span class="dash-badge sent" style="font-size:0.6rem">Sent</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">Cooper CPA Group</span>
+            <span style="font-size:0.68rem;color:#60a5fa">hello@coopercpa.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Accounting</span>
+            <span class="dash-badge drafted" style="font-size:0.6rem">Drafted</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">Lone Star Roofing</span>
+            <span style="font-size:0.68rem;color:#60a5fa">info@lonestarroofing.net</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Roofing</span>
+            <span class="dash-badge sent" style="font-size:0.6rem">Sent</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">Houston Landscape Pros</span>
+            <span style="font-size:0.68rem;color:#60a5fa">sales@houstonlandscape.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Landscaping</span>
+            <span class="dash-badge drafted" style="font-size:0.6rem">Drafted</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">Pink's Cleaning Co.</span>
+            <span style="font-size:0.68rem;color:#60a5fa">info@pinkscleaningtx.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Cleaning</span>
+            <span class="dash-badge sent" style="font-size:0.6rem">Sent</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;border-bottom:1px solid #1f2235;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">Excel Air</span>
+            <span style="font-size:0.68rem;color:#60a5fa">info@excelairconditioning.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">HVAC</span>
+            <span class="dash-badge drafted" style="font-size:0.6rem">Drafted</span>
+          </div>
+          <div style="display:grid;grid-template-columns:1.5fr 1.75fr 1fr 0.8fr;gap:0.5rem;padding:0.55rem 0.5rem;align-items:center">
+            <span style="font-size:0.72rem;color:#fff;font-weight:500">TIA Insurance Agency</span>
+            <span style="font-size:0.68rem;color:#60a5fa">csupport@gettia.com</span>
+            <span style="font-size:0.68rem;color:#9ca3af">Insurance</span>
+            <span class="dash-badge drafted" style="font-size:0.6rem">Drafted</span>
+          </div>
+          <div style="padding:0.75rem 0.5rem;border-top:1px solid #2a2d3a;margin-top:0.25rem;display:flex;justify-content:space-between;align-items:center">
+            <span style="font-size:0.68rem;color:#6b7280">Showing 8 of 149 leads</span>
+            <span style="font-size:0.68rem;color:#3b82f6;cursor:pointer">View all →</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing icons-bg" id="pricing">
+<div class="scattered-icons" id="pricing-icons"></div>
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-eyebrow">Pricing</div>
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p class="section-sub">One-time setup fee. Month-to-month. No contracts, no hidden fees.</p>
+    </div>
+    <div class="pricing-grid fade-in">
+      <div class="pricing-card">
+        <div class="pricing-plan">Starter</div>
+        <div class="pricing-price">$200</div>
+        <div class="pricing-period">/month</div>
+        <div class="pricing-setup">+ $500 one-time setup fee &nbsp;·&nbsp; 1–50 emails/day</div>
+        <ul class="pricing-features">
+          <li>Up to 50 outreach emails per day</li>
+          <li>AI-written personalized emails</li>
+          <li>Lead finding &amp; email verification</li>
+          <li>Replies delivered to your inbox</li>
+          <li>Analytics dashboard included</li>
+          <li>Houston-focused targeting</li>
+        </ul>
+        <a href="#contact" class="pricing-btn">Get started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-tag">Most popular</div>
+        <div class="pricing-plan">Growth</div>
+        <div class="pricing-price">$300</div>
+        <div class="pricing-period">/month</div>
+        <div class="pricing-setup">+ $500 one-time setup fee &nbsp;·&nbsp; 51–150 emails/day</div>
+        <ul class="pricing-features">
+          <li>Up to 150 outreach emails per day</li>
+          <li>AI-written personalized emails</li>
+          <li>Lead finding &amp; email verification</li>
+          <li>Replies delivered to your inbox</li>
+          <li>Analytics dashboard included</li>
+          <li>Houston-focused targeting</li>
+          <li>Backup email protection</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#contact" class="pricing-btn">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="background:var(--off-white)">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info-side fade-in">
+        <div class="section-eyebrow">Contact</div>
+        <h3>Ready to get<br>more clients?</h3>
+        <p>Fill out the form and we'll get back to you within 24 hours to discuss how we can help grow your business with AI-powered outreach.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-val">daniel@levelupaico.com</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-detail-label">Phone</div>
+              <div class="contact-detail-val">(832) 356-9373</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-detail-label">Location</div>
+              <div class="contact-detail-val">Houston, Texas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap fade-in">
+        <form onsubmit="handleSubmit(event)">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="john@yourbusiness.com" required>
+          </div>
+          <div class="form-group">
+            <label for="business">Business type</label>
+            <select id="business">
+              <option value="">Select your industry...</option>
+              <option>Roofing</option><option>HVAC</option><option>Plumbing</option>
+              <option>General Contractor</option><option>Landscaping</option>
+              <option>Commercial Cleaning</option><option>Accounting</option>
+              <option>Insurance</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="plan">Plan interest</label>
+            <select id="plan">
+              <option value="">Select a plan...</option>
+              <option>Starter — $200/month (1–50 emails/day)</option>
+              <option>Growth — $300/month (51–150 emails/day)</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your business</label>
+            <textarea id="message" placeholder="What kind of clients are you looking for? Any specific area of Houston?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer style="position:relative;overflow:hidden">
+<svg style="position:absolute;top:0;left:0;right:0;width:100%;opacity:0.06;pointer-events:none" viewBox="0 0 1440 80" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMin slice">
+  <rect x="80" y="0" width="38" height="80" fill="white"/>
+  <rect x="140" y="10" width="44" height="80" fill="white"/>
+  <rect x="200" y="30" width="30" height="80" fill="white"/>
+  <rect x="244" y="5" width="36" height="80" fill="white"/>
+  <rect x="286" y="12" width="36" height="80" fill="white"/>
+  <rect x="330" y="28" width="24" height="80" fill="white"/>
+  <rect x="366" y="0" width="50" height="80" fill="white"/>
+  <rect x="428" y="22" width="28" height="80" fill="white"/>
+  <rect x="462" y="18" width="22" height="80" fill="white"/>
+  <rect x="516" y="2" width="46" height="80" fill="white"/>
+  <rect x="570" y="25" width="32" height="80" fill="white"/>
+  <rect x="636" y="8" width="42" height="80" fill="white"/>
+  <rect x="744" y="30" width="60" height="80" fill="white"/>
+  <rect x="820" y="15" width="36" height="80" fill="white"/>
+  <rect x="924" y="5" width="44" height="80" fill="white"/>
+  <rect x="1076" y="0" width="48" height="80" fill="white"/>
+  <rect x="1256" y="10" width="36" height="80" fill="white"/>
+  <rect x="1360" y="8" width="34" height="80" fill="white"/>
+</svg>
+  <a href="#" class="footer-logo"><span style="width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block"></span>LevelUpAI Co</a>
+  <p>© 2026 LevelUpAI Co. Houston, Texas.</p>
+  <p style="font-size:0.75rem">AI-powered email outreach for small businesses.</p>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.fade-in, .step').forEach(el => observer.observe(el));
+document.querySelectorAll('.step').forEach((el,i) => { el.style.transitionDelay=(i*0.06)+'s'; });
+
+function animateCounter(el, target, duration, suffix) {
+  let start = 0;
+  const step = target / (duration / 16);
+  const timer = setInterval(() => {
+    start = Math.min(start + step, target);
+    el.textContent = Math.round(start) + (suffix||'');
+    if(start >= target) clearInterval(timer);
+  }, 16);
+}
+
+// Scattered business icons on sides only
+const bizIcons = ['🏠','🔧','🌿','🧹','🏗️','❄️','🪠','🛡️','📋','💼','🔑','🏢','🚿','💡','🪴','🧺','🔨','🏡','🌱','🧰','📊','🛠️','🏘️','💧'];
+function scatterIcons(containerId) {
+  const c = document.getElementById(containerId);
+  if(!c) return;
+  for(let i = 0; i < 32; i++) {
+    const el = document.createElement('span');
+    el.className = 'scattered-icon';
+    const onLeft = Math.random() > 0.5;
+    el.style.left = onLeft ? (Math.random() * 15) + '%' : (85 + Math.random() * 15) + '%';
+    el.style.top = (Math.random() * 90) + '%';
+    el.style.fontSize = (1.1 + Math.random() * 1) + 'rem';
+    el.style.animationDuration = (3 + Math.random() * 4) + 's';
+    el.style.animationDelay = (Math.random() * 4) + 's';
+    el.textContent = bizIcons[Math.floor(Math.random() * bizIcons.length)];
+    c.appendChild(el);
+  }
+}
+scatterIcons('pricing-icons');
+
+// Falling emails
+const emojis = ['📧','📨','📩','📫','✉️'];
+const emailContainer = document.getElementById('falling-emails');
+for(let i = 0; i < 30; i++) {
+  const el = document.createElement('span');
+  el.className = 'falling-email';
+  el.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+  el.style.left = (Math.random() * 100) + '%';
+  el.style.animationDuration = (6 + Math.random() * 6) + 's';
+  el.style.animationDelay = (Math.random() * 8) + 's';
+  el.style.fontSize = (1 + Math.random() * 0.8) + 'rem';
+  emailContainer.appendChild(el);
+}
+
+const statsObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if(e.isIntersecting) {
+      document.querySelectorAll('.counter').forEach(el => {
+        animateCounter(el, parseInt(el.dataset.target), 1500, '');
+      });
+      animateCounter(document.getElementById('hero-counter'), 55, 2000, '');
+      animateCounter(document.getElementById('d1'), 149, 1800, '');
+      animateCounter(document.getElementById('d2'), 12, 1500, '');
+      animateCounter(document.getElementById('d3'), 55, 1600, '');
+      setTimeout(() => { document.getElementById('d4').textContent = '18%'; }, 1800);
+      statsObs.disconnect();
+    }
+  });
+}, {threshold:0.3});
+statsObs.observe(document.querySelector('.stats-bar'));
+
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = "Message sent! We'll be in touch soon. ✓";
+  btn.style.background = '#16a34a';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
