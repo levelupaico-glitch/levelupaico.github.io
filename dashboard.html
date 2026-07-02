@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LevelUpAI — Dashboard</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1a4fe0;
+    --blue-dark: #0f3db5;
+    --ink: #0d0d0d;
+    --gray: #5c5a55;
+    --line: #e7e5e1;
+    --bg: #ffffff;
+    --card: #fafaf8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .num {
+    font-family: 'DM Serif Display', serif;
+    font-weight: 400;
+  }
+
+  /* ---------- Lock screen ---------- */
+  #lock {
+    position: fixed;
+    inset: 0;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    padding: 24px;
+  }
+
+  #lock.hidden { display: none; }
+
+  .lock-card {
+    width: 100%;
+    max-width: 360px;
+    text-align: center;
+  }
+
+  .lock-card img {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 16px;
+  }
+
+  .lock-card h1 {
+    font-size: 28px;
+    margin-bottom: 6px;
+  }
+
+  .lock-card p {
+    color: var(--gray);
+    font-size: 14px;
+    margin-bottom: 24px;
+  }
+
+  .lock-card input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: inherit;
+    margin-bottom: 12px;
+    outline: none;
+    transition: border-color 0.15s;
+  }
+
+  .lock-card input:focus { border-color: var(--blue); }
+
+  .lock-card button {
+    width: 100%;
+    padding: 12px 14px;
+    border: none;
+    border-radius: 8px;
+    background: var(--blue);
+    color: #fff;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+
+  .lock-card button:hover { background: var(--blue-dark); }
+
+  .lock-error {
+    color: #c0392b;
+    font-size: 13px;
+    margin-top: 10px;
+    min-height: 18px;
+  }
+
+  /* ---------- Main dashboard ---------- */
+  #dashboard { display: none; }
+  #dashboard.visible { display: block; }
+
+  .wrap {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 32px 24px 80px;
+  }
+
+  header.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    border-bottom: 3px solid var(--blue);
+    padding-bottom: 18px;
+    margin-bottom: 32px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .brand-text h1 {
+    font-size: 22px;
+    line-height: 1.1;
+  }
+
+  .brand-text h1 .accent { color: var(--blue); }
+  .brand-text h1 .mono { color: var(--blue); font-family: 'Courier New', monospace; }
+
+  .brand-text .tag {
+    font-size: 11px;
+    color: var(--gray);
+    letter-spacing: 0.06em;
+  }
+
+  .synced {
+    font-size: 13px;
+    color: var(--gray);
+    text-align: right;
+  }
+
+  .synced strong { color: var(--ink); }
+
+  /* ---------- Stat cards ---------- */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 720px) {
+    .stats { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .stat {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+  }
+
+  .stat .num {
+    font-size: 34px;
+    line-height: 1;
+    margin-bottom: 6px;
+  }
+
+  .stat.highlight .num { color: var(--blue); }
+
+  .stat .label {
+    font-size: 13px;
+    color: var(--gray);
+  }
+
+  /* ---------- Pipeline ---------- */
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .pipeline {
+    display: flex;
+    align-items: stretch;
+    gap: 0;
+    margin-bottom: 40px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .pipeline-stage {
+    flex: 1;
+    padding: 20px 16px;
+    text-align: center;
+    border-right: 1px solid var(--line);
+    background: var(--card);
+  }
+
+  .pipeline-stage:last-child { border-right: none; }
+
+  .pipeline-stage.replied {
+    background: var(--blue);
+  }
+
+  .pipeline-stage.replied .num,
+  .pipeline-stage.replied .label {
+    color: #fff;
+  }
+
+  .pipeline-stage .num { font-size: 30px; margin-bottom: 4px; }
+  .pipeline-stage .label { font-size: 12px; color: var(--gray); }
+
+  /* ---------- Performance comparison ---------- */
+  .compare-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 720px) {
+    .compare-grid { grid-template-columns: 1fr; }
+  }
+
+  .compare-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+
+  .compare-card h3 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  .compare-table th, .compare-table td {
+    text-align: left;
+    padding: 6px 8px;
+  }
+
+  .compare-table th {
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .compare-table td:not(:first-child),
+  .compare-table th:not(:first-child) {
+    text-align: right;
+  }
+
+  .compare-table tr + tr td { border-top: 1px solid var(--line); }
+
+  .compare-table .rate { color: var(--blue); font-weight: 700; }
+
+  /* ---------- Industry breakdown ---------- */
+  .industry-list { margin-bottom: 40px; }
+
+  .industry-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+  }
+
+  .industry-name {
+    width: 180px;
+    flex-shrink: 0;
+    text-transform: capitalize;
+    color: var(--ink);
+  }
+
+  .industry-bar-track {
+    flex: 1;
+    background: var(--card);
+    border-radius: 6px;
+    height: 10px;
+    overflow: hidden;
+  }
+
+  .industry-bar-fill {
+    height: 100%;
+    background: var(--blue);
+    border-radius: 6px;
+  }
+
+  .industry-count {
+    width: 32px;
+    text-align: right;
+    color: var(--gray);
+    font-size: 13px;
+  }
+
+  /* ---------- Activity table ---------- */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  th {
+    color: var(--gray);
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  td.industry { text-transform: capitalize; color: var(--gray); }
+
+  .badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .badge-sent { background: var(--card); color: var(--gray); border: 1px solid var(--line); }
+  .badge-fu1, .badge-fu2 { background: #fff4e0; color: #a86a00; }
+  .badge-replied { background: #e6edff; color: var(--blue-dark); font-weight: 700; }
+
+  .empty {
+    text-align: center;
+    color: var(--gray);
+    padding: 24px 0;
+    font-size: 14px;
+  }
+
+  /* ---------- Latest batch ---------- */
+  .section-note {
+    font-size: 13px;
+    color: var(--gray);
+    margin-top: -8px;
+    margin-bottom: 16px;
+  }
+
+  .lead-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+
+  .lead-card summary {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    padding: 12px 16px;
+    cursor: pointer;
+    font-size: 14px;
+    list-style: none;
+  }
+
+  .lead-card summary::-webkit-details-marker { display: none; }
+
+  .lead-card summary:hover { background: var(--card); }
+
+  .lead-name { font-weight: 700; flex: 1; }
+  .lead-industry { color: var(--gray); text-transform: capitalize; width: 170px; flex-shrink: 0; }
+  .lead-email { color: var(--blue-dark); font-size: 13px; }
+
+  @media (max-width: 720px) {
+    .lead-industry { display: none; }
+  }
+
+  .lead-body {
+    padding: 4px 16px 16px;
+    border-top: 1px solid var(--line);
+  }
+
+  .lead-subject {
+    margin: 12px 0 8px;
+    font-size: 14px;
+  }
+
+  .lead-text {
+    font-size: 13px;
+    color: var(--gray);
+    line-height: 1.6;
+    white-space: pre-wrap;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Lock screen -->
+  <div id="lock">
+    <div class="lock-card">
+      <img src="https://levelupaico.com/levelupai_logo.png" alt="LevelUpAI">
+      <h1>Dashboard</h1>
+      <p>Enter the password to view campaign activity.</p>
+      <input type="password" id="password" placeholder="Password" autofocus>
+      <button onclick="checkPassword()">Unlock</button>
+      <div class="lock-error" id="lock-error"></div>
+    </div>
+  </div>
+
+  <!-- Dashboard -->
+  <div id="dashboard">
+    <div class="wrap">
+      <header class="top">
+        <div class="brand">
+          <img src="https://levelupaico.com/levelupai_logo.png" alt="LevelUpAI">
+          <div class="brand-text">
+            <h1>Level<span class="accent">Up</span><span class="mono">AI</span></h1>
+            <div class="tag">Campaign Dashboard</div>
+          </div>
+        </div>
+        <div class="synced" id="synced">Loading...</div>
+      </header>
+
+      <div class="stats" id="stats"></div>
+
+      <h2 class="section-title">Outreach Pipeline</h2>
+      <div class="pipeline" id="pipeline"></div>
+
+      <h2 class="section-title">Performance Testing</h2>
+      <div class="compare-grid">
+        <div class="compare-card">
+          <h3>Send Window — AM vs PM</h3>
+          <div id="window-perf"></div>
+        </div>
+        <div class="compare-card">
+          <h3>Email Format — A vs B</h3>
+          <div id="format-perf"></div>
+        </div>
+      </div>
+
+      <h2 class="section-title">By Industry</h2>
+      <div class="industry-list" id="industries"></div>
+
+      <h2 class="section-title">Latest Batch — Drafted Emails</h2>
+      <p class="section-note">Leads found and drafted during the most recent campaign run. Click a row to view the full email.</p>
+      <div id="latest-batch"></div>
+
+      <h2 class="section-title">Recent Activity</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Business</th>
+            <th>Industry</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="activity"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    const PASSWORD = "LevelUp2026!"; // change this to whatever you'd like
+
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const err = document.getElementById('lock-error');
+      if (input === PASSWORD) {
+        sessionStorage.setItem('levelupai_dashboard_unlocked', 'true');
+        document.getElementById('lock').classList.add('hidden');
+        document.getElementById('dashboard').classList.add('visible');
+        loadData();
+      } else {
+        err.textContent = 'Incorrect password.';
+      }
+    }
+
+    document.getElementById('password').addEventListener('keydown', e => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    // Auto-unlock if already unlocked this session
+    if (sessionStorage.getItem('levelupai_dashboard_unlocked') === 'true') {
+      document.getElementById('lock').classList.add('hidden');
+      document.getElementById('dashboard').classList.add('visible');
+      loadData();
+    }
+
+    async function loadData() {
+      let tracking = [];
+      let leads = [];
+      let meta = null;
+
+      try {
+        const res = await fetch('data/tracking.json', { cache: 'no-store' });
+        tracking = await res.json();
+      } catch (e) {
+        console.error('Could not load tracking.json', e);
+      }
+
+      try {
+        const res = await fetch('data/leads.json', { cache: 'no-store' });
+        leads = await res.json();
+      } catch (e) {
+        console.error('Could not load leads.json', e);
+      }
+
+      try {
+        const res = await fetch('data/meta.json', { cache: 'no-store' });
+        meta = await res.json();
+      } catch (e) {
+        console.error('Could not load meta.json', e);
+      }
+
+      renderSynced(meta);
+      renderStats(tracking);
+      renderPipeline(tracking);
+      renderComparison(tracking, 'window', { AM: 'AM', PM: 'PM' }, 'window-perf', ['AM', 'PM']);
+      renderComparison(tracking, 'format', { A: 'Format A', B: 'Format B' }, 'format-perf', ['A', 'B']);
+      renderIndustries(tracking);
+      renderLatestBatch(leads);
+      renderActivity(tracking);
+    }
+
+    function renderSynced(meta) {
+      const el = document.getElementById('synced');
+      if (meta && meta.lastSynced) {
+        const d = new Date(meta.lastSynced);
+        el.innerHTML = 'Last updated<br><strong>' + d.toLocaleString('en-US', {
+          dateStyle: 'medium', timeStyle: 'short'
+        }) + '</strong>';
+      } else {
+        el.textContent = '';
+      }
+    }
+
+    function renderStats(tracking) {
+      const totalSent = tracking.length;
+      const replied = tracking.filter(t => t.replied).length;
+      const rate = totalSent ? ((replied / totalSent) * 100).toFixed(1) : '0.0';
+      const fu1 = tracking.filter(t => t.followedUp1).length;
+
+      const stats = [
+        { num: totalSent, label: 'Emails Sent', highlight: false },
+        { num: replied, label: 'Replies Received', highlight: true },
+        { num: rate + '%', label: 'Reply Rate', highlight: false },
+        { num: fu1, label: 'Follow-ups Sent', highlight: false }
+      ];
+
+      document.getElementById('stats').innerHTML = stats.map(s => `
+        <div class="stat ${s.highlight ? 'highlight' : ''}">
+          <div class="num">${s.num}</div>
+          <div class="label">${s.label}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderPipeline(tracking) {
+      const sent = tracking.length;
+      const fu1 = tracking.filter(t => t.followedUp1).length;
+      const fu2 = tracking.filter(t => t.followedUp2).length;
+      const replied = tracking.filter(t => t.replied).length;
+
+      const stages = [
+        { num: sent, label: 'Contacted' },
+        { num: fu1, label: 'Follow-up 1' },
+        { num: fu2, label: 'Follow-up 2' },
+        { num: replied, label: 'Replied', replied: true }
+      ];
+
+      document.getElementById('pipeline').innerHTML = stages.map(s => `
+        <div class="pipeline-stage ${s.replied ? 'replied' : ''}">
+          <div class="num">${s.num}</div>
+          <div class="label">${s.label}</div>
+        </div>
+      `).join('');
+    }
+
+    function renderComparison(tracking, field, labels, targetId, expectedKeys) {
+      const groups = {};
+      (expectedKeys || []).forEach(k => { groups[k] = { sent: 0, replied: 0 }; });
+
+      tracking.forEach(t => {
+        const key = t[field];
+        if (key === undefined || key === null || key === '') return;
+        if (!groups[key]) groups[key] = { sent: 0, replied: 0 };
+        groups[key].sent++;
+        if (t.replied) groups[key].replied++;
+      });
+
+      const keys = Object.keys(groups).sort();
+      const el = document.getElementById(targetId);
+
+      el.innerHTML = `
+        <table class="compare-table">
+          <thead>
+            <tr><th></th><th>Sent</th><th>Replied</th><th>Rate</th></tr>
+          </thead>
+          <tbody>
+            ${keys.map(k => {
+              const g = groups[k];
+              const rate = g.sent ? ((g.replied / g.sent) * 100).toFixed(1) : '0.0';
+              return `
+                <tr>
+                  <td>${(labels && labels[k]) || k}</td>
+                  <td>${g.sent}</td>
+                  <td>${g.replied}</td>
+                  <td class="rate">${rate}%</td>
+                </tr>
+              `;
+            }).join('')}
+          </tbody>
+        </table>
+      `;
+    }
+
+    // Keep this in sync with the INDUSTRIES list in index.js
+    const INDUSTRIES = [
+      'roofing companies',
+      'HVAC companies',
+      'plumbing companies',
+      'general contractors',
+      'landscaping companies',
+      'commercial cleaning companies',
+      'accounting firms',
+      'insurance agencies'
+    ];
+
+    function renderIndustries(tracking) {
+      const counts = {};
+      INDUSTRIES.forEach(ind => { counts[ind] = 0; });
+
+      tracking.forEach(t => {
+        const ind = t.industry || 'other';
+        counts[ind] = (counts[ind] || 0) + 1;
+      });
+
+      const entries = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+      const max = Math.max(1, ...entries.map(e => e[1]));
+
+      const el = document.getElementById('industries');
+      el.innerHTML = entries.map(([name, count]) => `
+        <div class="industry-row">
+          <div class="industry-name">${name}</div>
+          <div class="industry-bar-track">
+            <div class="industry-bar-fill" style="width:${(count / max) * 100}%"></div>
+          </div>
+          <div class="industry-count">${count}</div>
+        </div>
+      `).join('');
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function renderLatestBatch(leads) {
+      const el = document.getElementById('latest-batch');
+
+      if (!leads || !leads.length) {
+        el.innerHTML = '<div class="empty">No leads from the most recent run yet.</div>';
+        return;
+      }
+
+      el.innerHTML = leads.map(l => `
+        <details class="lead-card">
+          <summary>
+            <span class="lead-name">${escapeHtml(l.name)}</span>
+            <span class="lead-industry">${escapeHtml(l.industry)}</span>
+            <span class="lead-email">${escapeHtml(l.email)}</span>
+          </summary>
+          <div class="lead-body">
+            <div class="lead-subject"><strong>Subject:</strong> ${escapeHtml(l.subject)}</div>
+            <div class="lead-text">${escapeHtml(l.body).replace(/\n/g, '<br>')}</div>
+          </div>
+        </details>
+      `).join('');
+    }
+
+    function statusBadge(t) {
+      if (t.replied) return '<span class="badge badge-replied">Replied</span>';
+      if (t.followedUp2) return '<span class="badge badge-fu2">Follow-up 2 sent</span>';
+      if (t.followedUp1) return '<span class="badge badge-fu1">Follow-up 1 sent</span>';
+      return '<span class="badge badge-sent">Sent</span>';
+    }
+
+    function renderActivity(tracking) {
+      const sorted = [...tracking].sort((a, b) => new Date(b.time) - new Date(a.time));
+      const recent = sorted.slice(0, 50);
+      const el = document.getElementById('activity');
+
+      if (!recent.length) {
+        el.innerHTML = '<tr><td colspan="4" class="empty">No activity yet — check back after the next campaign run.</td></tr>';
+        return;
+      }
+
+      el.innerHTML = recent.map(t => `
+        <tr>
+          <td>${t.date || '—'}</td>
+          <td>${t.name || '—'}</td>
+          <td class="industry">${t.industry || '—'}</td>
+          <td>${statusBadge(t)}</td>
+        </tr>
+      `).join('');
+    }
+  </script>
+
+</body>
+</html>
