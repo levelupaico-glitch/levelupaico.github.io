@@ -59,8 +59,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-06-29T15:02:09.786Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-06-29T15:02:09.786Z",
+    "followUp2Date": "2026-07-02T15:04:06.970Z"
   },
   {
     "name": "One Hour Air Conditioning & Heating® of Houston",
@@ -74,8 +75,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-06-29T15:02:12.818Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-06-29T15:02:12.818Z",
+    "followUp2Date": "2026-07-02T15:04:10.012Z"
   },
   {
     "name": "All American AC & Heating, LLC.",
@@ -89,8 +91,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-06-29T15:02:15.854Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-06-29T15:02:15.854Z",
+    "followUp2Date": "2026-07-02T15:04:13.043Z"
   },
   {
     "name": "H-Town AC Repair HVAC services Houston",
@@ -104,8 +107,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-06-29T15:02:18.889Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-06-29T15:02:18.889Z",
+    "followUp2Date": "2026-07-02T15:04:16.080Z"
   },
   {
     "name": "GEI Plumbing Services Houston",
@@ -119,8 +123,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-06-29T15:02:21.921Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-06-29T15:02:21.921Z",
+    "followUp2Date": "2026-07-02T15:04:19.120Z"
   },
   {
     "name": "Texas General Contractors",
@@ -134,8 +139,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-06-29T15:02:24.952Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-06-29T15:02:24.952Z",
+    "followUp2Date": "2026-07-02T15:04:22.158Z"
   },
   {
     "name": "Houston's Preferred Contractors",
