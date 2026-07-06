@@ -154,8 +154,9 @@
     "time": "2026-06-30T15:05:36.624Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-06T15:03:29.665Z"
   },
   {
     "name": "Texas Castro Landscaping LLC",
@@ -168,8 +169,9 @@
     "time": "2026-06-30T15:11:49.565Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-06T15:03:32.697Z"
   },
   {
     "name": "Pepe's Landscaping Designs",
@@ -182,8 +184,9 @@
     "time": "2026-06-30T15:15:15.377Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-06T15:03:35.734Z"
   },
   {
     "name": "Blackstar Landscaping Houston",
@@ -196,8 +199,9 @@
     "time": "2026-06-30T15:18:48.727Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-06T15:03:38.764Z"
   },
   {
     "name": "Heaven On Earth Landscaping Inc.",
@@ -210,8 +214,9 @@
     "time": "2026-06-30T15:21:01.752Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-06T15:03:41.799Z"
   },
   {
     "name": "Frankie’s Landscape LLC",
@@ -224,8 +229,9 @@
     "time": "2026-06-30T15:26:35.396Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-06T15:03:44.835Z"
   },
   {
     "name": "Priority Roofing",
