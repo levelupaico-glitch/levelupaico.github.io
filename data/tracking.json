@@ -244,8 +244,9 @@
     "time": "2026-07-01T15:04:51.808Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-07T15:01:53.659Z"
   },
   {
     "name": "Danny's Landscaping",
@@ -258,8 +259,9 @@
     "time": "2026-07-01T15:12:09.754Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-07T15:01:56.695Z"
   },
   {
     "name": "D&G Landscaping & Design",
@@ -272,8 +274,9 @@
     "time": "2026-07-01T15:14:30.747Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-07T15:01:59.727Z"
   },
   {
     "name": "Mint Condition Commercial Cleaning Houston",
@@ -286,8 +289,9 @@
     "time": "2026-07-01T15:18:26.895Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-07T15:02:02.766Z"
   },
   {
     "name": "houston sharp cleaning",
@@ -300,8 +304,9 @@
     "time": "2026-07-01T15:22:35.466Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-07T15:02:05.801Z"
   },
   {
     "name": "AKIF CPA",
@@ -314,7 +319,8 @@
     "time": "2026-07-01T15:28:43.616Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-07T15:02:08.837Z"
   }
 ]
