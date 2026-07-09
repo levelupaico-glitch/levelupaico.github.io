@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <style>
   :root {
     --blue: #1a4fe0;
@@ -33,7 +34,6 @@
     font-weight: 400;
   }
 
-  /* ---------- Lock screen ---------- */
   #lock {
     position: fixed;
     inset: 0;
@@ -107,7 +107,6 @@
     min-height: 18px;
   }
 
-  /* ---------- Main dashboard ---------- */
   #dashboard { display: none; }
   #dashboard.visible { display: block; }
 
@@ -153,6 +152,28 @@
     letter-spacing: 0.06em;
   }
 
+  .top-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .history-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--blue);
+    text-decoration: none;
+    padding: 10px 16px;
+    border: 1px solid var(--blue);
+    border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .history-link:hover { background: var(--blue); color: #fff; }
+
   .synced {
     font-size: 13px;
     color: var(--gray);
@@ -161,7 +182,6 @@
 
   .synced strong { color: var(--ink); }
 
-  /* ---------- Stat cards ---------- */
   .stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -193,7 +213,6 @@
     color: var(--gray);
   }
 
-  /* ---------- Pipeline ---------- */
   .section-title {
     font-size: 20px;
     margin-bottom: 16px;
@@ -231,7 +250,6 @@
   .pipeline-stage .num { font-size: 30px; margin-bottom: 4px; }
   .pipeline-stage .label { font-size: 12px; color: var(--gray); }
 
-  /* ---------- Performance comparison ---------- */
   .compare-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -283,7 +301,6 @@
 
   .compare-table .rate { color: var(--blue); font-weight: 700; }
 
-  /* ---------- Industry breakdown ---------- */
   .industry-list { margin-bottom: 40px; }
 
   .industry-row {
@@ -322,7 +339,34 @@
     font-size: 13px;
   }
 
-  /* ---------- Activity table ---------- */
+  .chart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: 720px) {
+    .chart-grid { grid-template-columns: 1fr; }
+  }
+
+  .chart-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 18px 20px;
+  }
+
+  .chart-card h3 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--gray);
+    margin-bottom: 14px;
+  }
+
+  .chart-card canvas { max-height: 240px; }
+
   table {
     width: 100%;
     border-collapse: collapse;
@@ -364,7 +408,6 @@
     font-size: 14px;
   }
 
-  /* ---------- Latest batch ---------- */
   .section-note {
     font-size: 13px;
     color: var(--gray);
@@ -417,11 +460,29 @@
     line-height: 1.6;
     white-space: pre-wrap;
   }
+
+  .reply-label {
+    margin: 14px 0 6px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--blue-dark);
+  }
+
+  .reply-text {
+    font-size: 13px;
+    color: var(--ink);
+    line-height: 1.6;
+    white-space: pre-wrap;
+    background: #f2f5ff;
+    border-radius: 8px;
+    padding: 10px 12px;
+  }
 </style>
 </head>
 <body>
 
-  <!-- Lock screen -->
   <div id="lock">
     <div class="lock-card">
       <img src="https://levelupaico.com/levelupai_logo.png" alt="LevelUpAI">
@@ -433,7 +494,6 @@
     </div>
   </div>
 
-  <!-- Dashboard -->
   <div id="dashboard">
     <div class="wrap">
       <header class="top">
@@ -444,7 +504,10 @@
             <div class="tag">Campaign Dashboard</div>
           </div>
         </div>
-        <div class="synced" id="synced">Loading...</div>
+        <div class="top-right">
+          <a href="history.html" class="history-link">View History →</a>
+          <div class="synced" id="synced">Loading...</div>
+        </div>
       </header>
 
       <div class="stats" id="stats"></div>
@@ -467,9 +530,21 @@
       <h2 class="section-title">By Industry</h2>
       <div class="industry-list" id="industries"></div>
 
-      <h2 class="section-title">Latest Batch — Drafted Emails</h2>
-      <p class="section-note">Leads found and drafted during the most recent campaign run. Click a row to view the full email.</p>
-      <div id="latest-batch"></div>
+      <h2 class="section-title">Analytics</h2>
+      <div class="chart-grid">
+        <div class="chart-card">
+          <h3>Emails Sent Per Day</h3>
+          <canvas id="chart-sent-per-day"></canvas>
+        </div>
+        <div class="chart-card">
+          <h3>Reply Rate By Industry</h3>
+          <canvas id="chart-reply-by-industry"></canvas>
+        </div>
+      </div>
+
+      <h2 class="section-title">Recent Replies</h2>
+      <p class="section-note">Actual reply text from leads who've responded. Click a row to view the full message.</p>
+      <div id="recent-replies"></div>
 
       <h2 class="section-title">Recent Activity</h2>
       <table>
@@ -487,7 +562,7 @@
   </div>
 
   <script>
-    const PASSWORD = "LevelUp2026!"; // change this to whatever you'd like
+    const PASSWORD = "LevelUp2026!";
 
     function checkPassword() {
       const input = document.getElementById('password').value;
@@ -506,7 +581,6 @@
       if (e.key === 'Enter') checkPassword();
     });
 
-    // Auto-unlock if already unlocked this session
     if (sessionStorage.getItem('levelupai_dashboard_unlocked') === 'true') {
       document.getElementById('lock').classList.add('hidden');
       document.getElementById('dashboard').classList.add('visible');
@@ -515,7 +589,6 @@
 
     async function loadData() {
       let tracking = [];
-      let leads = [];
       let meta = null;
 
       try {
@@ -526,26 +599,22 @@
       }
 
       try {
-        const res = await fetch('data/leads.json', { cache: 'no-store' });
-        leads = await res.json();
-      } catch (e) {
-        console.error('Could not load leads.json', e);
-      }
-
-      try {
         const res = await fetch('data/meta.json', { cache: 'no-store' });
         meta = await res.json();
       } catch (e) {
         console.error('Could not load meta.json', e);
       }
 
+      const newEntries = tracking.filter(t => t.type === 'new' || !t.type);
+
       renderSynced(meta);
-      renderStats(tracking);
-      renderPipeline(tracking);
-      renderComparison(tracking, 'window', { AM: 'AM', PM: 'PM' }, 'window-perf', ['AM', 'PM']);
-      renderComparison(tracking, 'format', { A: 'Format A', B: 'Format B' }, 'format-perf', ['A', 'B']);
-      renderIndustries(tracking);
-      renderLatestBatch(leads);
+      renderStats(newEntries);
+      renderPipeline(newEntries);
+      renderComparison(newEntries, 'window', { AM: 'AM', PM: 'PM' }, 'window-perf', ['AM', 'PM']);
+      renderComparison(newEntries, 'format', { A: 'Format A', B: 'Format B' }, 'format-perf', ['A', 'B']);
+      renderIndustries(newEntries);
+      renderCharts(tracking, newEntries);
+      renderRecentReplies(newEntries);
       renderActivity(tracking);
     }
 
@@ -561,11 +630,11 @@
       }
     }
 
-    function renderStats(tracking) {
-      const totalSent = tracking.length;
-      const replied = tracking.filter(t => t.replied).length;
+    function renderStats(newEntries) {
+      const totalSent = newEntries.length;
+      const replied = newEntries.filter(t => t.replied).length;
       const rate = totalSent ? ((replied / totalSent) * 100).toFixed(1) : '0.0';
-      const fu1 = tracking.filter(t => t.followedUp1).length;
+      const fu1 = newEntries.filter(t => t.followedUp1).length;
 
       const stats = [
         { num: totalSent, label: 'Emails Sent', highlight: false },
@@ -582,11 +651,11 @@
       `).join('');
     }
 
-    function renderPipeline(tracking) {
-      const sent = tracking.length;
-      const fu1 = tracking.filter(t => t.followedUp1).length;
-      const fu2 = tracking.filter(t => t.followedUp2).length;
-      const replied = tracking.filter(t => t.replied).length;
+    function renderPipeline(newEntries) {
+      const sent = newEntries.length;
+      const fu1 = newEntries.filter(t => t.followedUp1).length;
+      const fu2 = newEntries.filter(t => t.followedUp2).length;
+      const replied = newEntries.filter(t => t.replied).length;
 
       const stages = [
         { num: sent, label: 'Contacted' },
@@ -603,11 +672,11 @@
       `).join('');
     }
 
-    function renderComparison(tracking, field, labels, targetId, expectedKeys) {
+    function renderComparison(newEntries, field, labels, targetId, expectedKeys) {
       const groups = {};
       (expectedKeys || []).forEach(k => { groups[k] = { sent: 0, replied: 0 }; });
 
-      tracking.forEach(t => {
+      newEntries.forEach(t => {
         const key = t[field];
         if (key === undefined || key === null || key === '') return;
         if (!groups[key]) groups[key] = { sent: 0, replied: 0 };
@@ -641,7 +710,6 @@
       `;
     }
 
-    // Keep this in sync with the INDUSTRIES list in index.js
     const INDUSTRIES = [
       'roofing companies',
       'HVAC companies',
@@ -653,11 +721,11 @@
       'insurance agencies'
     ];
 
-    function renderIndustries(tracking) {
+    function renderIndustries(newEntries) {
       const counts = {};
       INDUSTRIES.forEach(ind => { counts[ind] = 0; });
 
-      tracking.forEach(t => {
+      newEntries.forEach(t => {
         const ind = t.industry || 'other';
         counts[ind] = (counts[ind] || 0) + 1;
       });
@@ -677,6 +745,64 @@
       `).join('');
     }
 
+    let sentPerDayChart = null;
+    let replyByIndustryChart = null;
+
+    function renderCharts(allEntries, newEntries) {
+      const perDay = {};
+      allEntries.forEach(t => {
+        if (t.status !== 'sent') return;
+        const d = t.date || (t.time ? t.time.split('T')[0] : null);
+        if (!d) return;
+        perDay[d] = (perDay[d] || 0) + 1;
+      });
+      const days = Object.keys(perDay).sort().slice(-14);
+      const dayCounts = days.map(d => perDay[d]);
+
+      const ctx1 = document.getElementById('chart-sent-per-day');
+      if (sentPerDayChart) sentPerDayChart.destroy();
+      sentPerDayChart = new Chart(ctx1, {
+        type: 'bar',
+        data: {
+          labels: days,
+          datasets: [{ label: 'Emails Sent', data: dayCounts, backgroundColor: '#1a4fe0' }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true, ticks: { precision: 0 } } }
+        }
+      });
+
+      const byIndustry = {};
+      INDUSTRIES.forEach(ind => { byIndustry[ind] = { sent: 0, replied: 0 }; });
+      newEntries.forEach(t => {
+        const ind = t.industry || 'other';
+        if (!byIndustry[ind]) byIndustry[ind] = { sent: 0, replied: 0 };
+        byIndustry[ind].sent++;
+        if (t.replied) byIndustry[ind].replied++;
+      });
+      const industryNames = Object.keys(byIndustry);
+      const rates = industryNames.map(ind => {
+        const g = byIndustry[ind];
+        return g.sent ? Number(((g.replied / g.sent) * 100).toFixed(1)) : 0;
+      });
+
+      const ctx2 = document.getElementById('chart-reply-by-industry');
+      if (replyByIndustryChart) replyByIndustryChart.destroy();
+      replyByIndustryChart = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+          labels: industryNames,
+          datasets: [{ label: 'Reply Rate %', data: rates, backgroundColor: '#1a4fe0' }]
+        },
+        options: {
+          plugins: { legend: { display: false } },
+          scales: { y: { beginAtZero: true } },
+          indexAxis: 'y'
+        }
+      });
+    }
+
     function escapeHtml(str) {
       return String(str || '')
         .replace(/&/g, '&amp;')
@@ -685,15 +811,18 @@
         .replace(/"/g, '&quot;');
     }
 
-    function renderLatestBatch(leads) {
-      const el = document.getElementById('latest-batch');
+    function renderRecentReplies(newEntries) {
+      const el = document.getElementById('recent-replies');
+      const replied = newEntries
+        .filter(t => t.replied)
+        .sort((a, b) => new Date(b.replyDate || b.time) - new Date(a.replyDate || a.time));
 
-      if (!leads || !leads.length) {
-        el.innerHTML = '<div class="empty">No leads from the most recent run yet.</div>';
+      if (!replied.length) {
+        el.innerHTML = '<div class="empty">No replies yet.</div>';
         return;
       }
 
-      el.innerHTML = leads.map(l => `
+      el.innerHTML = replied.map(l => `
         <details class="lead-card">
           <summary>
             <span class="lead-name">${escapeHtml(l.name)}</span>
@@ -701,8 +830,10 @@
             <span class="lead-email">${escapeHtml(l.email)}</span>
           </summary>
           <div class="lead-body">
-            <div class="lead-subject"><strong>Subject:</strong> ${escapeHtml(l.subject)}</div>
+            <div class="lead-subject"><strong>Original subject:</strong> ${escapeHtml(l.subject)}</div>
             <div class="lead-text">${escapeHtml(l.body).replace(/\n/g, '<br>')}</div>
+            <div class="reply-label">Their reply</div>
+            <div class="reply-text">${escapeHtml(l.replyText) || '(no reply text captured)'}</div>
           </div>
         </details>
       `).join('');
@@ -710,6 +841,8 @@
 
     function statusBadge(t) {
       if (t.replied) return '<span class="badge badge-replied">Replied</span>';
+      if (t.type === 'followup2') return '<span class="badge badge-fu2">Follow-up 2 sent</span>';
+      if (t.type === 'followup1') return '<span class="badge badge-fu1">Follow-up 1 sent</span>';
       if (t.followedUp2) return '<span class="badge badge-fu2">Follow-up 2 sent</span>';
       if (t.followedUp1) return '<span class="badge badge-fu1">Follow-up 1 sent</span>';
       return '<span class="badge badge-sent">Sent</span>';

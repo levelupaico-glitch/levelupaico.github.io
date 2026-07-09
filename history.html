@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LevelUpAI — History</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue: #1a4fe0;
+    --blue-dark: #0f3db5;
+    --ink: #0d0d0d;
+    --gray: #5c5a55;
+    --line: #e7e5e1;
+    --bg: #ffffff;
+    --card: #fafaf8;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, .num { font-family: 'DM Serif Display', serif; font-weight: 400; }
+
+  #lock {
+    position: fixed; inset: 0; background: var(--bg);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 50; padding: 24px;
+  }
+  #lock.hidden { display: none; }
+  .lock-card { width: 100%; max-width: 360px; text-align: center; }
+  .lock-card img { width: 56px; height: 56px; margin-bottom: 16px; }
+  .lock-card h1 { font-size: 28px; margin-bottom: 6px; }
+  .lock-card p { color: var(--gray); font-size: 14px; margin-bottom: 24px; }
+  .lock-card input {
+    width: 100%; padding: 12px 14px; border: 1px solid var(--line);
+    border-radius: 8px; font-size: 15px; font-family: inherit;
+    margin-bottom: 12px; outline: none; transition: border-color 0.15s;
+  }
+  .lock-card input:focus { border-color: var(--blue); }
+  .lock-card button {
+    width: 100%; padding: 12px 14px; border: none; border-radius: 8px;
+    background: var(--blue); color: #fff; font-size: 15px; font-family: inherit;
+    font-weight: 700; cursor: pointer; transition: background 0.15s;
+  }
+  .lock-card button:hover { background: var(--blue-dark); }
+  .lock-error { color: #c0392b; font-size: 13px; margin-top: 10px; min-height: 18px; }
+
+  #page { display: none; }
+  #page.visible { display: block; }
+
+  .wrap { max-width: 1080px; margin: 0 auto; padding: 32px 24px 80px; }
+
+  header.top {
+    display: flex; align-items: center; justify-content: space-between;
+    flex-wrap: wrap; gap: 12px; border-bottom: 3px solid var(--blue);
+    padding-bottom: 18px; margin-bottom: 32px;
+  }
+
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 40px; height: 40px; }
+  .brand-text h1 { font-size: 22px; line-height: 1.1; }
+  .brand-text h1 .accent { color: var(--blue); }
+  .brand-text h1 .mono { color: var(--blue); font-family: 'Courier New', monospace; }
+  .brand-text .tag { font-size: 11px; color: var(--gray); letter-spacing: 0.06em; }
+
+  .back-link {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-size: 14px; font-weight: 700; color: var(--blue); text-decoration: none;
+    padding: 10px 16px; border: 1px solid var(--blue); border-radius: 8px;
+    transition: background 0.15s, color 0.15s;
+  }
+  .back-link:hover { background: var(--blue); color: #fff; }
+
+  h2.section-title { font-size: 20px; margin-bottom: 16px; }
+
+  .view-toggle {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  .view-toggle button {
+    padding: 9px 20px;
+    border: none;
+    background: var(--bg);
+    color: var(--gray);
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    border-right: 1px solid var(--line);
+  }
+  .view-toggle button:last-child { border-right: none; }
+  .view-toggle button.active { background: var(--blue); color: #fff; }
+
+  .history-layout {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 24px;
+  }
+  @media (max-width: 800px) {
+    .history-layout { grid-template-columns: 1fr; }
+  }
+
+  .period-list {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    overflow: hidden;
+    max-height: 640px;
+    overflow-y: auto;
+  }
+
+  .period-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+  }
+  .period-item:last-child { border-bottom: none; }
+  .period-item:hover { background: var(--card); }
+  .period-item.active { background: var(--blue); color: #fff; }
+  .period-item.active .period-count { color: #fff; }
+
+  .period-count {
+    font-size: 12px;
+    color: var(--gray);
+    background: var(--card);
+    padding: 2px 8px;
+    border-radius: 999px;
+  }
+  .period-item.active .period-count { background: rgba(255,255,255,0.2); }
+
+  .detail-panel {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    min-height: 200px;
+  }
+
+  .detail-summary {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .detail-summary .stat-mini { font-size: 14px; }
+  .detail-summary .stat-mini strong { font-family: 'DM Serif Display', serif; font-size: 20px; display: block; }
+  .detail-summary .stat-mini span { color: var(--gray); font-size: 12px; }
+
+  .lead-card {
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    margin-bottom: 8px;
+    overflow: hidden;
+  }
+  .lead-card summary {
+    display: flex; gap: 12px; align-items: center;
+    padding: 12px 16px; cursor: pointer; font-size: 14px; list-style: none;
+  }
+  .lead-card summary::-webkit-details-marker { display: none; }
+  .lead-card summary:hover { background: var(--card); }
+  .lead-name { font-weight: 700; flex: 1; }
+  .lead-industry { color: var(--gray); text-transform: capitalize; width: 150px; flex-shrink: 0; }
+  .lead-time { color: var(--gray); font-size: 12px; width: 60px; flex-shrink: 0; text-align: right; }
+  @media (max-width: 720px) { .lead-industry { display: none; } }
+
+  .lead-body { padding: 4px 16px 16px; border-top: 1px solid var(--line); }
+  .lead-subject { margin: 12px 0 8px; font-size: 14px; }
+  .lead-text { font-size: 13px; color: var(--gray); line-height: 1.6; white-space: pre-wrap; }
+
+  .reply-label {
+    margin: 14px 0 6px; font-size: 12px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; color: var(--blue-dark);
+  }
+  .reply-text {
+    font-size: 13px; color: var(--ink); line-height: 1.6; white-space: pre-wrap;
+    background: #f2f5ff; border-radius: 8px; padding: 10px 12px;
+  }
+
+  .type-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding: 2px 8px;
+    border-radius: 999px;
+    flex-shrink: 0;
+  }
+  .type-new { background: #e6edff; color: var(--blue-dark); }
+  .type-followup1, .type-followup2 { background: #fff4e0; color: #a86a00; }
+
+  .empty { text-align: center; color: var(--gray); padding: 40px 0; font-size: 14px; }
+</style>
+</head>
+<body>
+
+  <div id="lock">
+    <div class="lock-card">
+      <img src="https://levelupaico.com/levelupai_logo.png" alt="LevelUpAI">
+      <h1>History</h1>
+      <p>Enter the password to view campaign history.</p>
+      <input type="password" id="password" placeholder="Password" autofocus>
+      <button onclick="checkPassword()">Unlock</button>
+      <div class="lock-error" id="lock-error"></div>
+    </div>
+  </div>
+
+  <div id="page">
+    <div class="wrap">
+      <header class="top">
+        <div class="brand">
+          <img src="https://levelupaico.com/levelupai_logo.png" alt="LevelUpAI">
+          <div class="brand-text">
+            <h1>Level<span class="accent">Up</span><span class="mono">AI</span></h1>
+            <div class="tag">Campaign History</div>
+          </div>
+        </div>
+        <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+      </header>
+
+      <h2 class="section-title">Browse Sent Emails</h2>
+      <div class="view-toggle">
+        <button id="btn-day" class="active" onclick="setView('day')">Day</button>
+        <button id="btn-week" onclick="setView('week')">Week</button>
+        <button id="btn-month" onclick="setView('month')">Month</button>
+      </div>
+
+      <div class="history-layout">
+        <div class="period-list" id="period-list"></div>
+        <div class="detail-panel" id="detail-panel">
+          <div class="empty">Select a period on the left to see what was sent.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const PASSWORD = "LevelUp2026!";
+
+    function checkPassword() {
+      const input = document.getElementById('password').value;
+      const err = document.getElementById('lock-error');
+      if (input === PASSWORD) {
+        sessionStorage.setItem('levelupai_dashboard_unlocked', 'true');
+        unlock();
+      } else {
+        err.textContent = 'Incorrect password.';
+      }
+    }
+
+    document.getElementById('password').addEventListener('keydown', e => {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    function unlock() {
+      document.getElementById('lock').classList.add('hidden');
+      document.getElementById('page').classList.add('visible');
+      loadData();
+    }
+
+    if (sessionStorage.getItem('levelupai_dashboard_unlocked') === 'true') {
+      unlock();
+    }
+
+    let allEntries = [];
+    let currentView = 'day';
+    let selectedPeriod = null;
+
+    async function loadData() {
+      try {
+        const res = await fetch('data/tracking.json', { cache: 'no-store' });
+        allEntries = await res.json();
+      } catch (e) {
+        console.error('Could not load tracking.json', e);
+        allEntries = [];
+      }
+      allEntries = allEntries.filter(t => t.status === 'sent' || t.status === 'dry_run');
+      renderPeriodList();
+    }
+
+    function setView(view) {
+      currentView = view;
+      selectedPeriod = null;
+      ['day', 'week', 'month'].forEach(v => {
+        document.getElementById('btn-' + v).classList.toggle('active', v === view);
+      });
+      renderPeriodList();
+      document.getElementById('detail-panel').innerHTML =
+        '<div class="empty">Select a period on the left to see what was sent.</div>';
+    }
+
+    function getISOWeek(dateStr) {
+      const d = new Date(dateStr + 'T00:00:00Z');
+      const dayNum = (d.getUTCDay() + 6) % 7;
+      d.setUTCDate(d.getUTCDate() - dayNum + 3);
+      const firstThursday = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+      const week = 1 + Math.round(((d - firstThursday) / 86400000 - 3) / 7);
+      return `${d.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
+    }
+
+    function getPeriodKey(entry) {
+      const date = entry.date || (entry.time ? entry.time.split('T')[0] : null);
+      if (!date) return null;
+      if (currentView === 'day') return date;
+      if (currentView === 'month') return date.slice(0, 7);
+      return getISOWeek(date);
+    }
+
+    function formatPeriodLabel(key) {
+      if (currentView === 'day') {
+        const d = new Date(key + 'T00:00:00');
+        return d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+      }
+      if (currentView === 'month') {
+        const d = new Date(key + '-01T00:00:00');
+        return d.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+      }
+      return key.replace('-W', ' — Week ');
+    }
+
+    function renderPeriodList() {
+      const groups = {};
+      allEntries.forEach(entry => {
+        const key = getPeriodKey(entry);
+        if (!key) return;
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(entry);
+      });
+
+      const keys = Object.keys(groups).sort().reverse();
+      const el = document.getElementById('period-list');
+
+      if (!keys.length) {
+        el.innerHTML = '<div class="empty">No history yet.</div>';
+        return;
+      }
+
+      el.innerHTML = keys.map(key => `
+        <div class="period-item" data-key="${key}" onclick="selectPeriod('${key}')">
+          <span>${formatPeriodLabel(key)}</span>
+          <span class="period-count">${groups[key].length}</span>
+        </div>
+      `).join('');
+
+      if (keys.length) selectPeriod(keys[0]);
+    }
+
+    function escapeHtml(str) {
+      return String(str || '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;');
+    }
+
+    function typeLabel(t) {
+      if (t.type === 'followup1') return { text: 'Follow-up 1', cls: 'type-followup1' };
+      if (t.type === 'followup2') return { text: 'Follow-up 2', cls: 'type-followup2' };
+      return { text: 'New Outreach', cls: 'type-new' };
+    }
+
+    function selectPeriod(key) {
+      selectedPeriod = key;
+      document.querySelectorAll('.period-item').forEach(el => {
+        el.classList.toggle('active', el.dataset.key === key);
+      });
+
+      const entries = allEntries
+        .filter(e => getPeriodKey(e) === key)
+        .sort((a, b) => new Date(b.time) - new Date(a.time));
+
+      const newCount = entries.filter(e => e.type === 'new' || !e.type).length;
+      const fu1Count = entries.filter(e => e.type === 'followup1').length;
+      const fu2Count = entries.filter(e => e.type === 'followup2').length;
+      const repliedCount = entries.filter(e => e.replied).length;
+
+      const summaryHtml = `
+        <div class="detail-summary">
+          <div class="stat-mini"><strong>${entries.length}</strong><span>Total Sent</span></div>
+          <div class="stat-mini"><strong>${newCount}</strong><span>New Outreach</span></div>
+          <div class="stat-mini"><strong>${fu1Count + fu2Count}</strong><span>Follow-ups</span></div>
+          <div class="stat-mini"><strong>${repliedCount}</strong><span>Replies</span></div>
+        </div>
+      `;
+
+      if (!entries.length) {
+        document.getElementById('detail-panel').innerHTML = summaryHtml + '<div class="empty">Nothing sent this period.</div>';
+        return;
+      }
+
+      const cardsHtml = entries.map(t => {
+        const tag = typeLabel(t);
+        const time = t.time ? new Date(t.time).toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) : '';
+        return `
+          <details class="lead-card">
+            <summary>
+              <span class="type-tag ${tag.cls}">${tag.text}</span>
+              <span class="lead-name">${escapeHtml(t.name)}</span>
+              <span class="lead-industry">${escapeHtml(t.industry)}</span>
+              <span class="lead-time">${time}</span>
+            </summary>
+            <div class="lead-body">
+              <div class="lead-subject"><strong>Subject:</strong> ${escapeHtml(t.subject)}</div>
+              <div class="lead-text">${escapeHtml(t.body).replace(/\n/g, '<br>')}</div>
+              ${t.replied ? `
+                <div class="reply-label">Their reply</div>
+                <div class="reply-text">${escapeHtml(t.replyText) || '(no reply text captured)'}</div>
+              ` : ''}
+            </div>
+          </details>
+        `;
+      }).join('');
+
+      document.getElementById('detail-panel').innerHTML = summaryHtml + cardsHtml;
+    }
+  </script>
+
+</body>
+</html>
