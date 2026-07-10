@@ -182,6 +182,26 @@
 
   .synced strong { color: var(--ink); }
 
+  .city-switch {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .city-switch button {
+    padding: 8px 16px;
+    border: none;
+    background: var(--bg);
+    color: var(--gray);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    border-right: 1px solid var(--line);
+  }
+  .city-switch button:last-child { border-right: none; }
+  .city-switch button.active { background: var(--blue); color: #fff; }
+
   .stats {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -505,6 +525,7 @@
           </div>
         </div>
         <div class="top-right">
+          <div class="city-switch" id="city-switch"></div>
           <a href="history.html" class="history-link">View History →</a>
           <div class="synced" id="synced">Loading...</div>
         </div>
@@ -571,6 +592,7 @@
         sessionStorage.setItem('levelupai_dashboard_unlocked', 'true');
         document.getElementById('lock').classList.add('hidden');
         document.getElementById('dashboard').classList.add('visible');
+        renderCitySwitch();
         loadData();
       } else {
         err.textContent = 'Incorrect password.';
@@ -584,22 +606,48 @@
     if (sessionStorage.getItem('levelupai_dashboard_unlocked') === 'true') {
       document.getElementById('lock').classList.add('hidden');
       document.getElementById('dashboard').classList.add('visible');
+      renderCitySwitch();
+      loadData();
+    }
+
+    const CITY_SOURCES = {
+      houston: { label: 'Houston', prefix: 'data/' },
+      'colorado-springs': { label: 'Colorado Springs', prefix: 'data/colorado-springs/' }
+    };
+
+    function getSelectedCity() {
+      return localStorage.getItem('levelupai_selected_city') || 'houston';
+    }
+
+    function renderCitySwitch() {
+      const current = getSelectedCity();
+      const el = document.getElementById('city-switch');
+      el.innerHTML = Object.entries(CITY_SOURCES).map(([key, c]) => `
+        <button class="${key === current ? 'active' : ''}" onclick="switchCity('${key}')">${c.label}</button>
+      `).join('');
+    }
+
+    function switchCity(key) {
+      localStorage.setItem('levelupai_selected_city', key);
+      renderCitySwitch();
       loadData();
     }
 
     async function loadData() {
+      const city = getSelectedCity();
+      const prefix = (CITY_SOURCES[city] || CITY_SOURCES.houston).prefix;
       let tracking = [];
       let meta = null;
 
       try {
-        const res = await fetch('data/tracking.json', { cache: 'no-store' });
+        const res = await fetch(prefix + 'tracking.json', { cache: 'no-store' });
         tracking = await res.json();
       } catch (e) {
         console.error('Could not load tracking.json', e);
       }
 
       try {
-        const res = await fetch('data/meta.json', { cache: 'no-store' });
+        const res = await fetch(prefix + 'meta.json', { cache: 'no-store' });
         meta = await res.json();
       } catch (e) {
         console.error('Could not load meta.json', e);

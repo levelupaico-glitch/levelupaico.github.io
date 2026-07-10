@@ -80,6 +80,26 @@
   }
   .back-link:hover { background: var(--blue); color: #fff; }
 
+  .city-switch {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .city-switch button {
+    padding: 8px 16px;
+    border: none;
+    background: var(--bg);
+    color: var(--gray);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    border-right: 1px solid var(--line);
+  }
+  .city-switch button:last-child { border-right: none; }
+  .city-switch button.active { background: var(--blue); color: #fff; }
+
   h2.section-title { font-size: 20px; margin-bottom: 16px; }
 
   .view-toggle {
@@ -235,6 +255,8 @@
         <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
       </header>
 
+      <div class="city-switch" id="city-switch" style="margin-bottom: 24px;"></div>
+
       <h2 class="section-title">Browse Sent Emails</h2>
       <div class="view-toggle">
         <button id="btn-day" class="active" onclick="setView('day')">Day</button>
@@ -269,9 +291,33 @@
       if (e.key === 'Enter') checkPassword();
     });
 
+    const CITY_SOURCES = {
+      houston: { label: 'Houston', prefix: 'data/' },
+      'colorado-springs': { label: 'Colorado Springs', prefix: 'data/colorado-springs/' }
+    };
+
+    function getSelectedCity() {
+      return localStorage.getItem('levelupai_selected_city') || 'houston';
+    }
+
+    function renderCitySwitch() {
+      const current = getSelectedCity();
+      const el = document.getElementById('city-switch');
+      el.innerHTML = Object.entries(CITY_SOURCES).map(([key, c]) => `
+        <button class="${key === current ? 'active' : ''}" onclick="switchCity('${key}')">${c.label}</button>
+      `).join('');
+    }
+
+    function switchCity(key) {
+      localStorage.setItem('levelupai_selected_city', key);
+      renderCitySwitch();
+      loadData();
+    }
+
     function unlock() {
       document.getElementById('lock').classList.add('hidden');
       document.getElementById('page').classList.add('visible');
+      renderCitySwitch();
       loadData();
     }
 
@@ -284,8 +330,10 @@
     let selectedPeriod = null;
 
     async function loadData() {
+      const city = getSelectedCity();
+      const prefix = (CITY_SOURCES[city] || CITY_SOURCES.houston).prefix;
       try {
-        const res = await fetch('data/tracking.json', { cache: 'no-store' });
+        const res = await fetch(prefix + 'tracking.json', { cache: 'no-store' });
         allEntries = await res.json();
       } catch (e) {
         console.error('Could not load tracking.json', e);
