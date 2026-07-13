@@ -155,8 +155,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-06T15:03:29.665Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-06T15:03:29.665Z",
+    "followUp2Date": "2026-07-13T15:01:54.271Z"
   },
   {
     "name": "Texas Castro Landscaping LLC",
@@ -170,8 +171,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-06T15:03:32.697Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-06T15:03:32.697Z",
+    "followUp2Date": "2026-07-13T15:01:57.305Z"
   },
   {
     "name": "Pepe's Landscaping Designs",
@@ -185,8 +187,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-06T15:03:35.734Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-06T15:03:35.734Z",
+    "followUp2Date": "2026-07-13T15:02:00.337Z"
   },
   {
     "name": "Blackstar Landscaping Houston",
@@ -200,8 +203,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-06T15:03:38.764Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-06T15:03:38.764Z",
+    "followUp2Date": "2026-07-13T15:02:03.373Z"
   },
   {
     "name": "Heaven On Earth Landscaping Inc.",
@@ -215,8 +219,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-06T15:03:41.799Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-06T15:03:41.799Z",
+    "followUp2Date": "2026-07-13T15:02:06.407Z"
   },
   {
     "name": "Frankie’s Landscape LLC",
@@ -230,8 +235,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-06T15:03:44.835Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-06T15:03:44.835Z",
+    "followUp2Date": "2026-07-13T15:02:09.445Z"
   },
   {
     "name": "Priority Roofing",
@@ -245,8 +251,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-07T15:01:53.659Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-07T15:01:53.659Z",
+    "followUp2Date": "2026-07-13T15:02:12.485Z"
   },
   {
     "name": "Danny's Landscaping",
@@ -260,8 +267,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-07T15:01:56.695Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-07T15:01:56.695Z",
+    "followUp2Date": "2026-07-13T15:02:15.519Z"
   },
   {
     "name": "D&G Landscaping & Design",
@@ -275,8 +283,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-07T15:01:59.727Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-07T15:01:59.727Z",
+    "followUp2Date": "2026-07-13T15:02:18.554Z"
   },
   {
     "name": "Mint Condition Commercial Cleaning Houston",
@@ -290,8 +299,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-07T15:02:02.766Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-07T15:02:02.766Z",
+    "followUp2Date": "2026-07-13T15:02:21.591Z"
   },
   {
     "name": "houston sharp cleaning",
@@ -476,5 +486,155 @@
     "status": "sent",
     "followedUp1": false,
     "followedUp2": false
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "alfonso@houstonspreferredcontractors.com",
+    "name": "Houston's Preferred Contractors",
+    "email": "alfonso@houstonspreferredcontractors.com",
+    "industry": "general contractors",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Houston's,\n\nJust wanted to follow up on my previous email — we help general contractors businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:01:54.271Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "texascastrolandscaping@gmail.com",
+    "name": "Texas Castro Landscaping LLC",
+    "email": "texascastrolandscaping@gmail.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Texas,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:01:57.305Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "pepeslandscaping1365@gmail.com",
+    "name": "Pepe's Landscaping Designs",
+    "email": "pepeslandscaping1365@gmail.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Pepe's,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:00.337Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "save@blackstarlandscaping.com",
+    "name": "Blackstar Landscaping Houston",
+    "email": "save@blackstarlandscaping.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Blackstar,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:03.373Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "alfredo@heavenonearthlandscaping.com",
+    "name": "Heaven On Earth Landscaping Inc.",
+    "email": "alfredo@heavenonearthlandscaping.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Heaven,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:06.407Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "frankiegarcialawncare@gmail.com",
+    "name": "Frankie’s Landscape LLC",
+    "email": "frankiegarcialawncare@gmail.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Frankie’s,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:09.445Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "houston@priorityroofs.com",
+    "name": "Priority Roofing",
+    "email": "houston@priorityroofs.com",
+    "industry": "roofing companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Priority,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:12.485Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "danny@dannyslandscapingtx.com",
+    "name": "Danny's Landscaping",
+    "email": "danny@dannyslandscapingtx.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Danny's,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:15.519Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "dglandscapingdesign@gmail.com",
+    "name": "D&G Landscaping & Design",
+    "email": "dglandscapingdesign@gmail.com",
+    "industry": "landscaping companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy D&G,\n\nJust wanted to follow up on my previous email — we help landscaping companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:18.554Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "msheppard@mintconditionhou.com",
+    "name": "Mint Condition Commercial Cleaning Houston",
+    "email": "msheppard@mintconditionhou.com",
+    "industry": "commercial cleaning companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy Mint,\n\nJust wanted to follow up on my previous email — we help commercial cleaning companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-13",
+    "time": "2026-07-13T15:02:21.591Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
   }
 ]
