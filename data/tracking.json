@@ -315,8 +315,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-07T15:02:05.801Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-07T15:02:05.801Z",
+    "followUp2Date": "2026-07-14T15:04:21.732Z"
   },
   {
     "name": "AKIF CPA",
@@ -330,8 +331,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-07T15:02:08.837Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-07T15:02:08.837Z",
+    "followUp2Date": "2026-07-14T15:04:24.767Z"
   },
   {
     "name": "Texas Accounting Firm - Standlee & Bleifeld CPAs PLLC",
@@ -344,8 +346,9 @@
     "time": "2026-07-08T18:33:07.543Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:27.800Z"
   },
   {
     "name": "RP Jones, CPA, P.C.",
@@ -358,8 +361,9 @@
     "time": "2026-07-08T18:34:53.037Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:30.834Z"
   },
   {
     "name": "TIA- Texas Insurance Agency",
@@ -372,8 +376,9 @@
     "time": "2026-07-08T18:36:41.433Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:33.869Z"
   },
   {
     "name": "Paga-Menos Insurance",
@@ -386,8 +391,9 @@
     "time": "2026-07-08T18:37:51.632Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:36.901Z"
   },
   {
     "name": "Linda Meyer Insurance Brokerage",
@@ -400,8 +406,9 @@
     "time": "2026-07-08T18:39:35.720Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:39.938Z"
   },
   {
     "name": "Moss Roofing Houston",
@@ -414,8 +421,9 @@
     "time": "2026-07-09T15:02:26.602Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:42.973Z"
   },
   {
     "name": "Houston Roofing Experts",
@@ -428,8 +436,9 @@
     "time": "2026-07-09T15:04:30.014Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:46.009Z"
   },
   {
     "name": "TrueWorks Roofing",
@@ -442,8 +451,9 @@
     "time": "2026-07-09T15:05:48.751Z",
     "replied": false,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-14T15:04:49.040Z"
   },
   {
     "name": "Top Roofing LLC",
@@ -632,6 +642,156 @@
     "body": "Howdy Mint,\n\nJust wanted to follow up on my previous email — we help commercial cleaning companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
     "date": "2026-07-13",
     "time": "2026-07-13T15:02:21.591Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "houstonsharpcleaning@gmail.com",
+    "name": "houston sharp cleaning",
+    "email": "houstonsharpcleaning@gmail.com",
+    "industry": "commercial cleaning companies",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy houston,\n\nJust wanted to follow up on my previous email — we help commercial cleaning companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:21.732Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "phil@philhogan.com",
+    "name": "AKIF CPA",
+    "email": "phil@philhogan.com",
+    "industry": "accounting firms",
+    "subject": "Re: Last follow-up — LevelUpAI",
+    "body": "Howdy AKIF,\n\nJust wanted to follow up on my previous email — we help accounting firms businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:24.767Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "brian@texasaccountingfirm.com",
+    "name": "Texas Accounting Firm - Standlee & Bleifeld CPAs PLLC",
+    "email": "brian@texasaccountingfirm.com",
+    "industry": "accounting firms",
+    "subject": "Re: Quick question for Texas Accounting Firm - Standlee & Bleifeld CPAs PLLC",
+    "body": "Howdy Texas,\n\nJust wanted to follow up on my previous email — we help accounting firms businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:27.800Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "ryan.jones@rpjonescpa.com",
+    "name": "RP Jones, CPA, P.C.",
+    "email": "ryan.jones@rpjonescpa.com",
+    "industry": "accounting firms",
+    "subject": "Re: Quick question for RP Jones, CPA, P.C.",
+    "body": "Howdy RP,\n\nJust wanted to follow up on my previous email — we help accounting firms businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:30.834Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "csupport@gettia.com",
+    "name": "TIA- Texas Insurance Agency",
+    "email": "csupport@gettia.com",
+    "industry": "insurance agencies",
+    "subject": "Re: Quick question for TIA- Texas Insurance Agency",
+    "body": "Howdy TIA-,\n\nJust wanted to follow up on my previous email — we help insurance agencies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:33.869Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "pagamenosinsurance@yahoo.com",
+    "name": "Paga-Menos Insurance",
+    "email": "pagamenosinsurance@yahoo.com",
+    "industry": "insurance agencies",
+    "subject": "Re: Quick question for Paga-Menos Insurance",
+    "body": "Howdy Paga-Menos,\n\nJust wanted to follow up on my previous email — we help insurance agencies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:36.901Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "linda@myinsurancebrokerage.net",
+    "name": "Linda Meyer Insurance Brokerage",
+    "email": "linda@myinsurancebrokerage.net",
+    "industry": "insurance agencies",
+    "subject": "Re: Quick question for Linda Meyer Insurance Brokerage",
+    "body": "Howdy Linda,\n\nJust wanted to follow up on my previous email — we help insurance agencies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:39.938Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@mossroofinghouston.com",
+    "name": "Moss Roofing Houston",
+    "email": "info@mossroofinghouston.com",
+    "industry": "roofing companies",
+    "subject": "Re: Quick question for Moss Roofing Houston",
+    "body": "Howdy Moss,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:42.973Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "sales@houstonroofingexperts.com",
+    "name": "Houston Roofing Experts",
+    "email": "sales@houstonroofingexperts.com",
+    "industry": "roofing companies",
+    "subject": "Re: Quick question for Houston Roofing Experts",
+    "body": "Howdy Houston,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:46.009Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "hello@trueworksroofing.com",
+    "name": "TrueWorks Roofing",
+    "email": "hello@trueworksroofing.com",
+    "industry": "roofing companies",
+    "subject": "Re: Quick question for TrueWorks Roofing",
+    "body": "Howdy TrueWorks,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Houston get more clients through automated AI outreach.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-14",
+    "time": "2026-07-14T15:04:49.040Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
