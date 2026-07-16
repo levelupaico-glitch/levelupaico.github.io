@@ -14,8 +14,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-16T16:04:55.386Z"
   },
   {
     "type": "new",
@@ -32,8 +33,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-16T16:04:58.424Z"
   },
   {
     "type": "new",
@@ -50,8 +52,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-07-16T16:05:01.456Z"
   },
   {
     "type": "new",
@@ -160,5 +163,50 @@
     "status": "sent",
     "followedUp1": false,
     "followedUp2": false
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@rampartroofing.com",
+    "name": "Rampart Roofing & Exteriors",
+    "email": "info@rampartroofing.com",
+    "industry": "roofing companies",
+    "subject": "Re: Quick question for Rampart Roofing & Exteriors",
+    "body": "Howdy Rampart,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach.\n\nJulia\nLevelUpAI",
+    "date": "2026-07-16",
+    "time": "2026-07-16T16:04:55.386Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@cheyennemtnroofing.com",
+    "name": "Cheyenne Mountain Roofing - Colorado Springs Roof Repair & Replacement",
+    "email": "info@cheyennemtnroofing.com",
+    "industry": "roofing companies",
+    "subject": "Re: Quick question for Cheyenne Mountain Roofing - Colorado Springs Roof Repair & Replacement",
+    "body": "Howdy Cheyenne,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach.\n\nJulia\nLevelUpAI",
+    "date": "2026-07-16",
+    "time": "2026-07-16T16:04:58.424Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@homesteadroofingcolorado.com",
+    "name": "Homestead Roofing - Colorado Springs",
+    "email": "info@homesteadroofingcolorado.com",
+    "industry": "roofing companies",
+    "subject": "Re: Quick question for Homestead Roofing - Colorado Springs",
+    "body": "Howdy Homestead,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach.\n\nJulia\nLevelUpAI",
+    "date": "2026-07-16",
+    "time": "2026-07-16T16:05:01.456Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
   }
 ]
