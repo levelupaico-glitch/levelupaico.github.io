@@ -15,8 +15,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-16T16:04:55.386Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-16T16:04:55.386Z",
+    "followUp2Date": "2026-07-20T16:02:20.241Z"
   },
   {
     "type": "new",
@@ -34,8 +35,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-16T16:04:58.424Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-16T16:04:58.424Z",
+    "followUp2Date": "2026-07-20T16:02:23.272Z"
   },
   {
     "type": "new",
@@ -53,8 +55,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-16T16:05:01.456Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-16T16:05:01.456Z",
+    "followUp2Date": "2026-07-20T16:02:26.305Z"
   },
   {
     "type": "new",
@@ -204,6 +207,51 @@
     "body": "Howdy Homestead,\n\nJust wanted to follow up on my previous email — we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach.\n\nJulia\nLevelUpAI",
     "date": "2026-07-16",
     "time": "2026-07-16T16:05:01.456Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "info@rampartroofing.com",
+    "name": "Rampart Roofing & Exteriors",
+    "email": "info@rampartroofing.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Rampart Roofing & Exteriors and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nJulia\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T16:02:20.241Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "info@cheyennemtnroofing.com",
+    "name": "Cheyenne Mountain Roofing - Colorado Springs Roof Repair & Replacement",
+    "email": "info@cheyennemtnroofing.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Cheyenne Mountain Roofing - Colorado Springs Roof Repair & Replacement and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nJulia\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T16:02:23.272Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "info@homesteadroofingcolorado.com",
+    "name": "Homestead Roofing - Colorado Springs",
+    "email": "info@homesteadroofingcolorado.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Homestead Roofing - Colorado Springs and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses in Colorado Springs get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nJulia\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T16:02:26.305Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
