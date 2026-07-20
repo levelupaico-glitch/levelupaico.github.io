@@ -347,8 +347,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:27.800Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:27.800Z",
+    "followUp2Date": "2026-07-20T15:04:59.146Z"
   },
   {
     "name": "RP Jones, CPA, P.C.",
@@ -362,8 +363,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:30.834Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:30.834Z",
+    "followUp2Date": "2026-07-20T15:05:02.188Z"
   },
   {
     "name": "TIA- Texas Insurance Agency",
@@ -377,8 +379,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:33.869Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:33.869Z",
+    "followUp2Date": "2026-07-20T15:05:05.222Z"
   },
   {
     "name": "Paga-Menos Insurance",
@@ -392,8 +395,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:36.901Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:36.901Z",
+    "followUp2Date": "2026-07-20T15:05:08.264Z"
   },
   {
     "name": "Linda Meyer Insurance Brokerage",
@@ -407,8 +411,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:39.938Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:39.938Z",
+    "followUp2Date": "2026-07-20T15:05:11.299Z"
   },
   {
     "name": "Moss Roofing Houston",
@@ -422,8 +427,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:42.973Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:42.973Z",
+    "followUp2Date": "2026-07-20T15:05:14.333Z"
   },
   {
     "name": "Houston Roofing Experts",
@@ -437,8 +443,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:46.009Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:46.009Z",
+    "followUp2Date": "2026-07-20T15:05:17.367Z"
   },
   {
     "name": "TrueWorks Roofing",
@@ -452,8 +459,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-14T15:04:49.040Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-14T15:04:49.040Z",
+    "followUp2Date": "2026-07-20T15:05:20.401Z"
   },
   {
     "name": "Top Roofing LLC",
@@ -467,8 +475,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-15T15:02:03.263Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-15T15:02:03.263Z",
+    "followUp2Date": "2026-07-20T15:05:23.439Z"
   },
   {
     "name": "Innpreccon Roofing, LLC",
@@ -482,8 +491,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-15T15:02:06.296Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-15T15:02:06.296Z",
+    "followUp2Date": "2026-07-20T15:05:26.474Z"
   },
   {
     "name": "Ace Comfort Air Conditioning & Heating",
@@ -1150,5 +1160,155 @@
     "status": "sent",
     "followedUp1": false,
     "followedUp2": false
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "brian@texasaccountingfirm.com",
+    "name": "Texas Accounting Firm - Standlee & Bleifeld CPAs PLLC",
+    "email": "brian@texasaccountingfirm.com",
+    "industry": "accounting firms",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Texas Accounting Firm - Standlee & Bleifeld CPAs PLLC and won't follow up again after this.\n\nIf that changes, we help accounting firms businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:04:59.146Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "ryan.jones@rpjonescpa.com",
+    "name": "RP Jones, CPA, P.C.",
+    "email": "ryan.jones@rpjonescpa.com",
+    "industry": "accounting firms",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for RP Jones, CPA, P.C. and won't follow up again after this.\n\nIf that changes, we help accounting firms businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:02.188Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "csupport@gettia.com",
+    "name": "TIA- Texas Insurance Agency",
+    "email": "csupport@gettia.com",
+    "industry": "insurance agencies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for TIA- Texas Insurance Agency and won't follow up again after this.\n\nIf that changes, we help insurance agencies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:05.222Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "pagamenosinsurance@yahoo.com",
+    "name": "Paga-Menos Insurance",
+    "email": "pagamenosinsurance@yahoo.com",
+    "industry": "insurance agencies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Paga-Menos Insurance and won't follow up again after this.\n\nIf that changes, we help insurance agencies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:08.264Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "linda@myinsurancebrokerage.net",
+    "name": "Linda Meyer Insurance Brokerage",
+    "email": "linda@myinsurancebrokerage.net",
+    "industry": "insurance agencies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Linda Meyer Insurance Brokerage and won't follow up again after this.\n\nIf that changes, we help insurance agencies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:11.299Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "info@mossroofinghouston.com",
+    "name": "Moss Roofing Houston",
+    "email": "info@mossroofinghouston.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Moss Roofing Houston and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:14.333Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "sales@houstonroofingexperts.com",
+    "name": "Houston Roofing Experts",
+    "email": "sales@houstonroofingexperts.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Houston Roofing Experts and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:17.367Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "hello@trueworksroofing.com",
+    "name": "TrueWorks Roofing",
+    "email": "hello@trueworksroofing.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for TrueWorks Roofing and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:20.401Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "info@toproofingtx.com",
+    "name": "Top Roofing LLC",
+    "email": "info@toproofingtx.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Top Roofing LLC and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:23.439Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "example@mysite.com",
+    "name": "Innpreccon Roofing, LLC",
+    "email": "example@mysite.com",
+    "industry": "roofing companies",
+    "subject": "Last follow-up — LevelUpAI",
+    "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Innpreccon Roofing, LLC and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
+    "date": "2026-07-20",
+    "time": "2026-07-20T15:05:26.474Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
   }
 ]
