@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Building — LevelUpAI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --white:#ffffff;--off-white:#f8f7f4;--black:#0d0d0d;
+  --gray-100:#f1f0ec;--gray-200:#e3e1da;--gray-400:#9a9890;--gray-600:#5c5a55;
+  --blue:#1a4fe0;--blue-light:#eaedff;--blue-mid:#4169e8;--accent:#0f3db5;
+}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-200);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--black);text-decoration:none;letter-spacing:-0.02em;display:flex;align-items:center;gap:0.5rem}
+.nav-logo-dot{width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block}
+.nav-links{display:flex;gap:2rem;align-items:center}
+.nav-links a{font-size:0.875rem;font-weight:400;color:var(--gray-600);text-decoration:none;transition:color 0.2s}
+.nav-links a:hover{color:var(--black)}
+.nav-links a.active{color:var(--black);font-weight:500}
+.nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem;border-radius:6px;font-weight:500!important;transition:background 0.2s!important}
+.nav-cta:hover{background:var(--accent)!important}
+
+.hero{padding:130px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.5rem}
+.hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.5rem}
+.hero h1 em{font-style:italic;color:var(--blue)}
+.hero-sub{font-size:1.05rem;color:var(--gray-600);line-height:1.75;margin-bottom:2.5rem;font-weight:300}
+.hero-buttons{display:flex;gap:1rem;flex-wrap:wrap}
+.btn-primary{background:var(--blue);color:var(--white);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block}
+.btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
+.btn-secondary{background:transparent;color:var(--black);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:1.5px solid var(--gray-200);cursor:pointer;transition:border-color 0.2s,transform 0.15s;display:inline-block}
+.btn-secondary:hover{border-color:var(--gray-600);transform:translateY(-1px)}
+
+.browser-frame{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;box-shadow:0 4px 30px rgba(26,79,224,0.08)}
+.browser-bar{background:var(--gray-100);padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--gray-200)}
+.browser-dot{width:8px;height:8px;border-radius:50%}
+.browser-tag{margin-left:auto;font-size:0.65rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.15rem 0.6rem;border-radius:100px;background:var(--blue-light);color:var(--blue)}
+.mock-after-body{padding:1.25rem;background:var(--white)}
+.mock-after-hero{background:var(--blue);border-radius:8px;padding:1.25rem;margin-bottom:0.85rem}
+.mock-after-hero-line{height:11px;background:rgba(255,255,255,0.9);border-radius:3px;margin-bottom:0.6rem;width:75%}
+.mock-after-hero-line.short{width:45%;background:rgba(255,255,255,0.55)}
+.mock-after-hero-btn{background:var(--white);border-radius:5px;height:22px;width:100px;margin-top:0.5rem}
+.mock-after-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem}
+.mock-after-card{background:var(--off-white);border-radius:6px;height:60px}
+
+.stat-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+.stat-card{background:var(--off-white);border:1px solid var(--gray-200);border-radius:16px;padding:1.75rem 1.5rem}
+.stat-card-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--blue);line-height:1;margin-bottom:0.75rem}
+.stat-card-label{font-size:0.88rem;color:var(--black);line-height:1.5;margin-bottom:0.75rem;font-weight:400}
+.stat-card-source{font-size:0.72rem;color:var(--gray-400);font-weight:400}
+
+.compare-table{margin-top:3rem;background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;overflow:hidden}
+.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center}
+.compare-row.head{background:var(--black);color:var(--white)}
+.compare-row.us{background:var(--blue-light)}
+.compare-row + .compare-row{border-top:1px solid var(--gray-200)}
+.compare-cell{padding:1.1rem 1.5rem;font-size:0.9rem}
+.compare-row.head .compare-cell{font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
+.compare-cell.label{font-weight:500;color:var(--black)}
+.compare-row.us .compare-cell.label{color:var(--blue)}
+.compare-cell.val{color:var(--gray-600);font-weight:300}
+.compare-row.us .compare-cell.val{color:var(--black);font-weight:500}
+
+section{padding:5rem 2rem}
+.container{max-width:1100px;margin:0 auto}
+.section-eyebrow{font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--blue);margin-bottom:1rem}
+.section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.75rem,3.5vw,2.75rem);line-height:1.15;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.25rem}
+.section-sub{font-size:1.05rem;color:var(--gray-600);font-weight:300;line-height:1.7;max-width:560px}
+
+.how{background:var(--off-white)}
+.how-header{margin-bottom:3.5rem}
+.steps{display:flex;flex-direction:column;gap:0}
+.step{display:grid;grid-template-columns:56px 1fr;gap:1.75rem;align-items:start;padding:2rem 0;border-bottom:1px solid var(--gray-200)}
+.step:last-child{border-bottom:none}
+.step-icon-wrap{width:52px;height:52px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;margin-top:0.2rem}
+.step-content h3{font-size:1.15rem;font-weight:600;color:var(--black);margin-bottom:0.4rem;margin-top:0.2rem}
+.step-content p{font-size:0.95rem;color:var(--gray-600);line-height:1.7;font-weight:300}
+.step-badge{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.4rem}
+
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;transition:transform 0.2s,box-shadow 0.2s}
+.pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,79,224,0.1)}
+.pricing-card.featured{border-color:var(--blue);background:var(--black);color:var(--white)}
+.pricing-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:100px;white-space:nowrap}
+.pricing-plan{font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:0.5rem}
+.pricing-card.featured .pricing-plan{color:#6b8fff}
+.pricing-price{font-family:'DM Serif Display',serif;font-size:2.75rem;color:var(--black);line-height:1;margin-bottom:0.25rem}
+.pricing-card.featured .pricing-price{color:var(--white)}
+.pricing-period{font-size:0.85rem;color:var(--gray-400);margin-bottom:0.5rem}
+.pricing-setup{font-size:0.85rem;color:var(--gray-600);margin-bottom:1.5rem;padding-bottom:1.5rem;border-bottom:1px solid var(--gray-200)}
+.pricing-card.featured .pricing-setup{color:rgba(255,255,255,0.45);border-color:rgba(255,255,255,0.1)}
+.pricing-features{list-style:none;display:flex;flex-direction:column;gap:0.75rem;margin-bottom:2rem}
+.pricing-features li{font-size:0.9rem;color:var(--gray-600);display:flex;gap:0.65rem;align-items:flex-start}
+.pricing-card.featured .pricing-features li{color:rgba(255,255,255,0.7)}
+.pricing-features li::before{content:'✓';color:var(--blue);font-weight:700;flex-shrink:0;margin-top:0.1rem}
+.pricing-card.featured .pricing-features li::before{color:#6b8fff}
+.pricing-btn{display:block;width:100%;text-align:center;padding:0.85rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;background:var(--blue);color:var(--white);transition:background 0.2s;cursor:pointer;border:none;font-family:'DM Sans',sans-serif}
+.pricing-btn:hover{background:var(--accent)}
+.pricing-card:not(.featured) .pricing-btn{background:var(--off-white);color:var(--black);border:1.5px solid var(--gray-200)}
+.pricing-card:not(.featured) .pricing-btn:hover{background:var(--gray-100)}
+
+.contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-form-wrap{background:var(--white);border:1px solid var(--gray-200);border-radius:20px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,0.04)}
+.form-group{margin-bottom:1.25rem}
+label{display:block;font-size:0.85rem;font-weight:500;color:var(--black);margin-bottom:0.4rem}
+input,textarea,select{width:100%;padding:0.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.95rem;color:var(--black);background:var(--white);outline:none;transition:border-color 0.2s}
+input:focus,textarea:focus,select:focus{border-color:var(--blue)}
+textarea{resize:vertical;min-height:120px}
+select{appearance:none;cursor:pointer}
+.form-submit{width:100%;padding:0.9rem;background:var(--blue);color:var(--white);border:none;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:1rem;font-weight:500;cursor:pointer;transition:background 0.2s,transform 0.15s;margin-top:0.5rem}
+.form-submit:hover{background:var(--accent);transform:translateY(-1px)}
+.contact-info-side{padding-top:0.5rem}
+.contact-info-side h3{font-family:'DM Serif Display',serif;font-size:1.9rem;line-height:1.2;margin-bottom:1rem;letter-spacing:-0.02em}
+.contact-info-side p{color:var(--gray-600);font-weight:300;line-height:1.7;margin-bottom:2rem}
+.contact-details{display:flex;flex-direction:column;gap:1rem}
+.contact-detail{display:flex;gap:0.75rem;align-items:flex-start}
+.contact-icon{width:40px;height:40px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-detail-label{font-size:0.72rem;color:var(--gray-400);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
+.contact-detail-val{color:var(--black);font-weight:400;font-size:0.9rem}
+
+footer{background:var(--black);color:rgba(255,255,255,0.4);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.footer-logo{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
+footer p{font-size:0.8rem}
+
+@media(max-width:768px){
+  .stat-cards-grid{grid-template-columns:1fr 1fr}
+  .compare-row{grid-template-columns:1.2fr 1fr 1fr;font-size:0.85rem}
+  .compare-cell{padding:0.85rem 0.75rem}
+  .hero{grid-template-columns:1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .contact-inner{grid-template-columns:1fr}
+  .nav-links{display:none}
+  .mock-after-grid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>LevelUpAI</a>
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="website-building.html" class="active">Website Building</a>
+    <a href="email-outreach.html">AI Email Outreach</a>
+    <a href="#contact" class="nav-cta">Get started</a>
+  </div>
+</nav>
+
+<section>
+  <div class="hero">
+    <div>
+      <span class="hero-eyebrow">🖥️ Website Building</span>
+      <h1>Your business deserves a website that <em>works as hard as you do</em></h1>
+      <p class="hero-sub">No website, or one that hasn't been touched in years? We design and build a clean, modern site that loads fast, looks great on phones, and gives customers a reason to trust you before they even call.</p>
+      <div class="hero-buttons">
+        <a href="#contact" class="btn-primary">Start my website</a>
+        <a href="#pricing" class="btn-secondary">See pricing →</a>
+      </div>
+    </div>
+    <div class="browser-frame">
+      <div class="browser-bar">
+        <span class="browser-dot" style="background:#ff5f57"></span>
+        <span class="browser-dot" style="background:#ffbd2e"></span>
+        <span class="browser-dot" style="background:#28c840"></span>
+        <span class="browser-tag">Your new site</span>
+      </div>
+      <div class="mock-after-body">
+        <div class="mock-after-hero">
+          <div class="mock-after-hero-line"></div>
+          <div class="mock-after-hero-line short"></div>
+          <div class="mock-after-hero-btn"></div>
+        </div>
+        <div class="mock-after-grid">
+          <div class="mock-after-card"></div>
+          <div class="mock-after-card"></div>
+          <div class="mock-after-card"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div>
+      <div class="section-eyebrow">Why it matters</div>
+      <h2 class="section-title">A good website isn't decoration — it's revenue</h2>
+      <p class="section-sub">Real research on how a website affects trust and sales for small businesses.</p>
+    </div>
+    <div class="stat-cards-grid">
+      <div class="stat-card">
+        <div class="stat-card-num">2.8x</div>
+        <p class="stat-card-label">Small businesses with a website are 2.8 times more likely to grow their revenue.</p>
+        <span class="stat-card-source">Google/Deloitte study of 4,500+ small businesses</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">40%</div>
+        <p class="stat-card-label">Small businesses with a website grow revenue 40% faster than those without one.</p>
+        <span class="stat-card-source">Verisign</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">75%</div>
+        <p class="stat-card-label">Of consumers judge a business's credibility based on its website design alone.</p>
+        <span class="stat-card-source">Zippia / Stanford Web Credibility research</span>
+      </div>
+      <div class="stat-card">
+        <div class="stat-card-num">62%</div>
+        <p class="stat-card-label">Of customers will simply ignore a business that has no website at all.</p>
+        <span class="stat-card-source">Network Solutions, 2026</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <div class="container">
+    <div class="how-header">
+      <div class="section-eyebrow">How it works</div>
+      <h2 class="section-title">From first call to<br>live website</h2>
+      <p class="section-sub">A straightforward process, start to finish — no jargon, no surprises.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="step-icon-wrap">💬</div>
+        <div class="step-content">
+          <span class="step-badge">Discovery</span>
+          <h3>We learn about your business</h3>
+          <p>A short call to understand what you do, who your customers are, and what you want the site to accomplish.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">🎨</div>
+        <div class="step-content">
+          <span class="step-badge">Design</span>
+          <h3>We design it around you</h3>
+          <p>A clean, modern layout built for your brand and your industry — not a generic template.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">🛠️</div>
+        <div class="step-content">
+          <span class="step-badge">Build</span>
+          <h3>We build and you review</h3>
+          <p>We build the real site, share it with you for feedback, and make revisions until it's right.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">🚀</div>
+        <div class="step-content">
+          <span class="step-badge">Launch</span>
+          <h3>We launch it live</h3>
+          <p>Your site goes live on your domain, fully mobile-friendly and ready to bring in customers.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-icon-wrap">🔧</div>
+        <div class="step-content">
+          <span class="step-badge">Ongoing</span>
+          <h3>We keep it running</h3>
+          <p>Hosting, updates, and small changes are handled for you every month — you never have to think about it.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="container">
+    <div>
+      <div class="section-eyebrow">Pricing</div>
+      <h2 class="section-title">Simple, transparent pricing</h2>
+      <p class="section-sub">One-time build fee, plus simple monthly hosting and maintenance. No contracts, cancel any time.</p>
+    </div>
+    <div class="compare-table">
+      <div class="compare-row head">
+        <div class="compare-cell label">Option</div>
+        <div class="compare-cell val">Build cost</div>
+        <div class="compare-cell val">Monthly cost</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Freelance designer</div>
+        <div class="compare-cell val">$500 – $8,000</div>
+        <div class="compare-cell val">$50 – $200/mo</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Web design agency</div>
+        <div class="compare-cell val">$2,500 – $15,000+</div>
+        <div class="compare-cell val">$100 – $300/mo</div>
+      </div>
+      <div class="compare-row">
+        <div class="compare-cell label">Subscription website services</div>
+        <div class="compare-cell val">$0 – $300</div>
+        <div class="compare-cell val">$225 – $499/mo</div>
+      </div>
+      <div class="compare-row us">
+        <div class="compare-cell label">LevelUpAI</div>
+        <div class="compare-cell val">$250 – $400</div>
+        <div class="compare-cell val">$50 – $65/mo</div>
+      </div>
+    </div>
+    <p style="font-size:0.8rem;color:var(--gray-400);margin-top:0.75rem;font-weight:300">Market ranges based on 2026 industry pricing research (GruffyGoat, Leadpages, OneLittleWeb, Elementor).</p>
+  </div>
+</section>
+
+<section class="pricing icons-bg" id="pricing" style="padding-top:0">
+  <div class="container">
+    <div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <div class="pricing-plan">Starter</div>
+        <div class="pricing-price">$250</div>
+        <div class="pricing-period">one-time build</div>
+        <div class="pricing-setup">+ $50/month hosting &amp; maintenance &nbsp;·&nbsp; up to 3 pages</div>
+        <ul class="pricing-features">
+          <li>Custom-designed, mobile-friendly site</li>
+          <li>Up to 3 pages (Home, Services, Contact)</li>
+          <li>Contact form connected to your email</li>
+          <li>Basic local SEO setup</li>
+          <li>One round of revisions before launch</li>
+          <li>Hosting &amp; security updates included</li>
+          <li>Small text/photo updates, 1 request per month</li>
+          <li>2-week typical turnaround</li>
+        </ul>
+        <a href="#contact" class="pricing-btn">Get started</a>
+      </div>
+      <div class="pricing-card featured">
+        <div class="pricing-tag">Most popular</div>
+        <div class="pricing-plan">Growth</div>
+        <div class="pricing-price">$400</div>
+        <div class="pricing-period">one-time build</div>
+        <div class="pricing-setup">+ $65/month hosting &amp; maintenance &nbsp;·&nbsp; up to 8 pages</div>
+        <ul class="pricing-features">
+          <li>Custom-designed, mobile-friendly site</li>
+          <li>Up to 8 pages, including a blog/updates section</li>
+          <li>Contact form + booking/quote request form</li>
+          <li>Advanced local SEO setup</li>
+          <li>Two rounds of revisions before launch</li>
+          <li>Hosting &amp; security updates included</li>
+          <li>Small text/photo updates, up to 3 requests per month</li>
+          <li>Priority support &amp; 1-week typical turnaround</li>
+        </ul>
+        <a href="#contact" class="pricing-btn">Get started</a>
+      </div>
+    </div>
+    <p style="font-size:0.85rem;color:var(--gray-600);margin-top:1.5rem;font-weight:300">Domain name not included (~$12/year) — you own it, and we help you connect it. Need more pages or extra work beyond the monthly allowance? We'll quote it separately, no surprise fees.</p>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--off-white)">
+  <div class="container">
+    <div class="contact-inner">
+      <div class="contact-info-side">
+        <div class="section-eyebrow">Contact</div>
+        <h3>Ready for a website<br>that works?</h3>
+        <p>Fill out the form and we'll get back to you within 24 hours to talk through what you need.</p>
+        <div class="contact-details">
+          <div class="contact-detail">
+            <div class="contact-icon">📧</div>
+            <div>
+              <div class="contact-detail-label">Email</div>
+              <div class="contact-detail-val">daniel@levelupaico.com</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-detail-label">Phone</div>
+              <div class="contact-detail-val">(832) 356-9373</div>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-detail-label">Location</div>
+              <div class="contact-detail-val">Houston, Texas</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <form action="https://formspree.io/f/mrewyvdz" method="POST">
+          <input type="hidden" name="service" value="Website Building">
+          <div class="form-group">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" placeholder="John Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" id="email" name="email" placeholder="john@yourbusiness.com" required>
+          </div>
+          <div class="form-group">
+            <label for="business">Business type</label>
+            <select id="business" name="business">
+              <option value="">Select your industry...</option>
+              <option>Roofing</option><option>HVAC</option><option>Plumbing</option>
+              <option>General Contractor</option><option>Landscaping</option>
+              <option>Commercial Cleaning</option><option>Accounting</option>
+              <option>Insurance</option><option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="plan">Plan interest</label>
+            <select id="plan" name="plan">
+              <option value="">Select a plan...</option>
+              <option>Starter – $250 + $50/month (up to 3 pages)</option>
+              <option>Growth – $400 + $65/month (up to 8 pages)</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="site-status">Current website status</label>
+            <select id="site-status" name="site-status">
+              <option value="">Select one...</option>
+              <option>I don't have a website</option>
+              <option>My website is outdated</option>
+              <option>Not sure / need advice</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Tell us about your business</label>
+            <textarea id="message" name="message" placeholder="What would you like your website to do for you?"></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send message →</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <a href="index.html" class="footer-logo"><span style="width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block"></span>LevelUpAI</a>
+  <p>© 2026 LevelUpAI Co. Houston, Texas.</p>
+  <p style="font-size:0.75rem">Websites &amp; AI-powered outreach for small businesses.</p>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = "Message sent! We'll be in touch soon. ✓";
+  btn.style.background = '#16a34a';
+  btn.disabled = true;
+}
+</script>
+</body>
+</html>
