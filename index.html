@@ -19,11 +19,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black)
 
 .skyline-bg{position:relative;overflow:hidden}
 .skyline-svg{position:absolute;bottom:0;left:0;right:0;width:100%;pointer-events:none;opacity:0.045;z-index:0}
-.skyline-bg > *:not(.skyline-svg){position:relative;z-index:1}
+.skyline-photo{position:absolute;bottom:0;left:0;right:0;width:100%;height:800px;object-fit:cover;object-position:center 30%;pointer-events:none;opacity:1;z-index:0;mask-image:linear-gradient(180deg,transparent,black 20%);-webkit-mask-image:linear-gradient(180deg,transparent,black 20%)}
+.skyline-bg > *:not(.skyline-svg):not(.skyline-photo){position:relative;z-index:1}
 
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-200);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--black);text-decoration:none;letter-spacing:-0.02em;display:flex;align-items:center;gap:0.5rem}
 .nav-logo-dot{width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block}
+.nav-logo-icon{width:22px;height:22px;object-fit:contain;display:inline-block}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-size:0.875rem;font-weight:400;color:var(--gray-600);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--black)}
@@ -32,39 +34,88 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-cta:hover{background:var(--accent)!important}
 
 .hero{padding:130px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+
+.industry-marquee{width:100%;overflow:hidden;padding:1.5rem 0;background:var(--off-white);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200)}
+.industry-marquee-track{display:flex;gap:1rem;animation:marquee 100s linear infinite;width:max-content}
+.industry-marquee:hover .industry-marquee-track{animation-play-state:paused}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.marquee-card{position:relative;width:280px;height:180px;border-radius:14px;overflow:hidden;flex-shrink:0;box-shadow:0 3px 14px rgba(0,0,0,0.08)}
+.marquee-card img{width:100%;height:100%;object-fit:cover}
+.marquee-card-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,0.72) 100%);display:flex;align-items:flex-end;padding:0.85rem}
+.marquee-card-label{color:var(--white);font-size:0.88rem;font-weight:600}
+
+.hero{padding:105px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.5rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.5rem}
 .hero h1 em{font-style:italic;color:var(--blue)}
-.hero-sub{font-size:1.05rem;color:var(--gray-600);line-height:1.75;margin-bottom:2.5rem;font-weight:300}
+.hero-sub{font-size:1.05rem;color:var(--white);line-height:1.75;margin-bottom:2.5rem;font-weight:300}
 .hero-buttons{display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{background:var(--blue);color:var(--white);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:none;cursor:pointer;transition:background 0.2s,transform 0.15s;display:inline-block}
 .btn-primary:hover{background:var(--accent);transform:translateY(-1px)}
-.btn-secondary{background:transparent;color:var(--black);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:1.5px solid var(--gray-200);cursor:pointer;transition:border-color 0.2s,transform 0.15s;display:inline-block}
+.btn-secondary{background:var(--white);color:var(--black);padding:0.85rem 2rem;border-radius:8px;font-size:0.95rem;font-weight:500;text-decoration:none;border:1.5px solid var(--gray-200);cursor:pointer;transition:border-color 0.2s,transform 0.15s;display:inline-block}
 .btn-secondary:hover{border-color:var(--gray-600);transform:translateY(-1px)}
 
 /* Before/after browser mockup */
-.mockup-pair{position:relative;display:flex;flex-direction:column;gap:1.25rem}
-.browser-frame{background:var(--white);border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;box-shadow:0 4px 30px rgba(26,79,224,0.08)}
-.browser-bar{background:var(--gray-100);padding:0.6rem 0.9rem;display:flex;align-items:center;gap:0.4rem;border-bottom:1px solid var(--gray-200)}
-.browser-dot{width:8px;height:8px;border-radius:50%}
-.browser-tag{margin-left:auto;font-size:0.65rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.15rem 0.6rem;border-radius:100px}
-.browser-tag.before{background:#fde8e8;color:#c0392b}
-.browser-tag.after{background:var(--blue-light);color:var(--blue)}
-.mock-before-body{padding:1.1rem;font-family:Georgia,serif;background:#fffef7}
-.mock-before-title{font-size:1.1rem;font-weight:700;color:#333;margin-bottom:0.5rem}
-.mock-before-line{height:8px;background:#ddd;border-radius:2px;margin-bottom:0.5rem}
-.mock-before-line.short{width:60%}
-.mock-after-body{padding:1.1rem;background:var(--white)}
-.mock-after-hero{background:var(--blue);border-radius:8px;padding:1.1rem;margin-bottom:0.75rem}
-.mock-after-hero-line{height:10px;background:rgba(255,255,255,0.85);border-radius:3px;margin-bottom:0.5rem;width:70%}
-.mock-after-hero-line.short{width:40%;background:rgba(255,255,255,0.5)}
-.mock-after-grid{display:grid;grid-template-columns:1fr 1fr;gap:0.5rem}
-.mock-after-card{background:var(--off-white);border-radius:6px;height:36px}
+.compare-wrap{display:flex;flex-direction:column;align-items:center;gap:0.85rem}
+.compare-slider{position:relative;width:100%;max-width:460px;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:0 12px 50px rgba(26,79,224,0.16);border:1px solid var(--gray-200);cursor:ew-resize;user-select:none}
+.compare-layer{position:absolute;inset:0;padding:1.5rem;overflow:hidden}
+.compare-before{background:#fffef7}
+.compare-after{background:var(--white);clip-path:inset(0 100% 0 0);transition:clip-path 0.5s ease;position:relative;overflow:hidden}
+.compare-slider.no-transition .compare-after{transition:none}
+.compare-after-blob{position:absolute;top:0;bottom:0;width:45%;pointer-events:none;z-index:0}
+.compare-after-blob-1{right:0;background:linear-gradient(270deg,rgba(26,79,224,0.42),rgba(26,79,224,0.14) 60%,transparent 100%)}
+.compare-after-blob-2{left:0;background:linear-gradient(90deg,rgba(26,79,224,0.42),rgba(26,79,224,0.14) 60%,transparent 100%)}
+.compare-after > *:not(.compare-after-blob){position:relative;z-index:1}
+.compare-handle{position:absolute;top:0;bottom:0;left:0%;width:3px;background:var(--white);box-shadow:0 0 0 1px rgba(0,0,0,0.08);transform:translateX(-50%);transition:left 0.5s ease;pointer-events:none;z-index:2}
+.compare-slider.no-transition .compare-handle{transition:none}
+.compare-handle-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:var(--white);border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:var(--blue)}
+.compare-tag{position:absolute;top:1rem;font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:100px;z-index:1}
+.compare-tag-before{left:1rem;background:#fde8e8;color:#c0392b}
+.compare-tag-after{right:1rem;background:var(--blue-light);color:var(--blue)}
+.compare-hint{font-size:0.8rem;color:var(--white);font-weight:300}
 
-.stats-bar{background:var(--gray-100);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:2rem}
-.stats-bar-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.mock-before-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:0.6rem;margin-bottom:0.7rem;border-bottom:1px solid #ddd}
+.mock-before-logo{font-family:Georgia,serif;font-size:0.85rem;font-weight:700;color:#333}
+.mock-before-nav-links{display:flex;gap:0.5rem;font-size:0.6rem;color:#555;font-family:Georgia,serif}
+.mock-before-title{font-family:Georgia,serif;font-size:1rem;font-weight:700;color:#333;margin-bottom:0.6rem}
+.mock-before-line{height:9px;background:#ddd;border-radius:2px;margin-bottom:0.6rem}
+.mock-before-line.short{width:60%}
+.mock-after-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:0.7rem;margin-bottom:0.7rem}
+.mock-after-logo{font-family:'DM Serif Display',serif;font-size:0.9rem;font-weight:700;color:var(--black);display:flex;align-items:center;gap:0.3rem}
+.mock-after-logo-dot{width:5px;height:5px;background:var(--blue);border-radius:50%;display:inline-block}
+.mock-after-nav-btn{background:var(--blue);color:var(--white);font-size:0.55rem;font-weight:600;padding:0.25rem 0.6rem;border-radius:5px}
+.mock-after-hero-photo{position:relative;border-radius:12px;overflow:hidden;height:180px;border:1px solid rgba(0,0,0,0.1);box-shadow:0 2px 4px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.22)}
+.mock-after-hero-photo img{width:100%;height:100%;object-fit:cover}
+.mock-after-hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,0.1),rgba(13,13,13,0.75));display:flex;flex-direction:column;justify-content:flex-end;padding:0.9rem}
+.mock-after-top-section{background:var(--white);position:relative;z-index:1;margin:-1.5rem -1.5rem 0.9rem;padding:1.5rem 1.5rem 0.9rem;border-bottom:1px solid var(--gray-200)}
+.mock-after-caption{font-size:0.6rem;color:var(--gray-400);text-align:center;margin-top:0.5rem;font-weight:300;letter-spacing:0.02em}
+.mock-after-hero-headline{font-family:'DM Serif Display',serif;color:var(--white);font-size:1.05rem;line-height:1.15;margin-bottom:0.2rem}
+.mock-after-hero-sub{color:rgba(255,255,255,0.8);font-size:0.68rem;margin-bottom:0.6rem}
+.mock-after-hero-btn{display:inline-block;background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:600;padding:0.4rem 0.8rem;border-radius:6px;width:fit-content}
+.mock-after-feature-row{display:flex;gap:0.5rem;margin-top:0.8rem}
+.mock-after-feature{flex:1;background:var(--off-white);border-radius:6px;padding:0.5rem 0.4rem;text-align:center}
+.mock-after-feature-icon{font-size:0.9rem;margin-bottom:0.2rem}
+.mock-after-feature-label{font-size:0.5rem;color:var(--gray-600);font-weight:500;line-height:1.2}
+.mock-after-badges-caption{font-size:0.58rem;color:var(--gray-400);text-align:center;margin-top:0.7rem;font-weight:300}
+.mock-after-badges-marquee{overflow:hidden;margin-top:0.5rem;-webkit-mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent)}
+.mock-after-badges-track{display:flex;gap:0.5rem;width:max-content;animation:badgesMarquee 18s linear infinite}
+@keyframes badgesMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.mock-after-badge{flex-shrink:0;position:relative;width:78px;height:58px;border-radius:8px;overflow:hidden}
+.mock-after-badge img{width:100%;height:100%;object-fit:cover}
+.mock-after-badge-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,0.75));display:flex;align-items:flex-end;padding:0.3rem}
+.mock-after-badge-label{color:var(--white);font-size:0.42rem;font-weight:600;line-height:1.15}
+.example-note{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.8rem;font-weight:500;padding:0.5rem 1rem;border-radius:100px;margin-top:1rem}
+.example-note-dot{width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
+
+.stats-bar{background:radial-gradient(circle at 15% 20%,#1a2a5e 0%,transparent 45%),radial-gradient(circle at 85% 80%,#12204d 0%,transparent 50%),linear-gradient(135deg,#0a1230,#050a1c 60%,#0a1230);border-top:1px solid rgba(255,255,255,0.08);border-bottom:1px solid rgba(255,255,255,0.08);padding:2.5rem 2rem;position:relative;overflow:hidden}
+.stats-bar-inner{position:relative;z-index:1}
+.stats-bar-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;position:relative}
+.stats-bar-item{padding:1.1rem 0.75rem;border-radius:14px;cursor:default;transition:box-shadow 0.25s ease,transform 0.25s ease;position:relative;background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,0.06)}
+.stats-bar-item:hover{box-shadow:0 10px 28px rgba(26,79,224,0.14);transform:translateY(-2px)}
 .stats-bar-num{font-family:'DM Serif Display',serif;font-size:2.25rem;color:var(--blue);display:block;line-height:1}
 .stats-bar-label{font-size:0.85rem;color:var(--gray-600);margin-top:0.25rem;font-weight:300}
+.stats-bar-detail{max-height:0;overflow:hidden;opacity:0;transition:max-height 0.3s ease,opacity 0.25s ease,margin-top 0.3s ease;font-size:0.78rem;color:var(--gray-600);line-height:1.5;font-weight:300}
+.stats-bar-item:hover .stats-bar-detail{max-height:100px;opacity:1;margin-top:0.6rem}
 
 section{padding:5rem 2rem}
 .container{max-width:1100px;margin:0 auto}
@@ -72,19 +123,116 @@ section{padding:5rem 2rem}
 .section-title{font-family:'DM Serif Display',serif;font-size:clamp(1.75rem,3.5vw,2.75rem);line-height:1.15;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.25rem}
 .section-sub{font-size:1.05rem;color:var(--gray-600);font-weight:300;line-height:1.7;max-width:560px}
 
-.services{background:var(--off-white)}
-.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-.service-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;transition:transform 0.2s,box-shadow 0.2s;display:flex;flex-direction:column}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,79,224,0.1)}
-.service-icon{width:52px;height:52px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.5rem}
-.service-card h3{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:0.75rem;letter-spacing:-0.01em}
-.service-card p{color:var(--gray-600);font-weight:300;line-height:1.7;margin-bottom:1.5rem;flex-grow:1}
-.service-link{color:var(--blue);font-weight:500;text-decoration:none;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.4rem}
-.service-link:hover{gap:0.6rem}
-.service-more{background:var(--white);border:1.5px dashed var(--gray-200);border-radius:20px;padding:2.5rem;text-align:center;margin-top:1.5rem}
-.service-more p{color:var(--gray-600);font-weight:300;font-size:0.95rem}
+.industries{background:var(--off-white)}
+.industries-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-top:2.5rem}
+.industry-photo{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:3/4;box-shadow:0 4px 20px rgba(0,0,0,0.08)}
+.industry-photo img{width:100%;height:100%;object-fit:cover;transition:transform 0.5s ease}
+.industry-photo:hover img{transform:scale(1.08)}
+.industry-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 50%,rgba(0,0,0,0.7) 100%);display:flex;align-items:flex-end;padding:1rem}
+.industry-photo-label{color:var(--white);font-size:0.85rem;font-weight:600}
 
-footer{background:var(--black);color:rgba(255,255,255,0.4);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.services{background:var(--off-white);position:relative;overflow:hidden}
+.services-side-glow{position:absolute;top:0;bottom:0;width:42%;pointer-events:none;z-index:0}
+.services-side-glow-left{left:0;background:linear-gradient(90deg,rgba(26,79,224,0.42),rgba(26,79,224,0.15) 55%,transparent 100%)}
+.services-side-glow-right{right:0;background:linear-gradient(270deg,rgba(26,79,224,0.42),rgba(26,79,224,0.15) 55%,transparent 100%)}
+.services-blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.services-blob-3{width:340px;height:340px;background:radial-gradient(circle,rgba(244,180,0,0.16),transparent 70%);top:22%;left:6%}
+
+.services-anim{position:absolute;top:52%;left:50%;transform:translate(-50%,-50%);width:1250px;height:780px;pointer-events:none;z-index:0;opacity:0.2}
+.anim-scene{position:absolute;inset:0;opacity:0;transition:opacity 0.8s ease}
+.anim-scene.active{opacity:1}
+
+.anim-browser{background:var(--white);border-radius:16px;border:3px solid var(--blue);width:100%;height:100%;padding:1.5rem;box-sizing:border-box}
+.anim-browser-bar{display:flex;align-items:center;gap:6px;margin-bottom:1.2rem}
+.anim-browser-dot{width:12px;height:12px;border-radius:50%}
+.anim-browser-dot-1{background:#f4b400}
+.anim-browser-dot-2{background:var(--blue)}
+.anim-browser-dot-3{background:#f4b400}
+.anim-browser-nav{margin-left:auto;display:flex;gap:8px}
+.anim-nav-pill{width:34px;height:8px;border-radius:4px;background:var(--gray-200)}
+
+.anim-block{background:var(--blue);border-radius:8px;height:0;margin-bottom:1rem}
+.anim-block-1{width:0;height:26px}
+.anim-block-2{width:75%;height:0;background:#f4b400}
+.anim-block-3{display:flex;gap:0.8rem}
+.anim-block-4{width:40%;height:0;background:var(--blue);border-radius:100px}
+.anim-img-block{width:0;flex:1;height:70px;background:var(--gray-100);border:2px dashed #f4b400;border-radius:8px;opacity:0;transform:scale(0.85);transform-origin:center}
+.anim-img-block-2{background:var(--gray-100);border:2px dashed var(--blue)}
+
+.anim-scene.active .anim-block-1{animation:anim-grow-w 0.6s ease forwards 0.2s}
+.anim-scene.active .anim-block-2{animation:anim-grow-h 0.6s ease forwards 1.0s}
+.anim-scene.active .anim-img-block{animation:anim-pop-in 0.5s ease forwards 1.7s}
+.anim-scene.active .anim-block-4{animation:anim-grow-h-btn 0.6s ease forwards 2.5s}
+@keyframes anim-grow-w{from{width:0}to{width:55%}}
+@keyframes anim-grow-h{from{height:0}to{height:30px}}
+@keyframes anim-pop-in{from{opacity:0;transform:scale(0.85)}to{opacity:1;transform:scale(1);width:auto}}
+@keyframes anim-grow-h-btn{from{height:0}to{height:32px}}
+
+.anim-email{background:var(--white);border-radius:16px;border:3px solid var(--blue);width:100%;height:100%;padding:1.5rem;box-sizing:border-box;position:relative;overflow:hidden}
+.anim-email-header{display:flex;align-items:center;gap:0.6rem;margin-bottom:1.2rem;padding-bottom:0.8rem;border-bottom:1px solid var(--gray-200)}
+.anim-email-icon{font-size:1.4rem}
+.anim-email-header-lines{flex:1}
+.anim-email-label{font-size:0.6rem;color:var(--gray-400);margin-bottom:2px}
+.anim-email-to{background:#f4b400;border-radius:4px;height:8px;width:0}
+.anim-email-line{background:var(--gray-200);border-radius:4px;height:12px;margin-bottom:0.9rem;width:0}
+.anim-email-line-1{background:#f4b400}
+.anim-email-line-2{background:var(--blue-light);border:1px solid var(--blue)}
+.anim-scene.active .anim-email-to{animation:anim-type 0.5s ease forwards 0.2s}
+.anim-scene.active .anim-email-line-1{animation:anim-type 0.5s ease forwards 0.8s}
+.anim-scene.active .anim-email-line-2{animation:anim-type 0.5s ease forwards 1.4s}
+.anim-scene.active .anim-email-line-3{animation:anim-type 0.5s ease forwards 2.0s}
+.anim-scene.active .anim-email-line-4{animation:anim-type 0.5s ease forwards 2.6s}
+@keyframes anim-type{from{width:0}to{width:var(--w,80%)}}
+.anim-email-plane{position:absolute;bottom:1.5rem;right:1.5rem;font-size:1.8rem;opacity:0}
+.anim-scene.active .anim-email-plane{animation:anim-send 1s ease-in forwards 3.4s}
+@keyframes anim-send{0%{opacity:1;transform:translate(0,0) rotate(0deg)}100%{opacity:0;transform:translate(160px,-140px) rotate(35deg)}}
+.anim-email-sent{position:absolute;bottom:1.6rem;right:1.5rem;font-size:0.85rem;font-weight:600;color:var(--blue);opacity:0}
+.anim-scene.active .anim-email-sent{animation:anim-fade-in 0.5s ease forwards 4.3s}
+@keyframes anim-fade-in{to{opacity:1}}
+
+.services > .container{position:relative;z-index:1}
+.panel-nav-hint{text-align:center;font-size:0.8rem;color:var(--gray-400);font-weight:300;margin-bottom:0.5rem}
+.panel-stage{position:relative;height:640px;overflow:visible}
+.panel{position:absolute;top:0;left:50%;width:100%;max-width:900px;transition:transform 0.5s cubic-bezier(.22,.9,.3,1),opacity 0.5s ease,filter 0.5s ease}
+.panel-active{transform:translateX(-50%) scale(1);opacity:1;filter:none;z-index:2;pointer-events:auto}
+.panel-left{transform:translateX(-190%) scale(0.78);opacity:0.35;filter:blur(1px);z-index:1;pointer-events:none}
+.panel-right{transform:translateX(90%) scale(0.78);opacity:0.35;filter:blur(1px);z-index:1;pointer-events:none}
+.panel-hidden{transform:translateX(-50%) scale(0.7);opacity:0;z-index:0;pointer-events:none}
+.panel-nav-hint{text-align:center;font-size:0.78rem;color:var(--gray-400);font-weight:300;margin-bottom:1rem}
+.panel-dots{display:flex;justify-content:center;gap:0.5rem;margin-top:1.5rem}
+.panel-dot{width:8px;height:8px;border-radius:50%;background:var(--gray-200);cursor:pointer;transition:background 0.2s,transform 0.2s}
+.panel-dot.active{background:var(--blue);transform:scale(1.3)}
+
+.about-points{display:flex;flex-direction:column;gap:1.25rem;margin-top:0.5rem;max-width:520px}
+.about-point{display:flex;gap:0.85rem;align-items:flex-start;font-size:0.9rem;color:var(--gray-600);font-weight:300;line-height:1.6}
+.about-point strong{color:var(--black);font-weight:600}
+.about-point-icon{font-size:1.3rem;flex-shrink:0}
+
+.contact-mini-details{display:flex;flex-direction:column;gap:1rem;max-width:400px}
+.contact-mini-item{display:flex;gap:0.85rem;align-items:center;color:var(--black);text-decoration:none;padding:0.75rem;border-radius:12px;transition:background 0.2s}
+a.contact-mini-item:hover{background:var(--white)}
+.contact-mini-icon{width:38px;height:38px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.05rem;flex-shrink:0}
+.contact-mini-label{font-size:0.7rem;color:var(--gray-400);font-weight:500;text-transform:uppercase;letter-spacing:0.05em}
+
+.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.service-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s;display:flex;flex-direction:column;position:relative;overflow:hidden}
+.service-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+.service-card:hover{transform:translateY(-6px);box-shadow:0 16px 44px rgba(26,79,224,0.14);border-color:transparent}
+.service-card:hover::before{transform:scaleX(1)}
+.service-card-num{position:absolute;top:1.75rem;right:2rem;font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--gray-100);line-height:1;z-index:0}
+.service-icon{width:52px;height:52px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:1.5rem;position:relative;z-index:1}
+.service-card h3{font-family:'DM Serif Display',serif;font-size:1.5rem;margin-bottom:0.75rem;letter-spacing:-0.01em;position:relative;z-index:1}
+.service-card p{color:var(--gray-600);font-weight:300;line-height:1.7;margin-bottom:1.5rem;flex-grow:1;position:relative;z-index:1}
+.service-link{color:var(--blue);font-weight:500;text-decoration:none;font-size:0.95rem;display:inline-flex;align-items:center;gap:0.4rem;position:relative;z-index:1}
+.service-link:hover{gap:0.6rem}
+.service-more{background:var(--white);border:1.5px dashed var(--gray-200);border-radius:20px;padding:2rem 2.5rem;margin-top:1.5rem;display:flex;align-items:center;gap:1rem}
+.service-more-pulse{width:10px;height:10px;border-radius:50%;background:var(--blue);flex-shrink:0;position:relative}
+.service-more-pulse::before{content:'';position:absolute;inset:-6px;border-radius:50%;background:var(--blue);opacity:0.3;animation:pulse-ring 2s ease-out infinite}
+@keyframes pulse-ring{0%{transform:scale(0.6);opacity:0.5}100%{transform:scale(2.2);opacity:0}}
+.service-more p{color:var(--gray-600);font-weight:300;font-size:0.95rem;text-align:left;margin:0}
+
+footer{background:linear-gradient(180deg,#151515,var(--black));color:rgba(255,255,255,0.4);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;position:relative}
+footer::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--blue),var(--accent),var(--blue))}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
 footer p{font-size:0.8rem}
 
@@ -92,17 +240,22 @@ footer p{font-size:0.8rem}
 .fade-in.visible{opacity:1;transform:none}
 
 @media(max-width:768px){
+  .services-anim{display:none}
+  .marquee-card{width:200px;height:130px}
+  .compare-slider{max-width:100%}
+  .stats-bar-inner{grid-template-columns:repeat(2,1fr)}
+  .stats-bar-item::after{display:none}
+  .industries-grid{grid-template-columns:repeat(2,1fr)}
   .hero{grid-template-columns:1fr}
   .services-grid{grid-template-columns:1fr}
   .nav-links{display:none}
-  .stats-bar-inner{grid-template-columns:repeat(2,1fr)}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>LevelUpAI</a>
+  <a href="index.html" class="nav-logo"><img src="levelupai_logo.png" class="nav-logo-icon" alt="LevelUpAI">LevelUpAI</a>
   <div class="nav-links">
     <a href="index.html" class="active">Home</a>
     <a href="website-building.html">Website Building</a>
@@ -112,21 +265,9 @@ footer p{font-size:0.8rem}
 </nav>
 
 <section style="padding:0" class="skyline-bg">
-<svg class="skyline-svg" viewBox="0 0 1440 320" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
-  <rect x="80" y="40" width="38" height="280" fill="#1a4fe0"/>
-  <rect x="140" y="80" width="44" height="240" fill="#1a4fe0"/>
-  <rect x="200" y="140" width="30" height="180" fill="#1a4fe0"/>
-  <rect x="244" y="100" width="36" height="220" fill="#1a4fe0"/>
-  <polygon points="244,100 262,60 280,100" fill="#1a4fe0"/>
-  <rect x="286" y="110" width="36" height="210" fill="#1a4fe0"/>
-  <rect x="366" y="70" width="50" height="250" fill="#1a4fe0"/>
-  <rect x="516" y="55" width="46" height="265" fill="#1a4fe0"/>
-  <rect x="636" y="90" width="42" height="230" fill="#1a4fe0"/>
-  <rect x="744" y="180" width="60" height="140" fill="#1a4fe0"/>
-  <rect x="924" y="85" width="44" height="235" fill="#1a4fe0"/>
-  <rect x="1076" y="65" width="48" height="255" fill="#1a4fe0"/>
-  <rect x="0" y="318" width="1440" height="4" fill="#1a4fe0"/>
-</svg>
+<video class="skyline-photo" autoplay muted loop playsinline>
+  <source src="https://videos.pexels.com/video-files/18127054/18127054-uhd_1922_1440_30fps.mp4" type="video/mp4">
+</video>
   <div class="hero">
     <div class="fade-in visible">
       <span class="hero-eyebrow">🌆 Houston, Texas</span>
@@ -136,85 +277,411 @@ footer p{font-size:0.8rem}
         <a href="website-building.html" class="btn-primary">Get a new website</a>
         <a href="email-outreach.html" class="btn-secondary">Explore AI outreach →</a>
       </div>
+      <div class="example-note"><span class="example-note-dot"></span>You're looking at an example of our work right now</div>
     </div>
-    <div class="mockup-pair fade-in visible">
-      <div class="browser-frame">
-        <div class="browser-bar">
-          <span class="browser-dot" style="background:#ff5f57"></span>
-          <span class="browser-dot" style="background:#ffbd2e"></span>
-          <span class="browser-dot" style="background:#28c840"></span>
-          <span class="browser-tag before">Before</span>
-        </div>
-        <div class="mock-before-body">
+    <div class="compare-wrap fade-in visible">
+      <div class="compare-slider" id="compareSlider">
+        <div class="compare-layer compare-before">
+          <div class="mock-before-nav">
+            <span class="mock-before-logo">Ramirez Roofing Co.</span>
+            <div class="mock-before-nav-links"><span>Home</span><span>About</span><span>Contact</span></div>
+          </div>
           <div class="mock-before-title">Welcome to Our Company</div>
           <div class="mock-before-line"></div>
           <div class="mock-before-line"></div>
           <div class="mock-before-line short"></div>
+          <div class="mock-before-line"></div>
+          <div class="mock-before-line short"></div>
         </div>
-      </div>
-      <div class="browser-frame">
-        <div class="browser-bar">
-          <span class="browser-dot" style="background:#ff5f57"></span>
-          <span class="browser-dot" style="background:#ffbd2e"></span>
-          <span class="browser-dot" style="background:#28c840"></span>
-          <span class="browser-tag after">After</span>
-        </div>
-        <div class="mock-after-body">
-          <div class="mock-after-hero">
-            <div class="mock-after-hero-line"></div>
-            <div class="mock-after-hero-line short"></div>
+        <div class="compare-layer compare-after" id="compareAfter">
+          <div class="compare-after-blob compare-after-blob-1"></div>
+          <div class="compare-after-blob compare-after-blob-2"></div>
+          <div class="mock-after-top-section">
+            <div class="mock-after-nav">
+              <span class="mock-after-logo"><span class="mock-after-logo-dot"></span>Ramirez Roofing</span>
+              <span class="mock-after-nav-btn">Get a Quote</span>
+            </div>
+            <div class="mock-after-hero-photo">
+              <img src="https://images.unsplash.com/photo-1705579604902-eb832f58bf85?w=700&q=80&auto=format&fit=crop" alt="">
+              <div class="mock-after-hero-photo-overlay">
+                <div class="mock-after-hero-headline">Roofing you can trust</div>
+                <div class="mock-after-hero-sub">Houston's top-rated roofing team</div>
+                <span class="mock-after-hero-btn">Free Inspection</span>
+              </div>
+            </div>
+            <div class="mock-after-caption">Serving Houston &amp; surrounding areas since 2015</div>
           </div>
-          <div class="mock-after-grid">
-            <div class="mock-after-card"></div>
-            <div class="mock-after-card"></div>
+          <div class="mock-after-feature-row">
+            <div class="mock-after-feature"><div class="mock-after-feature-icon">🏠</div><div class="mock-after-feature-label">Free Estimates</div></div>
+            <div class="mock-after-feature"><div class="mock-after-feature-icon">🛠️</div><div class="mock-after-feature-label">Licensed &amp; Insured</div></div>
+            <div class="mock-after-feature"><div class="mock-after-feature-icon">⭐</div><div class="mock-after-feature-label">5-Star Rated</div></div>
+          </div>
+          <div class="mock-after-badges-caption">Trusted by 500+ Houston homeowners</div>
+          <div class="mock-after-badges-marquee">
+            <div class="mock-after-badges-track">
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Lifetime Warranty</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1605556786938-d7581f7e477a?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">11 Years Experience</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1541557435984-1c79685a082b?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Locally Owned</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Professional Work</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">24/7 Support</span></div></div>
+              <!-- duplicated for seamless loop -->
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Lifetime Warranty</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1605556786938-d7581f7e477a?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">11 Years Experience</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1541557435984-1c79685a082b?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Locally Owned</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Professional Work</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">24/7 Support</span></div></div>
+            </div>
           </div>
         </div>
+        <div class="compare-handle" id="compareHandle">
+          <div class="compare-handle-grip">↔</div>
+        </div>
+        <span class="compare-tag compare-tag-before">Before</span>
+        <span class="compare-tag compare-tag-after">After</span>
       </div>
+      <p class="compare-hint">Hover and scroll to compare</p>
     </div>
   </div>
 </section>
 
+<div class="industry-marquee">
+  <div class="industry-marquee-track">
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1705579604902-eb832f58bf85?w=500&q=80&auto=format&fit=crop" alt="Roofing"><div class="marquee-card-overlay"><span class="marquee-card-label">Roofing</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1613620838744-a0fbfb76bae3?w=500&q=80&auto=format&fit=crop" alt="HVAC"><div class="marquee-card-overlay"><span class="marquee-card-label">HVAC</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1622426385889-4fc93a72423a?w=500&q=80&auto=format&fit=crop" alt="Electrical"><div class="marquee-card-overlay"><span class="marquee-card-label">Electrical</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?w=500&q=80&auto=format&fit=crop" alt="General Contracting"><div class="marquee-card-overlay"><span class="marquee-card-label">General Contracting</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?w=500&q=80&auto=format&fit=crop" alt="Solar"><div class="marquee-card-overlay"><span class="marquee-card-label">Solar</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1561400555-786780284b67?w=500&q=80&auto=format&fit=crop" alt="Plumbing"><div class="marquee-card-overlay"><span class="marquee-card-label">Plumbing</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1552360498-eb65e9d928b7?w=500&q=80&auto=format&fit=crop" alt="Handyman"><div class="marquee-card-overlay"><span class="marquee-card-label">Handyman</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1612473741370-55a9374e4944?w=500&q=80&auto=format&fit=crop" alt="Cleaning Services"><div class="marquee-card-overlay"><span class="marquee-card-label">Cleaning Services</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1645713516157-f6565dc40bbc?w=500&q=80&auto=format&fit=crop" alt="Manufacturing"><div class="marquee-card-overlay"><span class="marquee-card-label">Manufacturing</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1651849107180-c3db0a833abd?w=500&q=80&auto=format&fit=crop" alt="Maintenance Services"><div class="marquee-card-overlay"><span class="marquee-card-label">Maintenance</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1732395805034-e0bf859665e5?w=500&q=80&auto=format&fit=crop" alt="Construction"><div class="marquee-card-overlay"><span class="marquee-card-label">Construction</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1605556786938-d7581f7e477a?w=500&q=80&auto=format&fit=crop" alt="Skilled Trades"><div class="marquee-card-overlay"><span class="marquee-card-label">Skilled Trades</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1541557435984-1c79685a082b?w=500&q=80&auto=format&fit=crop" alt="Restaurants"><div class="marquee-card-overlay"><span class="marquee-card-label">Restaurants</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?w=500&q=80&auto=format&fit=crop" alt="Hospitality"><div class="marquee-card-overlay"><span class="marquee-card-label">Hospitality</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1758522276630-8ebdf55d7619?w=500&q=80&auto=format&fit=crop" alt="Arts &amp; Creative"><div class="marquee-card-overlay"><span class="marquee-card-label">Arts &amp; Creative</span></div></div>
+    <!-- duplicated for seamless infinite loop -->
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1705579604902-eb832f58bf85?w=500&q=80&auto=format&fit=crop" alt="Roofing"><div class="marquee-card-overlay"><span class="marquee-card-label">Roofing</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1613620838744-a0fbfb76bae3?w=500&q=80&auto=format&fit=crop" alt="HVAC"><div class="marquee-card-overlay"><span class="marquee-card-label">HVAC</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1622426385889-4fc93a72423a?w=500&q=80&auto=format&fit=crop" alt="Electrical"><div class="marquee-card-overlay"><span class="marquee-card-label">Electrical</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?w=500&q=80&auto=format&fit=crop" alt="General Contracting"><div class="marquee-card-overlay"><span class="marquee-card-label">General Contracting</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1642749776312-aa42ce20c9f5?w=500&q=80&auto=format&fit=crop" alt="Solar"><div class="marquee-card-overlay"><span class="marquee-card-label">Solar</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1561400555-786780284b67?w=500&q=80&auto=format&fit=crop" alt="Plumbing"><div class="marquee-card-overlay"><span class="marquee-card-label">Plumbing</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1552360498-eb65e9d928b7?w=500&q=80&auto=format&fit=crop" alt="Handyman"><div class="marquee-card-overlay"><span class="marquee-card-label">Handyman</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1612473741370-55a9374e4944?w=500&q=80&auto=format&fit=crop" alt="Cleaning Services"><div class="marquee-card-overlay"><span class="marquee-card-label">Cleaning Services</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1645713516157-f6565dc40bbc?w=500&q=80&auto=format&fit=crop" alt="Manufacturing"><div class="marquee-card-overlay"><span class="marquee-card-label">Manufacturing</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1651849107180-c3db0a833abd?w=500&q=80&auto=format&fit=crop" alt="Maintenance Services"><div class="marquee-card-overlay"><span class="marquee-card-label">Maintenance</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1732395805034-e0bf859665e5?w=500&q=80&auto=format&fit=crop" alt="Construction"><div class="marquee-card-overlay"><span class="marquee-card-label">Construction</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1605556786938-d7581f7e477a?w=500&q=80&auto=format&fit=crop" alt="Skilled Trades"><div class="marquee-card-overlay"><span class="marquee-card-label">Skilled Trades</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1541557435984-1c79685a082b?w=500&q=80&auto=format&fit=crop" alt="Restaurants"><div class="marquee-card-overlay"><span class="marquee-card-label">Restaurants</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?w=500&q=80&auto=format&fit=crop" alt="Hospitality"><div class="marquee-card-overlay"><span class="marquee-card-label">Hospitality</span></div></div>
+    <div class="marquee-card"><img src="https://images.unsplash.com/photo-1758522276630-8ebdf55d7619?w=500&q=80&auto=format&fit=crop" alt="Arts &amp; Creative"><div class="marquee-card-overlay"><span class="marquee-card-label">Arts &amp; Creative</span></div></div>
+  </div>
+</div>
+
 <div class="stats-bar">
   <div class="stats-bar-inner">
-    <div><span class="stats-bar-num">100%</span><div class="stats-bar-label">Done for you</div></div>
-    <div><span class="stats-bar-num">2</span><div class="stats-bar-label">Services, one team</div></div>
-    <div><span class="stats-bar-num">24/7</span><div class="stats-bar-label">Site + outreach uptime</div></div>
-    <div><span class="stats-bar-num">HTX</span><div class="stats-bar-label">Built for Houston</div></div>
+    <div class="stats-bar-item">
+      <span class="stats-bar-num">100%</span>
+      <div class="stats-bar-label">Done for you</div>
+      <div class="stats-bar-detail">We handle design, build, hosting, and outreach — you just approve the work.</div>
+    </div>
+    <div class="stats-bar-item">
+      <span class="stats-bar-num">2</span>
+      <div class="stats-bar-label">Services, one team</div>
+      <div class="stats-bar-detail">Website building and AI email outreach, run by the same team so everything fits together.</div>
+    </div>
+    <div class="stats-bar-item">
+      <span class="stats-bar-num">24/7</span>
+      <div class="stats-bar-label">Site + outreach uptime</div>
+      <div class="stats-bar-detail">Your site stays live and your outreach keeps running, even while you're on the job.</div>
+    </div>
+    <div class="stats-bar-item">
+      <span class="stats-bar-num">HTX</span>
+      <div class="stats-bar-label">Built for Houston</div>
+      <div class="stats-bar-detail">Local focus means we understand Houston's trades, neighborhoods, and customers.</div>
+    </div>
   </div>
 </div>
 
 <section class="services" id="services">
+  <div class="services-side-glow services-side-glow-left"></div>
+  <div class="services-side-glow services-side-glow-right"></div>
+  <div class="services-blob services-blob-3"></div>
+  <div class="services-anim">
+    <div class="anim-scene" id="animScene1">
+      <div class="anim-browser">
+        <div class="anim-browser-bar">
+          <span class="anim-browser-dot anim-browser-dot-1"></span><span class="anim-browser-dot anim-browser-dot-2"></span><span class="anim-browser-dot anim-browser-dot-3"></span>
+          <div class="anim-browser-nav"><span class="anim-nav-pill"></span><span class="anim-nav-pill"></span><span class="anim-nav-pill"></span></div>
+        </div>
+        <div class="anim-block anim-block-1"></div>
+        <div class="anim-block anim-block-2"></div>
+        <div class="anim-block anim-block-3">
+          <div class="anim-img-block"></div>
+          <div class="anim-img-block anim-img-block-2"></div>
+        </div>
+        <div class="anim-block anim-block-4"></div>
+      </div>
+    </div>
+    <div class="anim-scene" id="animScene2">
+      <div class="anim-email">
+        <div class="anim-email-header">
+          <span class="anim-email-icon">✉️</span>
+          <div class="anim-email-header-lines">
+            <div class="anim-email-label">To:</div>
+            <div class="anim-email-to" style="--w:45%"></div>
+          </div>
+        </div>
+        <div class="anim-email-line anim-email-line-1" style="--w:60%"></div>
+        <div class="anim-email-line anim-email-line-2" style="--w:88%"></div>
+        <div class="anim-email-line anim-email-line-3" style="--w:70%"></div>
+        <div class="anim-email-line anim-email-line-4" style="--w:50%"></div>
+        <span class="anim-email-plane">📨</span>
+        <span class="anim-email-sent">Sent ✓</span>
+      </div>
+    </div>
+  </div>
   <div class="container">
-    <div class="fade-in visible">
-      <div class="section-eyebrow">What we do</div>
-      <h2 class="section-title">Two ways we help you grow</h2>
-      <p class="section-sub">Whether you need a real online presence, more clients reaching out, or both — we've got you covered.</p>
-    </div>
-    <div class="services-grid">
-      <div class="service-card fade-in visible">
-        <div class="service-icon">🖥️</div>
-        <h3>Website Building</h3>
-        <p>A modern, mobile-friendly website built for your business — whether you don't have one yet or your current site is holding you back. One-time build, plus simple monthly hosting and maintenance.</p>
-        <a href="website-building.html" class="service-link">Learn more →</a>
+    <div class="panel-nav-hint">Scroll or swipe to explore</div>
+    <div class="panel-stage" id="panelStage">
+      <div class="panel" data-panel="0">
+        <div class="section-eyebrow">About Us</div>
+        <h2 class="section-title">A local team, built for local business</h2>
+        <p class="section-sub" style="max-width:560px;margin-bottom:2rem">LevelUpAI is a Houston-based studio helping trades and service businesses look as good online as the work they actually do. No agencies, no jargon — just a clean website and outreach that brings in real clients, built by someone who actually picks up the phone.</p>
+        <div class="about-points">
+          <div class="about-point"><span class="about-point-icon">📍</span><div><strong>Houston-based</strong><br>We know the market, the neighborhoods, and the competition you're up against.</div></div>
+          <div class="about-point"><span class="about-point-icon">🤝</span><div><strong>Hands-on</strong><br>You talk to the person actually building your site — not a account rep.</div></div>
+          <div class="about-point"><span class="about-point-icon">⚡</span><div><strong>Fast turnaround</strong><br>No 3-month agency timelines. Most sites launch in 1-2 weeks.</div></div>
+        </div>
       </div>
-      <div class="service-card fade-in visible">
-        <div class="service-icon">📧</div>
-        <h3>AI Email Outreach</h3>
-        <p>Done-for-you AI email outreach that finds leads, writes personalized emails, and gets replies from potential clients — while you focus on running your business.</p>
-        <a href="email-outreach.html" class="service-link">Learn more →</a>
+
+      <div class="panel" data-panel="1">
+        <div class="fade-in">
+          <div class="section-eyebrow">What we do</div>
+          <h2 class="section-title">Two ways we help you grow</h2>
+          <p class="section-sub">Whether you need a real online presence, more clients reaching out, or both — we've got you covered.</p>
+        </div>
+        <div class="services-grid">
+          <div class="service-card fade-in">
+            <span class="service-card-num">01</span>
+            <div class="service-icon">🖥️</div>
+            <h3>Website Building</h3>
+            <p>A modern, mobile-friendly website built for your business — whether you don't have one yet or your current site is holding you back. One-time build, plus simple monthly hosting and maintenance.</p>
+            <a href="website-building.html" class="service-link">Learn more →</a>
+          </div>
+          <div class="service-card fade-in">
+            <span class="service-card-num">02</span>
+            <div class="service-icon">📧</div>
+            <h3>AI Email Outreach</h3>
+            <p>Done-for-you AI email outreach that finds leads, writes personalized emails, and gets replies from potential clients — while you focus on running your business.</p>
+            <a href="email-outreach.html" class="service-link">Learn more →</a>
+          </div>
+        </div>
+        <div class="service-more fade-in">
+          <span class="service-more-pulse"></span>
+          <p>More AI-powered tools for local businesses are on the way — think missed-call follow-up, review requests, and more. Stay tuned.</p>
+        </div>
+      </div>
+
+      <div class="panel" data-panel="2">
+        <div class="section-eyebrow">Get in touch</div>
+        <h2 class="section-title">Ready to get started?</h2>
+        <p class="section-sub" style="max-width:560px;margin-bottom:2rem">Tell us a bit about your business and we'll get back to you within 24 hours — no pressure, no pushy sales calls.</p>
+        <div class="contact-mini-details">
+          <a href="mailto:daniel@levelupaico.com" class="contact-mini-item">
+            <span class="contact-mini-icon">📧</span>
+            <div><span class="contact-mini-label">Email</span><br>daniel@levelupaico.com</div>
+          </a>
+          <a href="tel:+18323569373" class="contact-mini-item">
+            <span class="contact-mini-icon">📞</span>
+            <div><span class="contact-mini-label">Phone</span><br>(832) 356-9373</div>
+          </a>
+          <div class="contact-mini-item">
+            <span class="contact-mini-icon">📍</span>
+            <div><span class="contact-mini-label">Location</span><br>Houston, Texas</div>
+          </div>
+        </div>
+        <div class="hero-buttons" style="margin-top:2rem">
+          <a href="website-building.html#contact" class="btn-primary">Get a new website</a>
+          <a href="email-outreach.html#contact" class="btn-secondary">Explore AI outreach</a>
+        </div>
       </div>
     </div>
-    <div class="service-more fade-in visible">
-      <p>More AI-powered tools for local businesses are on the way — think missed-call follow-up, review requests, and more. Stay tuned.</p>
+    <div class="panel-dots">
+      <span class="panel-dot" data-goto="0"></span>
+      <span class="panel-dot" data-goto="1"></span>
+      <span class="panel-dot" data-goto="2"></span>
     </div>
   </div>
 </section>
 
 <footer style="position:relative;overflow:hidden">
-  <a href="index.html" class="footer-logo"><span style="width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block"></span>LevelUpAI</a>
+  <a href="index.html" class="footer-logo"><img src="levelupai_logo.png" class="nav-logo-icon" alt="LevelUpAI">LevelUpAI</a>
   <p>© 2026 LevelUpAI Co. Houston, Texas.</p>
   <p style="font-size:0.75rem">Websites &amp; AI-powered outreach for small businesses.</p>
 </footer>
 
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+// Before/after comparison slider:
+//   - Not hovering: auto-toggles between "before" and "after" every 3s
+//   - Hovering: auto-toggle pauses, mouse wheel scrubs the reveal position
+(function() {
+  const slider = document.getElementById('compareSlider');
+  const afterLayer = document.getElementById('compareAfter');
+  const handle = document.getElementById('compareHandle');
+  if (!slider || !afterLayer || !handle) return;
+
+  let currentPct = 0;
+
+  function setReveal(pct) {
+    currentPct = Math.max(0, Math.min(100, pct));
+    afterLayer.style.clipPath = `inset(0 ${100 - currentPct}% 0 0)`;
+    handle.style.left = currentPct + '%';
+  }
+
+  let autoState = 0; // 0 = showing before, 1 = showing after
+  let autoTimer = null;
+
+  function startAutoToggle() {
+    stopAutoToggle();
+    autoTimer = setInterval(() => {
+      autoState = autoState === 0 ? 1 : 0;
+      setReveal(autoState === 0 ? 0 : 100);
+    }, 3000);
+  }
+
+  function stopAutoToggle() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  // Start the auto-toggle once the slider scrolls into view.
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setReveal(0);
+        startAutoToggle();
+      } else {
+        stopAutoToggle();
+      }
+    });
+  }, {threshold:0.3});
+  revealObserver.observe(slider);
+
+  slider.addEventListener('mouseenter', () => {
+    stopAutoToggle();
+  });
+
+  slider.addEventListener('mouseleave', () => {
+    startAutoToggle();
+  });
+
+  slider.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    setReveal(e.deltaY > 0 ? 100 : 0);
+  }, { passive: false });
+})();
+
+// Alternating "website building" / "email sending" animation behind the
+// services section. Every 5s, switches scenes and restarts that scene's
+// internal build-up animation (forcing a reflow so the CSS keyframes
+// replay from the start each time, not just resume).
+(function() {
+  const scene1 = document.getElementById('animScene1');
+  const scene2 = document.getElementById('animScene2');
+  if (!scene1 || !scene2) return;
+
+  function restart(el) {
+    el.classList.remove('active');
+    void el.offsetWidth; // force reflow so the animation restarts
+    el.classList.add('active');
+  }
+
+  let showingScene1 = true;
+  restart(scene1);
+
+  setInterval(() => {
+    showingScene1 = !showingScene1;
+    scene1.classList.remove('active');
+    scene2.classList.remove('active');
+    if (showingScene1) {
+      restart(scene1);
+    } else {
+      restart(scene2);
+    }
+  }, 5000);
+})();
+
+// About Us / What We Do / Contact Us panel carousel.
+// Navigate with mouse wheel while hovering, or swipe on touch devices.
+// The background animation (services-anim) is a sibling element outside
+// this stage, so it never moves with the panels.
+(function() {
+  const stage = document.getElementById('panelStage');
+  if (!stage) return;
+  const panels = Array.from(stage.querySelectorAll('.panel'));
+  const dots = Array.from(document.querySelectorAll('.panel-dot'));
+  let activeIndex = 1; // start on "What We Do"
+  let isAnimating = false;
+
+  function render() {
+    panels.forEach((panel) => {
+      const i = Number(panel.dataset.panel);
+      panel.classList.remove('panel-active', 'panel-left', 'panel-right', 'panel-hidden');
+      const diff = i - activeIndex;
+      if (diff === 0) panel.classList.add('panel-active');
+      else if (diff === -1) panel.classList.add('panel-left');
+      else if (diff === 1) panel.classList.add('panel-right');
+      else panel.classList.add('panel-hidden');
+    });
+    dots.forEach((dot, i) => dot.classList.toggle('active', i === activeIndex));
+  }
+
+  function goTo(index) {
+    const clamped = Math.max(0, Math.min(panels.length - 1, index));
+    if (clamped === activeIndex) return;
+    activeIndex = clamped;
+    render();
+    isAnimating = true;
+    setTimeout(() => { isAnimating = false; }, 550); // matches CSS transition
+  }
+
+  render();
+
+  dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+  // Wheel: only intercept while hovering the stage, with a cooldown so
+  // one scroll gesture moves one panel rather than flying through all three.
+  stage.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    if (isAnimating) return;
+    if (e.deltaY > 10) goTo(activeIndex + 1);
+    else if (e.deltaY < -10) goTo(activeIndex - 1);
+  }, { passive: false });
+
+  // Touch swipe
+  let touchStartX = 0, touchStartY = 0;
+  stage.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  stage.addEventListener('touchend', (e) => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) goTo(activeIndex + 1);
+      else goTo(activeIndex - 1);
+    }
+  }, { passive: true });
+})();
+</script>
 </body>
 </html>

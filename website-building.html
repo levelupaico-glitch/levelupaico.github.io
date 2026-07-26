@@ -20,6 +20,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black)
 nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.93);backdrop-filter:blur(14px);border-bottom:1px solid var(--gray-200);padding:0 2rem;height:64px;display:flex;align-items:center;justify-content:space-between}
 .nav-logo{font-family:'DM Serif Display',serif;font-size:1.25rem;color:var(--black);text-decoration:none;letter-spacing:-0.02em;display:flex;align-items:center;gap:0.5rem}
 .nav-logo-dot{width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block}
+.nav-logo-icon{width:22px;height:22px;object-fit:contain;display:inline-block}
 .nav-links{display:flex;gap:2rem;align-items:center}
 .nav-links a{font-size:0.875rem;font-weight:400;color:var(--gray-600);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--black)}
@@ -48,18 +49,82 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .mock-after-hero-line.short{width:45%;background:rgba(255,255,255,0.55)}
 .mock-after-hero-btn{background:var(--white);border-radius:5px;height:22px;width:100px;margin-top:0.5rem}
 .mock-after-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:0.6rem}
+.mock-after-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:0.8rem;margin-bottom:0.8rem}
+.mock-after-logo{font-family:'DM Serif Display',serif;font-size:0.95rem;font-weight:700;color:var(--black);display:flex;align-items:center;gap:0.3rem}
+.mock-after-logo-dot{width:5px;height:5px;background:var(--blue);border-radius:50%;display:inline-block}
+.mock-after-nav-btn{background:var(--blue);color:var(--white);font-size:0.6rem;font-weight:600;padding:0.28rem 0.65rem;border-radius:5px}
+.mock-after-feature{background:var(--off-white);border-radius:6px;padding:0.6rem 0.4rem;text-align:center}
+.mock-after-feature-icon{font-size:1rem;margin-bottom:0.25rem}
+.mock-after-feature-label{font-size:0.55rem;color:var(--gray-600);font-weight:500;line-height:1.2}
+.example-note{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.8rem;font-weight:500;padding:0.5rem 1rem;border-radius:100px;margin-top:1rem}
+.example-note-dot{width:6px;height:6px;background:var(--blue);border-radius:50%;flex-shrink:0}
 .mock-after-card{background:var(--off-white);border-radius:6px;height:60px}
 
+/* Interactive before/after comparison slider */
+.compare-wrap{display:flex;flex-direction:column;align-items:center;gap:0.85rem}
+.compare-slider{position:relative;width:100%;max-width:460px;aspect-ratio:1/1;border-radius:20px;overflow:hidden;box-shadow:0 12px 50px rgba(26,79,224,0.16);border:1px solid var(--gray-200);cursor:ew-resize;user-select:none}
+.compare-layer{position:absolute;inset:0;padding:1.5rem;overflow:hidden}
+.compare-before{background:#fffef7}
+.compare-after{background:var(--white);clip-path:inset(0 100% 0 0);transition:clip-path 0.5s ease;position:relative;overflow:hidden}
+.compare-slider.no-transition .compare-after{transition:none}
+.compare-after-blob{position:absolute;top:0;bottom:0;width:45%;pointer-events:none;z-index:0}
+.compare-after-blob-1{right:0;background:linear-gradient(270deg,rgba(26,79,224,0.42),rgba(26,79,224,0.14) 60%,transparent 100%)}
+.compare-after-blob-2{left:0;background:linear-gradient(90deg,rgba(26,79,224,0.42),rgba(26,79,224,0.14) 60%,transparent 100%)}
+.compare-after > *:not(.compare-after-blob){position:relative;z-index:1}
+.compare-handle{position:absolute;top:0;bottom:0;left:0%;width:3px;background:var(--white);box-shadow:0 0 0 1px rgba(0,0,0,0.08);transform:translateX(-50%);transition:left 0.5s ease;pointer-events:none;z-index:2}
+.compare-slider.no-transition .compare-handle{transition:none}
+.compare-handle-grip{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:var(--white);border-radius:50%;box-shadow:0 4px 14px rgba(0,0,0,0.2);display:flex;align-items:center;justify-content:center;font-size:0.95rem;color:var(--blue)}
+.compare-tag{position:absolute;top:1rem;font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.65rem;border-radius:100px;z-index:1}
+.compare-tag-before{left:1rem;background:#fde8e8;color:#c0392b}
+.compare-tag-after{right:1rem;background:var(--blue-light);color:var(--blue)}
+.compare-hint{font-size:0.8rem;color:var(--gray-600);font-weight:300}
+
+.mock-before-nav{display:flex;justify-content:space-between;align-items:center;padding-bottom:0.6rem;margin-bottom:0.7rem;border-bottom:1px solid #ddd}
+.mock-before-logo{font-family:Georgia,serif;font-size:0.85rem;font-weight:700;color:#333}
+.mock-before-nav-links{display:flex;gap:0.5rem;font-size:0.6rem;color:#555;font-family:Georgia,serif}
+.mock-before-title{font-family:Georgia,serif;font-size:1rem;font-weight:700;color:#333;margin-bottom:0.6rem}
+.mock-before-line{height:9px;background:#ddd;border-radius:2px;margin-bottom:0.6rem}
+.mock-before-line.short{width:60%}
+
+.mock-after-top-section{background:var(--white);position:relative;z-index:1;margin:-1.5rem -1.5rem 0.9rem;padding:1.5rem 1.5rem 0.9rem;border-bottom:1px solid var(--gray-200)}
+.mock-after-hero-photo{position:relative;border-radius:12px;overflow:hidden;height:180px;border:1px solid rgba(0,0,0,0.1);box-shadow:0 2px 4px rgba(0,0,0,0.08),0 12px 28px rgba(0,0,0,0.22)}
+.mock-after-hero-photo img{width:100%;height:100%;object-fit:cover}
+.mock-after-hero-photo-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(13,13,13,0.1),rgba(13,13,13,0.75));display:flex;flex-direction:column;justify-content:flex-end;padding:0.9rem}
+.mock-after-hero-headline{font-family:'DM Serif Display',serif;color:var(--white);font-size:1.05rem;line-height:1.15;margin-bottom:0.2rem}
+.mock-after-hero-sub{color:rgba(255,255,255,0.8);font-size:0.68rem;margin-bottom:0.6rem}
+.mock-after-hero-btn{display:inline-block;background:var(--blue);color:var(--white);font-size:0.65rem;font-weight:600;padding:0.4rem 0.8rem;border-radius:6px;width:fit-content}
+.mock-after-caption{font-size:0.6rem;color:var(--gray-400);text-align:center;margin-top:0.5rem;font-weight:300;letter-spacing:0.02em}
+.mock-after-feature-row{display:flex;gap:0.5rem;margin-top:0.8rem}
+.mock-after-feature{flex:1;background:var(--off-white);border-radius:6px;padding:0.5rem 0.4rem;text-align:center}
+.mock-after-feature-icon{font-size:0.9rem;margin-bottom:0.2rem}
+.mock-after-feature-label{font-size:0.5rem;color:var(--gray-600);font-weight:500;line-height:1.2}
+.mock-after-badges-caption{font-size:0.58rem;color:var(--gray-400);text-align:center;margin-top:0.7rem;font-weight:300}
+.mock-after-badges-marquee{overflow:hidden;margin-top:0.5rem;-webkit-mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent);mask-image:linear-gradient(90deg,transparent,black 8%,black 92%,transparent)}
+.mock-after-badges-track{display:flex;gap:0.5rem;width:max-content;animation:badgesMarquee 18s linear infinite}
+@keyframes badgesMarquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+.mock-after-badge{flex-shrink:0;position:relative;width:78px;height:58px;border-radius:8px;overflow:hidden}
+.mock-after-badge img{width:100%;height:100%;object-fit:cover}
+.mock-after-badge-overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 35%,rgba(0,0,0,0.75));display:flex;align-items:flex-end;padding:0.3rem}
+.mock-after-badge-label{color:var(--white);font-size:0.42rem;font-weight:600;line-height:1.15}
+
 .stat-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
-.stat-card{background:var(--off-white);border:1px solid var(--gray-200);border-radius:16px;padding:1.75rem 1.5rem}
+.stat-card{background:var(--white);border:1px solid var(--gray-200);border-radius:16px;padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:transform 0.25s ease,box-shadow 0.25s ease}
+.stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
+.stat-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,79,224,0.14)}
+.stat-card:hover::before{transform:scaleX(1)}
+.services-blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
+.services-blob-1{width:500px;height:500px;background:radial-gradient(circle,rgba(26,79,224,0.14),transparent 70%);top:-140px;right:-100px}
+.services-blob-2{width:420px;height:420px;background:radial-gradient(circle,rgba(26,79,224,0.1),transparent 70%);bottom:-80px;left:-80px}
 .stat-card-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--blue);line-height:1;margin-bottom:0.75rem}
 .stat-card-label{font-size:0.88rem;color:var(--black);line-height:1.5;margin-bottom:0.75rem;font-weight:400}
 .stat-card-source{font-size:0.72rem;color:var(--gray-400);font-weight:400}
 
-.compare-table{margin-top:3rem;background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;overflow:hidden}
-.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center}
+.compare-table{margin-top:3rem;background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,0.05)}
+.compare-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;align-items:center;transition:background 0.2s ease}
 .compare-row.head{background:var(--black);color:var(--white)}
-.compare-row.us{background:var(--blue-light)}
+.compare-row:not(.head):not(.us):hover{background:var(--off-white)}
+.compare-row.us{background:var(--blue-light);position:relative}
+.compare-row.us::before{content:'✓ Best value';position:absolute;top:-11px;right:1.5rem;background:var(--blue);color:var(--white);font-size:0.6rem;font-weight:600;letter-spacing:0.05em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:100px}
 .compare-row + .compare-row{border-top:1px solid var(--gray-200)}
 .compare-cell{padding:1.1rem 1.5rem;font-size:0.9rem}
 .compare-row.head .compare-cell{font-size:0.75rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase}
@@ -77,7 +142,10 @@ section{padding:5rem 2rem}
 .how{background:var(--off-white)}
 .how-header{margin-bottom:3.5rem}
 .steps{display:flex;flex-direction:column;gap:0}
-.step{display:grid;grid-template-columns:56px 1fr;gap:1.75rem;align-items:start;padding:2rem 0;border-bottom:1px solid var(--gray-200)}
+.step{display:grid;grid-template-columns:56px 1fr;gap:1.75rem;align-items:start;padding:2rem 1rem;margin:0 -1rem;border-bottom:1px solid var(--gray-200);border-radius:14px;transition:background 0.25s ease}
+.step:hover{background:var(--white)}
+.step:hover .step-icon-wrap{background:var(--blue);transform:scale(1.08) rotate(-4deg)}
+.step-icon-wrap{transition:transform 0.3s ease,background 0.3s ease}
 .step:last-child{border-bottom:none}
 .step-icon-wrap{width:52px;height:52px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;margin-top:0.2rem}
 .step-content h3{font-size:1.15rem;font-weight:600;color:var(--black);margin-bottom:0.4rem;margin-top:0.2rem}
@@ -85,7 +153,10 @@ section{padding:5rem 2rem}
 .step-badge{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.4rem}
 
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-.pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;transition:transform 0.2s,box-shadow 0.2s}
+.pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s}
+.pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;z-index:1}
+.pricing-card:hover::before{transform:scaleX(1)}
+.pricing-card.featured::before{background:linear-gradient(90deg,#6b8fff,var(--blue))}
 .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,79,224,0.1)}
 .pricing-card.featured{border-color:var(--blue);background:var(--black);color:var(--white)}
 .pricing-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:100px;white-space:nowrap}
@@ -107,7 +178,7 @@ section{padding:5rem 2rem}
 .pricing-card:not(.featured) .pricing-btn:hover{background:var(--gray-100)}
 
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
-.contact-form-wrap{background:var(--white);border:1px solid var(--gray-200);border-radius:20px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,0.04)}
+.contact-form-wrap{background:var(--white);border:1px solid var(--gray-200);border-radius:20px;padding:2.5rem;box-shadow:0 12px 44px rgba(26,79,224,0.08)}
 .form-group{margin-bottom:1.25rem}
 label{display:block;font-size:0.85rem;font-weight:500;color:var(--black);margin-bottom:0.4rem}
 input,textarea,select{width:100%;padding:0.75rem 1rem;border:1.5px solid var(--gray-200);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:0.95rem;color:var(--black);background:var(--white);outline:none;transition:border-color 0.2s}
@@ -120,14 +191,19 @@ select{appearance:none;cursor:pointer}
 .contact-info-side h3{font-family:'DM Serif Display',serif;font-size:1.9rem;line-height:1.2;margin-bottom:1rem;letter-spacing:-0.02em}
 .contact-info-side p{color:var(--gray-600);font-weight:300;line-height:1.7;margin-bottom:2rem}
 .contact-details{display:flex;flex-direction:column;gap:1rem}
-.contact-detail{display:flex;gap:0.75rem;align-items:flex-start}
-.contact-icon{width:40px;height:40px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+.contact-detail{display:flex;gap:0.75rem;align-items:flex-start;padding:0.6rem;border-radius:12px;margin:0 -0.6rem;transition:background 0.2s ease}
+.contact-detail:hover{background:var(--white)}
+.contact-detail:hover .contact-icon{background:var(--blue);transform:scale(1.08)}
+.contact-icon{width:40px;height:40px;background:var(--blue-light);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;transition:transform 0.25s ease,background 0.25s ease}
 .contact-detail-label{font-size:0.72rem;color:var(--gray-400);font-weight:500;text-transform:uppercase;letter-spacing:0.06em}
 .contact-detail-val{color:var(--black);font-weight:400;font-size:0.9rem}
 
 footer{background:var(--black);color:rgba(255,255,255,0.4);padding:2.5rem 2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
 .footer-logo{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--white);text-decoration:none;display:flex;align-items:center;gap:0.5rem}
 footer p{font-size:0.8rem}
+
+.fade-in{opacity:0;transform:translateY(24px);transition:opacity 0.6s ease,transform 0.6s ease}
+.fade-in.visible{opacity:1;transform:none}
 
 @media(max-width:768px){
   .stat-cards-grid{grid-template-columns:1fr 1fr}
@@ -138,13 +214,14 @@ footer p{font-size:0.8rem}
   .contact-inner{grid-template-columns:1fr}
   .nav-links{display:none}
   .mock-after-grid{grid-template-columns:1fr 1fr}
+  .compare-slider{max-width:100%}
 }
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>LevelUpAI</a>
+  <a href="index.html" class="nav-logo"><img src="levelupai_logo.png" class="nav-logo-icon" alt="LevelUpAI">LevelUpAI</a>
   <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="website-building.html" class="active">Website Building</a>
@@ -163,32 +240,76 @@ footer p{font-size:0.8rem}
         <a href="#contact" class="btn-primary">Start my website</a>
         <a href="#pricing" class="btn-secondary">See pricing →</a>
       </div>
+      <div class="example-note"><span class="example-note-dot"></span>You're looking at an example of our work right now</div>
     </div>
-    <div class="browser-frame">
-      <div class="browser-bar">
-        <span class="browser-dot" style="background:#ff5f57"></span>
-        <span class="browser-dot" style="background:#ffbd2e"></span>
-        <span class="browser-dot" style="background:#28c840"></span>
-        <span class="browser-tag">Your new site</span>
-      </div>
-      <div class="mock-after-body">
-        <div class="mock-after-hero">
-          <div class="mock-after-hero-line"></div>
-          <div class="mock-after-hero-line short"></div>
-          <div class="mock-after-hero-btn"></div>
+    <div class="compare-wrap fade-in visible">
+      <div class="compare-slider" id="compareSlider">
+        <div class="compare-layer compare-before">
+          <div class="mock-before-nav">
+            <span class="mock-before-logo">Ramirez Roofing Co.</span>
+            <div class="mock-before-nav-links"><span>Home</span><span>About</span><span>Contact</span></div>
+          </div>
+          <div class="mock-before-title">Welcome to Our Company</div>
+          <div class="mock-before-line"></div>
+          <div class="mock-before-line"></div>
+          <div class="mock-before-line short"></div>
+          <div class="mock-before-line"></div>
+          <div class="mock-before-line short"></div>
         </div>
-        <div class="mock-after-grid">
-          <div class="mock-after-card"></div>
-          <div class="mock-after-card"></div>
-          <div class="mock-after-card"></div>
+        <div class="compare-layer compare-after" id="compareAfter">
+          <div class="compare-after-blob compare-after-blob-1"></div>
+          <div class="compare-after-blob compare-after-blob-2"></div>
+          <div class="mock-after-top-section">
+            <div class="mock-after-nav">
+              <span class="mock-after-logo"><span class="mock-after-logo-dot"></span>Ramirez Roofing</span>
+              <span class="mock-after-nav-btn">Get a Quote</span>
+            </div>
+            <div class="mock-after-hero-photo">
+              <img src="https://images.unsplash.com/photo-1705579604902-eb832f58bf85?w=700&q=80&auto=format&fit=crop" alt="">
+              <div class="mock-after-hero-photo-overlay">
+                <div class="mock-after-hero-headline">Roofing you can trust</div>
+                <div class="mock-after-hero-sub">Houston's top-rated roofing team</div>
+                <span class="mock-after-hero-btn">Free Inspection</span>
+              </div>
+            </div>
+            <div class="mock-after-caption">Serving Houston &amp; surrounding areas since 2015</div>
+          </div>
+          <div class="mock-after-feature-row">
+            <div class="mock-after-feature"><div class="mock-after-feature-icon">🏠</div><div class="mock-after-feature-label">Free Estimates</div></div>
+            <div class="mock-after-feature"><div class="mock-after-feature-icon">🛠️</div><div class="mock-after-feature-label">Licensed &amp; Insured</div></div>
+            <div class="mock-after-feature"><div class="mock-after-feature-icon">⭐</div><div class="mock-after-feature-label">5-Star Rated</div></div>
+          </div>
+          <div class="mock-after-badges-caption">Trusted by 500+ Houston homeowners</div>
+          <div class="mock-after-badges-marquee">
+            <div class="mock-after-badges-track">
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Lifetime Warranty</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1605556786938-d7581f7e477a?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">11 Years Experience</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1541557435984-1c79685a082b?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Locally Owned</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Professional Work</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">24/7 Support</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Lifetime Warranty</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1605556786938-d7581f7e477a?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">11 Years Experience</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1541557435984-1c79685a082b?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Locally Owned</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1558227691-41ea78d1f631?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">Professional Work</span></div></div>
+              <div class="mock-after-badge"><img src="https://images.unsplash.com/photo-1462539405390-d0bdb635c7d1?w=200&q=80&auto=format&fit=crop" alt=""><div class="mock-after-badge-overlay"><span class="mock-after-badge-label">24/7 Support</span></div></div>
+            </div>
+          </div>
         </div>
+        <div class="compare-handle" id="compareHandle">
+          <div class="compare-handle-grip">↔</div>
+        </div>
+        <span class="compare-tag compare-tag-before">Before</span>
+        <span class="compare-tag compare-tag-after">After</span>
       </div>
+      <p class="compare-hint">Hover and scroll to compare</p>
     </div>
   </div>
 </section>
 
-<section style="padding-top:0">
-  <div class="container">
+<section style="padding-top:0;position:relative;overflow:hidden">
+  <div class="services-blob services-blob-1"></div>
+  <div class="services-blob services-blob-2"></div>
+  <div class="container" style="position:relative;z-index:1">
     <div>
       <div class="section-eyebrow">Why it matters</div>
       <h2 class="section-title">A good website isn't decoration — it's revenue</h2>
@@ -311,7 +432,6 @@ footer p{font-size:0.8rem}
 
 <section class="pricing icons-bg" id="pricing" style="padding-top:0">
   <div class="container">
-    <div>
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-plan">Starter</div>
@@ -435,7 +555,7 @@ footer p{font-size:0.8rem}
 </section>
 
 <footer>
-  <a href="index.html" class="footer-logo"><span style="width:8px;height:8px;background:var(--blue);border-radius:50%;display:inline-block"></span>LevelUpAI</a>
+  <a href="index.html" class="footer-logo"><img src="levelupai_logo.png" class="nav-logo-icon" alt="LevelUpAI">LevelUpAI</a>
   <p>© 2026 LevelUpAI Co. Houston, Texas.</p>
   <p style="font-size:0.75rem">Websites &amp; AI-powered outreach for small businesses.</p>
 </footer>
@@ -448,6 +568,65 @@ function handleSubmit(e) {
   btn.style.background = '#16a34a';
   btn.disabled = true;
 }
+
+// Before/after comparison slider:
+//   - Not hovering: auto-toggles between "before" and "after" every 3s
+//   - Hovering: auto-toggle pauses, mouse wheel scrubs the reveal position
+(function() {
+  const slider = document.getElementById('compareSlider');
+  const afterLayer = document.getElementById('compareAfter');
+  const handle = document.getElementById('compareHandle');
+  if (!slider || !afterLayer || !handle) return;
+
+  let currentPct = 0;
+
+  function setReveal(pct) {
+    currentPct = Math.max(0, Math.min(100, pct));
+    afterLayer.style.clipPath = `inset(0 ${100 - currentPct}% 0 0)`;
+    handle.style.left = currentPct + '%';
+  }
+
+  let autoState = 0;
+  let autoTimer = null;
+
+  function startAutoToggle() {
+    stopAutoToggle();
+    autoTimer = setInterval(() => {
+      autoState = autoState === 0 ? 1 : 0;
+      setReveal(autoState === 0 ? 0 : 100);
+    }, 3000);
+  }
+
+  function stopAutoToggle() {
+    if (autoTimer) clearInterval(autoTimer);
+    autoTimer = null;
+  }
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        setReveal(0);
+        startAutoToggle();
+      } else {
+        stopAutoToggle();
+      }
+    });
+  }, {threshold:0.3});
+  revealObserver.observe(slider);
+
+  slider.addEventListener('mouseenter', () => stopAutoToggle());
+  slider.addEventListener('mouseleave', () => startAutoToggle());
+  slider.addEventListener('wheel', (e) => {
+    e.preventDefault();
+    setReveal(e.deltaY > 0 ? 100 : 0);
+  }, { passive: false });
+})();
+
+// Scroll-triggered fade-in animations
+const fadeObserver = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+}, {threshold:0.1});
+document.querySelectorAll('.fade-in').forEach(el => fadeObserver.observe(el));
 </script>
 </body>
 </html>
