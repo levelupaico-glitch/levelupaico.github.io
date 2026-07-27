@@ -28,7 +28,9 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem;border-radius:6px;font-weight:500!important;transition:background 0.2s!important}
 .nav-cta:hover{background:var(--accent)!important}
 
-.hero{padding:130px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero{padding:130px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
+.hero-wave-bg{position:absolute;left:0;right:0;bottom:-2px;width:100%;line-height:0;pointer-events:none;z-index:0}
+.hero-wave-bg svg{width:100%;height:auto;display:block}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.5rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.5rem}
 .hero h1 em{font-style:italic;color:var(--blue)}
@@ -108,6 +110,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .mock-after-badge-label{color:var(--white);font-size:0.42rem;font-weight:600;line-height:1.15}
 
 .stat-cards-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem;margin-top:3rem}
+.stat-section-inner{display:grid;grid-template-columns:320px 1fr;gap:3.5rem;align-items:center}
+.stat-photo-rotator{position:relative;width:100%;aspect-ratio:3/4;border-radius:22px;overflow:hidden;box-shadow:0 20px 56px rgba(26,79,224,0.2);border:1px solid rgba(255,255,255,0.6)}
+.stat-photo-rotator img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transition:opacity 1.8s ease}
+.stat-photo-rotator img.active{opacity:1}
+.stat-photo-rotator::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(13,13,13,0.35));pointer-events:none}
 .stat-card{background:var(--white);border:1px solid var(--gray-200);border-radius:16px;padding:1.75rem 1.5rem;position:relative;overflow:hidden;transition:transform 0.25s ease,box-shadow 0.25s ease}
 .stat-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease}
 .stat-card:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(26,79,224,0.14)}
@@ -115,6 +122,15 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .services-blob{position:absolute;border-radius:50%;filter:blur(70px);pointer-events:none;z-index:0}
 .services-blob-1{width:500px;height:500px;background:radial-gradient(circle,rgba(26,79,224,0.14),transparent 70%);top:-140px;right:-100px}
 .services-blob-2{width:420px;height:420px;background:radial-gradient(circle,rgba(26,79,224,0.1),transparent 70%);bottom:-80px;left:-80px}
+.services-blob-3{width:460px;height:460px;background:radial-gradient(circle,rgba(26,79,224,0.12),transparent 70%);top:-120px;left:-120px}
+.services-blob-4{width:380px;height:380px;background:radial-gradient(circle,rgba(26,79,224,0.09),transparent 70%);bottom:-100px;right:-60px}
+.services-blob-5{width:440px;height:440px;background:radial-gradient(circle,rgba(65,105,232,0.11),transparent 70%);top:40%;right:-160px}
+.services-blob-6{width:360px;height:360px;background:radial-gradient(circle,rgba(26,79,224,0.08),transparent 70%);top:-80px;left:35%}
+
+.grid-texture{position:absolute;inset:0;background-image:linear-gradient(rgba(26,79,224,0.06) 1px,transparent 1px),linear-gradient(90deg,rgba(26,79,224,0.06) 1px,transparent 1px);background-size:44px 44px;pointer-events:none;z-index:0}
+.grid-texture.grid-texture-fade{-webkit-mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,black 30%,transparent 75%);mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,black 30%,transparent 75%)}
+.dot-texture{position:absolute;inset:0;background-image:radial-gradient(rgba(90,90,90,0.18) 1.6px,transparent 1.6px);background-size:22px 22px;pointer-events:none;z-index:0}
+.diagonal-texture{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(26,79,224,0.07) 0,rgba(26,79,224,0.07) 1.5px,transparent 1.5px,transparent 26px);pointer-events:none;z-index:0}
 .stat-card-num{font-family:'DM Serif Display',serif;font-size:2.5rem;color:var(--blue);line-height:1;margin-bottom:0.75rem}
 .stat-card-label{font-size:0.88rem;color:var(--black);line-height:1.5;margin-bottom:0.75rem;font-weight:400}
 .stat-card-source{font-size:0.72rem;color:var(--gray-400);font-weight:400}
@@ -142,24 +158,29 @@ section{padding:5rem 2rem}
 .how{background:var(--off-white)}
 .how-header{margin-bottom:3.5rem}
 .steps{display:flex;flex-direction:column;gap:0}
-.step{display:grid;grid-template-columns:56px 1fr;gap:1.75rem;align-items:start;padding:2rem 1rem;margin:0 -1rem;border-bottom:1px solid var(--gray-200);border-radius:14px;transition:background 0.25s ease}
+.step{display:grid;grid-template-columns:64px 1fr;gap:1.75rem;align-items:start;padding:2rem 1rem;margin:0 -1rem;border-bottom:1px solid var(--gray-200);border-radius:14px;transition:background 0.25s ease}
 .step:hover{background:var(--white)}
 .step:hover .step-icon-wrap{background:var(--blue);transform:scale(1.08) rotate(-4deg)}
 .step-icon-wrap{transition:transform 0.3s ease,background 0.3s ease}
 .step:last-child{border-bottom:none}
 .step-icon-wrap{width:52px;height:52px;border-radius:14px;background:var(--blue-light);display:flex;align-items:center;justify-content:center;font-size:1.4rem;flex-shrink:0;margin-top:0.2rem}
+.step-photo{width:64px;height:64px;border-radius:16px;overflow:hidden;position:relative;flex-shrink:0;margin-top:0.2rem;box-shadow:0 6px 18px rgba(13,13,13,0.14);transition:transform 0.3s ease}
+.step-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.step-photo-badge{position:absolute;bottom:-7px;right:-7px;width:30px;height:30px;background:var(--blue);border-radius:9px;display:flex;align-items:center;justify-content:center;font-size:0.95rem;box-shadow:0 3px 8px rgba(0,0,0,0.3);transition:transform 0.3s ease}
+.step:hover .step-photo{transform:scale(1.06)}
+.step:hover .step-photo-badge{transform:scale(1.12) rotate(-6deg)}
 .step-content h3{font-size:1.15rem;font-weight:600;color:var(--black);margin-bottom:0.4rem;margin-top:0.2rem}
 .step-content p{font-size:0.95rem;color:var(--gray-600);line-height:1.7;font-weight:300}
 .step-badge{display:inline-block;background:var(--blue-light);color:var(--blue);font-size:0.68rem;font-weight:600;letter-spacing:0.06em;text-transform:uppercase;padding:0.2rem 0.6rem;border-radius:4px;margin-bottom:0.4rem}
 
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
-.pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s}
-.pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;z-index:1}
+.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3.75rem}
+.pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;transition:transform 0.25s,box-shadow 0.25s,border-color 0.25s}
+.pricing-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;border-radius:20px 20px 0 0;background:linear-gradient(90deg,var(--blue),var(--accent));transform:scaleX(0);transform-origin:left;transition:transform 0.3s ease;z-index:1}
 .pricing-card:hover::before{transform:scaleX(1)}
 .pricing-card.featured::before{background:linear-gradient(90deg,#6b8fff,var(--blue))}
 .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,79,224,0.1)}
 .pricing-card.featured{border-color:var(--blue);background:var(--black);color:var(--white)}
-.pricing-tag{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:100px;white-space:nowrap}
+.pricing-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);background:var(--blue);color:var(--white);font-size:0.7rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:100px;white-space:nowrap;z-index:2}
 .pricing-plan{font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--blue);margin-bottom:0.5rem}
 .pricing-card.featured .pricing-plan{color:#6b8fff}
 .pricing-price{font-family:'DM Serif Display',serif;font-size:2.75rem;color:var(--black);line-height:1;margin-bottom:0.25rem}
@@ -207,6 +228,8 @@ footer p{font-size:0.8rem}
 
 @media(max-width:768px){
   .stat-cards-grid{grid-template-columns:1fr 1fr}
+  .stat-section-inner{grid-template-columns:1fr}
+  .stat-photo-rotator{max-width:240px;margin:0 auto}
   .compare-row{grid-template-columns:1.2fr 1fr 1fr;font-size:0.85rem}
   .compare-cell{padding:0.85rem 0.75rem}
   .hero{grid-template-columns:1fr}
@@ -230,7 +253,13 @@ footer p{font-size:0.8rem}
   </div>
 </nav>
 
-<section>
+<section style="position:relative;overflow:hidden">
+  <div class="hero-wave-bg">
+    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path fill="#eaedff" d="M0,224 C240,280 480,160 720,176 C960,192 1200,272 1440,224 L1440,320 L0,320 Z"></path>
+      <path fill="#f2f4ff" d="M0,256 C260,300 500,208 740,220 C980,232 1180,296 1440,256 L1440,320 L0,320 Z"></path>
+    </svg>
+  </div>
   <div class="hero">
     <div>
       <span class="hero-eyebrow">🖥️ Website Building</span>
@@ -310,12 +339,21 @@ footer p{font-size:0.8rem}
   <div class="services-blob services-blob-1"></div>
   <div class="services-blob services-blob-2"></div>
   <div class="container" style="position:relative;z-index:1">
-    <div>
-      <div class="section-eyebrow">Why it matters</div>
-      <h2 class="section-title">A good website isn't decoration — it's revenue</h2>
-      <p class="section-sub">Real research on how a website affects trust and sales for small businesses.</p>
-    </div>
-    <div class="stat-cards-grid">
+    <div class="stat-section-inner">
+      <div class="stat-photo-rotator" id="statPhotoRotator">
+        <img class="active" src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=500&q=80&auto=format&fit=crop" alt="">
+        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=500&q=80&auto=format&fit=crop" alt="">
+        <img src="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=500&q=80&auto=format&fit=crop" alt="">
+        <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=500&q=80&auto=format&fit=crop" alt="">
+        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=500&q=80&auto=format&fit=crop" alt="">
+      </div>
+      <div>
+        <div>
+          <div class="section-eyebrow">Why it matters</div>
+          <h2 class="section-title">A good website isn't decoration — it's revenue</h2>
+          <p class="section-sub">Real research on how a website affects trust and sales for small businesses.</p>
+        </div>
+        <div class="stat-cards-grid">
       <div class="stat-card">
         <div class="stat-card-num">2.8x</div>
         <p class="stat-card-label">Small businesses with a website are 2.8 times more likely to grow their revenue.</p>
@@ -336,12 +374,17 @@ footer p{font-size:0.8rem}
         <p class="stat-card-label">Of customers will simply ignore a business that has no website at all.</p>
         <span class="stat-card-source">Network Solutions, 2026</span>
       </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="how">
-  <div class="container">
+<section class="how" style="position:relative;overflow:hidden">
+  <div class="grid-texture"></div>
+  <div class="services-blob services-blob-3"></div>
+  <div class="services-blob services-blob-4"></div>
+  <div class="container" style="position:relative;z-index:1">
     <div class="how-header">
       <div class="section-eyebrow">How it works</div>
       <h2 class="section-title">From first call to<br>live website</h2>
@@ -349,7 +392,10 @@ footer p{font-size:0.8rem}
     </div>
     <div class="steps">
       <div class="step">
-        <div class="step-icon-wrap">💬</div>
+        <div class="step-photo">
+          <img src="https://images.unsplash.com/photo-1714974528737-3e6c7e4d11af?w=200&q=80&auto=format&fit=crop" alt="">
+          <div class="step-photo-badge">💬</div>
+        </div>
         <div class="step-content">
           <span class="step-badge">Discovery</span>
           <h3>We learn about your business</h3>
@@ -357,7 +403,10 @@ footer p{font-size:0.8rem}
         </div>
       </div>
       <div class="step">
-        <div class="step-icon-wrap">🎨</div>
+        <div class="step-photo">
+          <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=200&q=80&auto=format&fit=crop" alt="">
+          <div class="step-photo-badge">🎨</div>
+        </div>
         <div class="step-content">
           <span class="step-badge">Design</span>
           <h3>We design it around you</h3>
@@ -365,7 +414,10 @@ footer p{font-size:0.8rem}
         </div>
       </div>
       <div class="step">
-        <div class="step-icon-wrap">🛠️</div>
+        <div class="step-photo">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&q=80&auto=format&fit=crop" alt="">
+          <div class="step-photo-badge">🛠️</div>
+        </div>
         <div class="step-content">
           <span class="step-badge">Build</span>
           <h3>We build and you review</h3>
@@ -373,7 +425,10 @@ footer p{font-size:0.8rem}
         </div>
       </div>
       <div class="step">
-        <div class="step-icon-wrap">🚀</div>
+        <div class="step-photo">
+          <img src="https://images.unsplash.com/photo-1758518731462-d091b0b4ed0d?w=200&q=80&auto=format&fit=crop" alt="">
+          <div class="step-photo-badge">🚀</div>
+        </div>
         <div class="step-content">
           <span class="step-badge">Launch</span>
           <h3>We launch it live</h3>
@@ -381,7 +436,10 @@ footer p{font-size:0.8rem}
         </div>
       </div>
       <div class="step">
-        <div class="step-icon-wrap">🔧</div>
+        <div class="step-photo">
+          <img src="https://images.unsplash.com/photo-1758519288969-4806f015852d?w=200&q=80&auto=format&fit=crop" alt="">
+          <div class="step-photo-badge">🔧</div>
+        </div>
         <div class="step-content">
           <span class="step-badge">Ongoing</span>
           <h3>We keep it running</h3>
@@ -392,12 +450,14 @@ footer p{font-size:0.8rem}
   </div>
 </section>
 
-<section id="compare">
-  <div class="container">
+<section id="compare" style="position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:#0f1a4d;opacity:0.6;z-index:0"></div>
+  <div class="services-blob services-blob-5"></div>
+  <div class="container" style="position:relative;z-index:1">
     <div>
       <div class="section-eyebrow">Pricing</div>
-      <h2 class="section-title">Simple, transparent pricing</h2>
-      <p class="section-sub">One-time build fee, plus simple monthly hosting and maintenance. No contracts, cancel any time.</p>
+      <h2 class="section-title" style="color:var(--white)">Simple, transparent pricing</h2>
+      <p class="section-sub" style="color:rgba(255,255,255,0.75)">One-time build fee, plus simple monthly hosting and maintenance. No contracts, cancel any time.</p>
     </div>
     <div class="compare-table">
       <div class="compare-row head">
@@ -426,12 +486,14 @@ footer p{font-size:0.8rem}
         <div class="compare-cell val">$50 – $65/mo</div>
       </div>
     </div>
-    <p style="font-size:0.8rem;color:var(--gray-400);margin-top:0.75rem;font-weight:300">Market ranges based on 2026 industry pricing research (GruffyGoat, Leadpages, OneLittleWeb, Elementor).</p>
+    <p style="font-size:0.8rem;color:rgba(255,255,255,0.65);margin-top:0.75rem;font-weight:300">Market ranges based on 2026 industry pricing research (GruffyGoat, Leadpages, OneLittleWeb, Elementor).</p>
   </div>
 </section>
 
-<section class="pricing icons-bg" id="pricing" style="padding-top:0">
-  <div class="container">
+<section class="pricing" id="pricing" style="padding-top:0;position:relative;overflow:hidden">
+  <div style="position:absolute;inset:0;background:#0f1a4d;opacity:0.6;z-index:0"></div>
+  <div class="services-blob services-blob-6"></div>
+  <div class="container" style="position:relative;z-index:1">
     <div class="pricing-grid">
       <div class="pricing-card">
         <div class="pricing-plan">Starter</div>
@@ -469,12 +531,15 @@ footer p{font-size:0.8rem}
         <a href="#contact" class="pricing-btn">Get started</a>
       </div>
     </div>
-    <p style="font-size:0.85rem;color:var(--gray-600);margin-top:1.5rem;font-weight:300">Domain name not included (~$12/year) — you own it, and we help you connect it. Need more pages or extra work beyond the monthly allowance? We'll quote it separately, no surprise fees.</p>
+    <p style="font-size:0.85rem;color:rgba(255,255,255,0.85);margin-top:1.5rem;font-weight:300">Domain name not included (~$12/year) — you own it, and we help you connect it. Need more pages or extra work beyond the monthly allowance? We'll quote it separately, no surprise fees.</p>
   </div>
 </section>
 
-<section id="contact" style="background:var(--off-white)">
-  <div class="container">
+<section id="contact" style="background:var(--off-white);position:relative;overflow:hidden">
+  <div class="dot-texture"></div>
+  <div class="services-blob services-blob-1"></div>
+  <div class="services-blob services-blob-2"></div>
+  <div class="container" style="position:relative;z-index:1">
     <div class="contact-inner">
       <div class="contact-info-side">
         <div class="section-eyebrow">Contact</div>
@@ -568,6 +633,20 @@ function handleSubmit(e) {
   btn.style.background = '#16a34a';
   btn.disabled = true;
 }
+
+// Why-it-matters photo rotator: cross-fades between images every 3.5s
+(function() {
+  const rotator = document.getElementById('statPhotoRotator');
+  if (!rotator) return;
+  const imgs = rotator.querySelectorAll('img');
+  if (imgs.length < 2) return;
+  let idx = 0;
+  setInterval(() => {
+    imgs[idx].classList.remove('active');
+    idx = (idx + 1) % imgs.length;
+    imgs[idx].classList.add('active');
+  }, 5000);
+})();
 
 // Before/after comparison slider:
 //   - Not hovering: auto-toggles between "before" and "after" every 3s
