@@ -30,6 +30,11 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-links a{font-size:0.875rem;font-weight:400;color:var(--gray-600);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--black)}
 .nav-links a.active{color:var(--black);font-weight:500}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-hamburger span{width:24px;height:2px;background:var(--black);border-radius:2px;transition:transform 0.25s ease,opacity 0.2s ease}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem;border-radius:6px;font-weight:500!important;transition:background 0.2s!important}
 .nav-cta:hover{background:var(--accent)!important}
 
@@ -253,6 +258,10 @@ footer p{font-size:0.8rem}
   .hero{grid-template-columns:1fr}
   .services-grid{grid-template-columns:1fr}
   .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-links.mobile-open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:fixed;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--gray-200);padding:0.5rem 2rem 1.25rem;box-shadow:0 12px 24px rgba(0,0,0,0.08)}
+  .nav-links.mobile-open a{padding:0.85rem 0;border-bottom:1px solid var(--gray-100);font-size:1rem}
+  .nav-links.mobile-open a.nav-cta{margin-top:0.85rem;border-bottom:none;text-align:center}
   .panel-stage{height:1150px}
 }
 </style>
@@ -261,12 +270,15 @@ footer p{font-size:0.8rem}
 
 <nav>
   <a href="index.html" class="nav-logo"><img src="levelupai_logo.png" class="nav-logo-icon" alt="LevelUpAI">LevelUpAI</a>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="index.html" class="active">Home</a>
     <a href="website-building.html">Website Building</a>
     <a href="email-outreach.html">AI Email Outreach</a>
     <a href="website-building.html#contact" class="nav-cta">Get started</a>
   </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <section style="padding:0" class="skyline-bg">
@@ -529,6 +541,24 @@ footer p{font-size:0.8rem}
 </footer>
 
 <script>
+// Mobile hamburger menu toggle
+(function() {
+  const hamburger = document.getElementById('navHamburger');
+  const navLinks = document.getElementById('navLinks');
+  if (!hamburger || !navLinks) return;
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('mobile-open');
+  });
+  // Close the menu after tapping any link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('mobile-open');
+    });
+  });
+})();
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold:0.1});

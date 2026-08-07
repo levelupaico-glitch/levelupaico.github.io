@@ -15,8 +15,8 @@
   --blue:#1a4fe0;--blue-light:#eaedff;--blue-mid:#4169e8;--accent:#0f3db5;
   --warm:#fff8f0;--warm-border:#fde8cc;
 }
-html{scroll-behavior:smooth}
-body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--black);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden;max-width:100vw}
 
 .icons-bg{position:relative;overflow:hidden}
 .icons-bg > *:not(.scattered-icons){position:relative;z-index:1}
@@ -38,10 +38,16 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 .nav-links a{font-size:0.875rem;font-weight:400;color:var(--gray-600);text-decoration:none;transition:color 0.2s}
 .nav-links a:hover{color:var(--black)}
 .nav-links a.active{color:var(--black);font-weight:500}
+.nav-hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px}
+.nav-hamburger span{width:24px;height:2px;background:var(--black);border-radius:2px;transition:transform 0.25s ease,opacity 0.2s ease}
+.nav-hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .nav-cta{background:var(--blue)!important;color:var(--white)!important;padding:0.5rem 1.25rem;border-radius:6px;font-weight:500!important;transition:background 0.2s!important}
 .nav-cta:hover{background:var(--accent)!important}
 
 .hero{padding:120px 2rem 80px;max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center}
+.hero>div{min-width:0}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:0.5rem;background:var(--blue-light);color:var(--blue);font-size:0.75rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;padding:0.35rem 0.85rem;border-radius:100px;margin-bottom:1.5rem}
 .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2.4rem,4.5vw,3.5rem);line-height:1.1;letter-spacing:-0.02em;color:var(--black);margin-bottom:1.5rem}
 .hero h1 em{font-style:italic;color:var(--blue)}
@@ -74,6 +80,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,
 
 .stats-bar{background:var(--gray-100);border-top:1px solid var(--gray-200);border-bottom:1px solid var(--gray-200);padding:2rem}
 .stats-bar-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center}
+.stats-bar-inner>*{min-width:0}
 .stats-bar-num{font-family:'DM Serif Display',serif;font-size:2.25rem;color:var(--blue);display:block;line-height:1}
 .stats-bar-label{font-size:0.85rem;color:var(--gray-600);margin-top:0.25rem;font-weight:300}
 
@@ -100,6 +107,7 @@ section{padding:5rem 2rem}
 .dash-dot{width:10px;height:10px;border-radius:50%}
 .dash-url{background:rgba(255,255,255,0.1);border-radius:4px;padding:0.2rem 0.75rem;font-size:0.7rem;color:rgba(255,255,255,0.5);margin-left:auto;font-family:monospace}
 .dash-body{background:#0f1117;border-radius:0 0 12px 12px;padding:1.5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.dash-body>*{min-width:0}
 .dash-stat{background:#1a1d27;border:1px solid #2a2d3a;border-radius:10px;padding:1rem}
 .dash-stat-label{font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em}
 .dash-stat-val{font-size:1.6rem;font-weight:700;margin-top:0.2rem}
@@ -108,6 +116,7 @@ section{padding:5rem 2rem}
 .dash-stat-val.amber{color:#f59e0b}
 .dash-stat-val.purple{color:#a855f7}
 .dash-charts{background:#0f1117;padding:1.5rem;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem;border-radius:12px}
+.dash-charts>*{min-width:0}
 .dash-chart-card{background:#1a1d27;border:1px solid #2a2d3a;border-radius:10px;padding:1rem}
 .dash-chart-title{font-size:0.65rem;color:#6b7280;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:0.75rem}
 .dash-bars{display:flex;align-items:flex-end;gap:6px;height:60px}
@@ -123,6 +132,7 @@ section{padding:5rem 2rem}
 
 .pricing{background:var(--off-white)}
 .pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.5rem;margin-top:3rem}
+.pricing-grid>*{min-width:0}
 .pricing-card{background:var(--white);border:1.5px solid var(--gray-200);border-radius:20px;padding:2.5rem;position:relative;transition:transform 0.2s,box-shadow 0.2s}
 .pricing-card:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(26,79,224,0.1)}
 .pricing-card.featured{border-color:var(--blue);background:var(--black);color:var(--white)}
@@ -145,6 +155,7 @@ section{padding:5rem 2rem}
 .pricing-card:not(.featured) .pricing-btn:hover{background:var(--gray-100)}
 
 .contact-inner{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start}
+.contact-inner>div{min-width:0}
 .contact-form-wrap{background:var(--white);border:1px solid var(--gray-200);border-radius:20px;padding:2.5rem;box-shadow:0 4px 30px rgba(0,0,0,0.04)}
 .form-group{margin-bottom:1.25rem}
 label{display:block;font-size:0.85rem;font-weight:500;color:var(--black);margin-bottom:0.4rem}
@@ -176,6 +187,10 @@ footer p{font-size:0.8rem}
   .pricing-grid{grid-template-columns:1fr}
   .contact-inner{grid-template-columns:1fr}
   .nav-links{display:none}
+  .nav-hamburger{display:flex}
+  .nav-links.mobile-open{display:flex;flex-direction:column;align-items:stretch;gap:0;position:fixed;top:64px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--gray-200);padding:0.5rem 2rem 1.25rem;box-shadow:0 12px 24px rgba(0,0,0,0.08)}
+  .nav-links.mobile-open a{padding:0.85rem 0;border-bottom:1px solid var(--gray-100);font-size:1rem}
+  .nav-links.mobile-open a.nav-cta{margin-top:0.85rem;border-bottom:none;text-align:center}
   .stats-bar-inner{grid-template-columns:repeat(2,1fr)}
   .dash-body{grid-template-columns:1fr 1fr}
   .dash-charts{grid-template-columns:1fr}
@@ -186,12 +201,15 @@ footer p{font-size:0.8rem}
 
 <nav>
   <a href="index.html" class="nav-logo"><span class="nav-logo-dot"></span>LevelUpAI</a>
-  <div class="nav-links">
+  <div class="nav-links" id="navLinks">
     <a href="index.html">Home</a>
     <a href="website-building.html">Website Building</a>
     <a href="email-outreach.html" class="active">AI Email Outreach</a>
     <a href="#contact" class="nav-cta">Get started</a>
   </div>
+  <button class="nav-hamburger" id="navHamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <section style="padding:0" class="skyline-bg">
@@ -678,11 +696,34 @@ footer p{font-size:0.8rem}
 </footer>
 
 <script>
+// Mobile hamburger menu toggle
+(function() {
+  const hamburger = document.getElementById('navHamburger');
+  const navLinks = document.getElementById('navLinks');
+  if (!hamburger || !navLinks) return;
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    navLinks.classList.toggle('mobile-open');
+  });
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      navLinks.classList.remove('mobile-open');
+    });
+  });
+})();
+
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
 }, {threshold:0.1});
 document.querySelectorAll('.fade-in, .step').forEach(el => observer.observe(el));
 document.querySelectorAll('.step').forEach((el,i) => { el.style.transitionDelay=(i*0.06)+'s'; });
+
+// Safety net: force-reveal any fade-in/step content the observer hasn't
+// triggered yet, so nothing can get permanently stuck invisible.
+setTimeout(() => {
+  document.querySelectorAll('.fade-in:not(.visible), .step:not(.visible)').forEach(el => el.classList.add('visible'));
+}, 1500);
 
 function animateCounter(el, target, duration, suffix) {
   let start = 0;
