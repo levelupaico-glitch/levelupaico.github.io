@@ -507,8 +507,9 @@
     "replied": false,
     "status": "sent",
     "followedUp1": true,
-    "followedUp2": false,
-    "followUp1Date": "2026-07-15T15:02:09.329Z"
+    "followedUp2": true,
+    "followUp1Date": "2026-07-15T15:02:09.329Z",
+    "followUp2Date": "2026-09-15T09:09:13.607Z"
   },
   {
     "type": "followup2",
@@ -870,8 +871,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:16.744Z"
   },
   {
     "type": "new",
@@ -888,8 +890,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:19.902Z"
   },
   {
     "type": "new",
@@ -906,8 +909,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:23.083Z"
   },
   {
     "type": "new",
@@ -924,8 +928,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:26.222Z"
   },
   {
     "type": "new",
@@ -942,8 +947,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:30.241Z"
   },
   {
     "type": "new",
@@ -960,8 +966,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:33.412Z"
   },
   {
     "type": "new",
@@ -978,8 +985,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:36.669Z"
   },
   {
     "type": "new",
@@ -996,8 +1004,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:39.926Z"
   },
   {
     "type": "new",
@@ -1014,8 +1023,9 @@
     "replyText": null,
     "replyDate": null,
     "status": "sent",
-    "followedUp1": false,
-    "followedUp2": false
+    "followedUp1": true,
+    "followedUp2": false,
+    "followUp1Date": "2026-09-15T09:09:43.093Z"
   },
   {
     "type": "new",
@@ -1306,6 +1316,146 @@
     "body": "Howdy,\n\nI'll keep this short — I haven't heard back, so I'll assume now isn't the right time for Innpreccon Roofing, LLC and won't follow up again after this.\n\nIf that changes, we help roofing companies businesses get more clients through automated AI outreach — no setup work on your end, and you can stop any time. Just reply YES if you'd like to take a look, otherwise I'll leave you be.\n\nDaniel\nLevelUpAI",
     "date": "2026-07-20",
     "time": "2026-07-20T15:05:26.474Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "parentEmail": "service@acecomfort-tx.com",
+    "name": "Ace Comfort Air Conditioning & Heating",
+    "email": "service@acecomfort-tx.com",
+    "industry": "HVAC companies",
+    "subject": "Last note about Ace Comfort Air Conditioning & Heating's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:13.607Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "myroofer@dcpines.com",
+    "name": "DC Pines Roofing",
+    "email": "myroofer@dcpines.com",
+    "industry": "roofing companies",
+    "subject": "Following up — DC Pines Roofing's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:16.744Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@lonestarroofing.net",
+    "name": "Lone Star Roofing",
+    "email": "info@lonestarroofing.net",
+    "industry": "roofing companies",
+    "subject": "Following up — Lone Star Roofing's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:19.902Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@75degreeac.com",
+    "name": "75 Degree AC- Houston",
+    "email": "info@75degreeac.com",
+    "industry": "HVAC companies",
+    "subject": "Following up — 75 Degree AC- Houston's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:23.083Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "admin@justintimeaircondition.com",
+    "name": "Just-N-Time AC and Heating",
+    "email": "admin@justintimeaircondition.com",
+    "industry": "HVAC companies",
+    "subject": "Following up — Just-N-Time AC and Heating's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:26.222Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "hello@thechillbrothers.com",
+    "name": "The Chill Brothers",
+    "email": "hello@thechillbrothers.com",
+    "industry": "HVAC companies",
+    "subject": "Following up — The Chill Brothers's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:30.241Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@houstonhvac.com",
+    "name": "Houston HVAC",
+    "email": "info@houstonhvac.com",
+    "industry": "HVAC companies",
+    "subject": "Following up — Houston HVAC's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:33.412Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "info@mysite.com",
+    "name": "Baker-Jones Co. Inc",
+    "email": "info@mysite.com",
+    "industry": "HVAC companies",
+    "subject": "Following up — Baker-Jones Co. Inc's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:36.669Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "hello@jccroofing.com",
+    "name": "JC&C Roofing Company",
+    "email": "hello@jccroofing.com",
+    "industry": "roofing companies",
+    "subject": "Following up — JC&C Roofing Company's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:39.926Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "parentEmail": "contact@cedarroofingtx.com",
+    "name": "Cedar Roofing",
+    "email": "contact@cedarroofingtx.com",
+    "industry": "roofing companies",
+    "subject": "Following up — Cedar Roofing's website",
+    "date": "2026-09-15",
+    "time": "2026-09-15T09:09:43.093Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
