@@ -1590,7 +1590,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-09-30T15:07:06.835Z"
+    "followUp1Date": "2026-09-30T15:07:06.835Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:19.185Z"
   },
   {
     "type": "new",
@@ -1607,7 +1609,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:18.788Z"
+    "followUp1Date": "2026-10-01T15:02:18.788Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:24.609Z"
   },
   {
     "type": "new",
@@ -1624,7 +1628,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:22.747Z"
+    "followUp1Date": "2026-10-01T15:02:22.747Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:29.072Z"
   },
   {
     "type": "new",
@@ -1641,7 +1647,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:26.555Z"
+    "followUp1Date": "2026-10-01T15:02:26.555Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:35.215Z"
   },
   {
     "type": "new",
@@ -1658,7 +1666,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:30.410Z"
+    "followUp1Date": "2026-10-01T15:02:30.410Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:42.926Z"
   },
   {
     "type": "new",
@@ -1675,7 +1685,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:34.314Z"
+    "followUp1Date": "2026-10-01T15:02:34.314Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:48.292Z"
   },
   {
     "type": "new",
@@ -1692,7 +1704,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:38.090Z"
+    "followUp1Date": "2026-10-01T15:02:38.090Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:52.122Z"
   },
   {
     "type": "new",
@@ -1709,7 +1723,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:42.494Z"
+    "followUp1Date": "2026-10-01T15:02:42.494Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:01:55.895Z"
   },
   {
     "type": "new",
@@ -1726,7 +1742,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:46.429Z"
+    "followUp1Date": "2026-10-01T15:02:46.429Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:02:00.646Z"
   },
   {
     "type": "new",
@@ -1743,7 +1761,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-01T15:02:50.068Z"
+    "followUp1Date": "2026-10-01T15:02:50.068Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-06T15:02:05.475Z"
   },
   {
     "type": "new",
@@ -1758,7 +1778,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-06T15:02:21.030Z"
   },
   {
     "type": "new",
@@ -1773,7 +1795,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-06T15:02:25.865Z"
   },
   {
     "type": "new",
@@ -3247,6 +3271,228 @@
     "subject": "Last note about Insurance Agency Unit Houston's website",
     "date": "2026-10-05",
     "time": "2026-10-05T15:07:24.568Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Harris Tire Co",
+    "email": "ken@harristire.com",
+    "industry": "tire shops",
+    "siteUrl": "https://levelupdemo.github.io/site-1b9c62017b42/",
+    "subject": "A website for Harris Tire Co",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:00:31.420Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "King Plumbing Inc",
+    "email": "josh@kingplumbing.co",
+    "industry": "plumbing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-5902d8c71e64/",
+    "subject": "A website for King Plumbing Inc",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:00.300Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "coryne@cliquemrkt.com",
+    "name": "Clique Marketing",
+    "email": "coryne@cliquemrkt.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-1211e43108d8/",
+    "subject": "Last note about Clique Marketing's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:19.185Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "dinesh.venugopal@infogain.com",
+    "name": "Infogain Corporation (Houston)",
+    "email": "dinesh.venugopal@infogain.com",
+    "industry": "IT support companies",
+    "siteUrl": "https://levelupdemo.github.io/site-3bd2131b4865/",
+    "subject": "Last note about Infogain Corporation (Houston)'s website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:24.609Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "blumcustombuilders@gmail.com",
+    "name": "Blum Custom Builders",
+    "email": "blumcustombuilders@gmail.com",
+    "industry": "general contractors",
+    "siteUrl": "https://levelupdemo.github.io/site-c8295b4c6f2b/",
+    "subject": "Last note about Blum Custom Builders's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:29.072Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "vgrinshtein@xvand.com",
+    "name": "Houston IT Company",
+    "email": "vgrinshtein@xvand.com",
+    "industry": "IT support companies",
+    "siteUrl": "https://levelupdemo.github.io/site-c2ae3de2db06/",
+    "subject": "Last note about Houston IT Company's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:35.215Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "wendy@yahoo.com",
+    "name": "Alvarado Taxes and Insurance",
+    "email": "wendy@yahoo.com",
+    "industry": "tax preparation services",
+    "siteUrl": "https://levelupdemo.github.io/site-3dd4e0899114/",
+    "subject": "Last note about Alvarado Taxes and Insurance's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:42.926Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Elorise Massage & Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "massage therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-7c553c965a57/",
+    "subject": "Last note about Elorise Massage & Spa's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:48.292Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "ron@thebodymaster.com",
+    "name": "Houston Personal Trainer",
+    "email": "ron@thebodymaster.com",
+    "industry": "personal trainers",
+    "siteUrl": "https://levelupdemo.github.io/site-15df5c8d2fd7/",
+    "subject": "Last note about Houston Personal Trainer's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:52.122Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "dean@timberlinefitness.com",
+    "name": "Terrence @ Timberline Fitness",
+    "email": "dean@timberlinefitness.com",
+    "industry": "personal trainers",
+    "siteUrl": "https://levelupdemo.github.io/site-5333fc3b2a93/",
+    "subject": "Last note about Terrence @ Timberline Fitness's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:01:55.895Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "johnny@texasbodyart.com",
+    "name": "Samita Tattoo artists",
+    "email": "johnny@texasbodyart.com",
+    "industry": "tattoo shops",
+    "siteUrl": "https://levelupdemo.github.io/site-cd0ebce45de3/",
+    "subject": "Last note about Samita Tattoo artists's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:02:00.646Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "aimee@ppt4kids.com",
+    "name": "mv pediatric therapy",
+    "email": "aimee@ppt4kids.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-2c6e6b0d3d17/",
+    "subject": "Last note about mv pediatric therapy's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:02:05.475Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "vlowens@starforwardsolutions.com",
+    "name": "Star Forward Solutions",
+    "email": "vlowens@starforwardsolutions.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-250fd9c38f2d/",
+    "subject": "Following up — Star Forward Solutions's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:02:21.030Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "chris@roadtrippers.com",
+    "name": "King Dragon Tattoo",
+    "email": "chris@roadtrippers.com",
+    "industry": "tattoo shops",
+    "siteUrl": "https://levelupdemo.github.io/site-458837d03e36/",
+    "subject": "Following up — King Dragon Tattoo's website",
+    "date": "2026-10-06",
+    "time": "2026-10-06T15:02:25.865Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
