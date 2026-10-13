@@ -1837,7 +1837,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:00:32.325Z"
+    "followUp1Date": "2026-10-07T15:00:32.325Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:02:32.248Z"
   },
   {
     "type": "new",
@@ -1854,7 +1856,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:00:37.208Z"
+    "followUp1Date": "2026-10-07T15:00:37.208Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:02:36.156Z"
   },
   {
     "type": "followup1",
@@ -1935,7 +1939,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:00:40.973Z"
+    "followUp1Date": "2026-10-07T15:00:40.973Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:02:39.896Z"
   },
   {
     "type": "new",
@@ -1952,7 +1958,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:00:47.981Z"
+    "followUp1Date": "2026-10-07T15:00:47.981Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:02:43.612Z"
   },
   {
     "type": "new",
@@ -1969,7 +1977,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:00:54.682Z"
+    "followUp1Date": "2026-10-07T15:00:54.682Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:02:47.361Z"
   },
   {
     "type": "new",
@@ -1986,7 +1996,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:00:58.932Z"
+    "followUp1Date": "2026-10-07T15:00:58.932Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:03:01.959Z"
   },
   {
     "type": "new",
@@ -2003,7 +2015,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:02.802Z"
+    "followUp1Date": "2026-10-07T15:01:02.802Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:03:05.918Z"
   },
   {
     "type": "new",
@@ -2020,7 +2034,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:06.784Z"
+    "followUp1Date": "2026-10-07T15:01:06.784Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:03:09.616Z"
   },
   {
     "type": "new",
@@ -2037,7 +2053,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:11.693Z"
+    "followUp1Date": "2026-10-07T15:01:11.693Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-13T15:03:13.498Z"
   },
   {
     "type": "new",
@@ -4210,6 +4228,225 @@
     "subject": "Last note about Elite Private Tutors's website",
     "date": "2026-10-12",
     "time": "2026-10-12T15:07:51.919Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "O'Neill's Catering",
+    "email": "neill@oneillscatering.com",
+    "industry": "catering companies",
+    "siteUrl": "https://levelupdemo.github.io/site-558e3a292bbb/",
+    "subject": "A website for O'Neill's Catering",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:00:36.441Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "E=motion Sports Therapy",
+    "email": "ariel@emotionsportstherapy.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-a6255a972027/",
+    "subject": "A website for E=motion Sports Therapy",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:01:04.061Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "The Leslie Studio (Houston)",
+    "email": "mary@thelesliestudio.com",
+    "industry": "photographers",
+    "siteUrl": "https://levelupdemo.github.io/site-b79d59a112a7/",
+    "subject": "A website for The Leslie Studio (Houston)",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:01:18.475Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Graziano Roofing of Texas Inc",
+    "email": "joey@grazianoroofing.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-de3304a1581d/",
+    "subject": "Built Graziano Roofing of Texas Inc a website — take a look",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:01:44.253Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "W C Construction",
+    "email": "wcarter@wcconstructioncompany.com",
+    "industry": "general contractors",
+    "siteUrl": "https://levelupdemo.github.io/site-7453daf41c9b/",
+    "subject": "Built W C Construction a website — take a look",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:02:04.389Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "enrique@teramovingservices.com",
+    "name": "Tera Moving of Downtown Houston",
+    "email": "enrique@teramovingservices.com",
+    "industry": "moving companies",
+    "siteUrl": "https://levelupdemo.github.io/site-bd6afb69b6b8/",
+    "subject": "Last note about Tera Moving of Downtown Houston's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:02:32.248Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "michael.novak@americanbestlocksmith.com",
+    "name": "American Best Locksmith",
+    "email": "michael.novak@americanbestlocksmith.com",
+    "industry": "locksmiths",
+    "siteUrl": "https://levelupdemo.github.io/site-dd9134dcfef5/",
+    "subject": "Last note about American Best Locksmith's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:02:36.156Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "rok@blazeenergytech.com",
+    "name": "Blaze Energy",
+    "email": "rok@blazeenergytech.com",
+    "industry": "solar companies",
+    "siteUrl": "https://levelupdemo.github.io/site-9b2bfb4afb42/",
+    "subject": "Last note about Blaze Energy's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:02:39.896Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "jgarza@farmersagent.com",
+    "name": "Farmers Insurance Jose Garza Agency",
+    "email": "jgarza@farmersagent.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-ef84c89fc3b1/",
+    "subject": "Last note about Farmers Insurance Jose Garza Agency's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:02:43.612Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "don@remax.com",
+    "name": "Don Ngo",
+    "email": "don@remax.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-f5d1c3db1791/",
+    "subject": "Last note about Don Ngo's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:02:47.361Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "hporter@staffingetc.net",
+    "name": "Staffing Etc",
+    "email": "hporter@staffingetc.net",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-669546ec62a9/",
+    "subject": "Last note about Staffing Etc's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:03:01.959Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "abhijit@knabookkeeping.com",
+    "name": "KNA Bookkeeping LLC",
+    "email": "abhijit@knabookkeeping.com",
+    "industry": "bookkeeping services",
+    "siteUrl": "https://levelupdemo.github.io/site-3689e20710d9/",
+    "subject": "Last note about KNA Bookkeeping LLC's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:03:05.918Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "imani@wellnesselitefitness.com",
+    "name": "Elite FIT NUTRITION & PERFORMANCE",
+    "email": "imani@wellnesselitefitness.com",
+    "industry": "personal trainers",
+    "siteUrl": "https://levelupdemo.github.io/site-fb4cf42cae0d/",
+    "subject": "Last note about Elite FIT NUTRITION & PERFORMANCE's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:03:09.616Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "scott@scottsautorepair.com",
+    "name": "Iglesias Auto Repairs",
+    "email": "scott@scottsautorepair.com",
+    "industry": "auto repair shops",
+    "siteUrl": "https://levelupdemo.github.io/site-265a7ea990f1/",
+    "subject": "Last note about Iglesias Auto Repairs's website",
+    "date": "2026-10-13",
+    "time": "2026-10-13T15:03:13.498Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
