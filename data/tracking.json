@@ -2072,7 +2072,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:15.471Z"
+    "followUp1Date": "2026-10-07T15:01:15.471Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:26.840Z"
   },
   {
     "type": "new",
@@ -2089,7 +2091,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:19.203Z"
+    "followUp1Date": "2026-10-07T15:01:19.203Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:30.602Z"
   },
   {
     "type": "new",
@@ -2106,7 +2110,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:23.239Z"
+    "followUp1Date": "2026-10-07T15:01:23.239Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:34.268Z"
   },
   {
     "type": "new",
@@ -2123,7 +2129,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-07T15:01:28.729Z"
+    "followUp1Date": "2026-10-07T15:01:28.729Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:37.942Z"
   },
   {
     "type": "new",
@@ -2155,7 +2163,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:10:27.090Z"
+    "followUp1Date": "2026-10-08T15:10:27.090Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:41.718Z"
   },
   {
     "type": "new",
@@ -2217,7 +2227,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:17:59.147Z"
+    "followUp1Date": "2026-10-08T15:17:59.147Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:45.436Z"
   },
   {
     "type": "new",
@@ -2249,7 +2261,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:20:11.642Z"
+    "followUp1Date": "2026-10-08T15:20:11.642Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:49.342Z"
   },
   {
     "type": "new",
@@ -2311,7 +2325,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:26:41.233Z"
+    "followUp1Date": "2026-10-08T15:26:41.233Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:53.180Z"
   },
   {
     "type": "new",
@@ -2328,7 +2344,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:26:49.495Z"
+    "followUp1Date": "2026-10-08T15:26:49.495Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:03:56.950Z"
   },
   {
     "type": "new",
@@ -2345,7 +2363,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:26:53.186Z"
+    "followUp1Date": "2026-10-08T15:26:53.186Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:04:00.779Z"
   },
   {
     "type": "new",
@@ -2377,7 +2397,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:29:06.207Z"
+    "followUp1Date": "2026-10-08T15:29:06.207Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-14T15:04:04.695Z"
   },
   {
     "type": "new",
@@ -4447,6 +4469,227 @@
     "subject": "Last note about Iglesias Auto Repairs's website",
     "date": "2026-10-13",
     "time": "2026-10-13T15:03:13.498Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Direct Staffing Solutions",
+    "email": "alewandowski@directstaffingsol.com",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-0685fbd8d2b4/",
+    "subject": "Built Direct Staffing Solutions a website — take a look",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:02:38.793Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Larry M Hicks",
+    "email": "lhicks@cpahicks.com",
+    "industry": "tax preparation services",
+    "siteUrl": "https://levelupdemo.github.io/site-129d315a26eb/",
+    "subject": "Built Larry M Hicks a website — take a look",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:02:52.455Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "RE/MAX METRO",
+    "email": "terry@realtor.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-ba1b55f6ff59/",
+    "subject": "Built RE/MAX METRO a website — take a look",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:10.830Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "jeremy@wrightbrothersroofing.com",
+    "name": "Wright Brothers Roofing",
+    "email": "jeremy@wrightbrothersroofing.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-43f4ff4a5535/",
+    "subject": "Last note about Wright Brothers Roofing's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:26.840Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "andrea@movemetotx.com",
+    "name": "Andrea Ruiz, The MOVEMETOTX Team at Real Broker, LLC",
+    "email": "andrea@movemetotx.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-ac4c94655eed/",
+    "subject": "Last note about Andrea Ruiz, The MOVEMETOTX Team at Real Broker, LLC's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:30.602Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "tommie@longhornstaffing.com",
+    "name": "Longhorn Staffing Solutions",
+    "email": "tommie@longhornstaffing.com",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-236e7a303132/",
+    "subject": "Last note about Longhorn Staffing Solutions's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:34.268Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "mark@sba.gov",
+    "name": "Apex Consulting",
+    "email": "mark@sba.gov",
+    "industry": "bookkeeping services",
+    "siteUrl": "https://levelupdemo.github.io/site-92225fcbe86f/",
+    "subject": "Last note about Apex Consulting's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:37.942Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Lisa Massage and Spa wellness",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-1bdb3dd99187/",
+    "subject": "Last note about Lisa Massage and Spa wellness's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:41.718Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "steve@smartsealfoam.com",
+    "name": "Smart Seal Attic Solutions",
+    "email": "steve@smartsealfoam.com",
+    "industry": "insulation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-533402dc0dfe/",
+    "subject": "Last note about Smart Seal Attic Solutions's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:45.436Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "cgerhardt@yahoo.com",
+    "name": "Gerhardt Charles CPA",
+    "email": "cgerhardt@yahoo.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-d4273b2e25f0/",
+    "subject": "Last note about Gerhardt Charles CPA's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:49.342Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "jason.thomas@yahoo.com",
+    "name": "Allstate Insurance Agent: Jason Thomas",
+    "email": "jason.thomas@yahoo.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-9992409952b0/",
+    "subject": "Last note about Allstate Insurance Agent: Jason Thomas's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:53.180Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "kazi@preeminentmarketing.ca",
+    "name": "Preeminent Marketing- PPC Ads & SEO Agency",
+    "email": "kazi@preeminentmarketing.ca",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-deaaa59d66c7/",
+    "subject": "Last note about Preeminent Marketing- PPC Ads & SEO Agency's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:03:56.950Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "mmorgan@mjmorgangroup.com",
+    "name": "MJ Morgan Group - Houston",
+    "email": "mmorgan@mjmorgangroup.com",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-75bea4ee4ec3/",
+    "subject": "Last note about MJ Morgan Group - Houston's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:04:00.779Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "div.pillay@mindtribes.com.au",
+    "name": "Mind Tribes",
+    "email": "div.pillay@mindtribes.com.au",
+    "industry": "yoga studios",
+    "siteUrl": "https://levelupdemo.github.io/site-ff9bd2279da9/",
+    "subject": "Last note about Mind Tribes's website",
+    "date": "2026-10-14",
+    "time": "2026-10-14T15:04:04.695Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
