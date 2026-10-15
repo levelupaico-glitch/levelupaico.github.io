@@ -2146,7 +2146,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-15T15:03:03.817Z"
   },
   {
     "type": "new",
@@ -2180,7 +2182,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-15T15:03:08.548Z"
   },
   {
     "type": "new",
@@ -2195,7 +2199,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-15T15:03:13.115Z"
   },
   {
     "type": "new",
@@ -2210,7 +2216,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-15T15:03:18.398Z"
   },
   {
     "type": "new",
@@ -2416,7 +2424,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:29:10.274Z"
+    "followUp1Date": "2026-10-08T15:29:10.274Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-15T15:02:37.538Z"
   },
   {
     "type": "new",
@@ -2448,7 +2458,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:31:22.289Z"
+    "followUp1Date": "2026-10-08T15:31:22.289Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-15T15:02:42.347Z"
   },
   {
     "type": "new",
@@ -2465,7 +2477,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:31:26.507Z"
+    "followUp1Date": "2026-10-08T15:31:26.507Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-15T15:02:47.682Z"
   },
   {
     "type": "new",
@@ -2482,7 +2496,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:31:30.765Z"
+    "followUp1Date": "2026-10-08T15:31:30.765Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-15T15:02:52.473Z"
   },
   {
     "type": "new",
@@ -2499,7 +2515,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-08T15:31:40.229Z"
+    "followUp1Date": "2026-10-08T15:31:40.229Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-10-15T15:02:57.768Z"
   },
   {
     "type": "new",
@@ -4690,6 +4708,225 @@
     "subject": "Last note about Mind Tribes's website",
     "date": "2026-10-14",
     "time": "2026-10-14T15:04:04.695Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "CORE Chiropractic",
+    "email": "drcordova@corechiropractic.net",
+    "industry": "chiropractors",
+    "siteUrl": "https://levelupdemo.github.io/site-a7cdff4532a1/",
+    "subject": "Built CORE Chiropractic a website — take a look",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:00:33.192Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Lyons Avenue Shopping Center",
+    "email": "dan@silvestriusa.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-2179a3088e1c/",
+    "subject": "Built Lyons Avenue Shopping Center a website — take a look",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:00:56.410Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Tim Landscaping",
+    "email": "thomas@stronglandscaping.com",
+    "industry": "landscaping companies",
+    "siteUrl": "https://levelupdemo.github.io/site-6950449f1e71/",
+    "subject": "A website for Tim Landscaping",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:01:27.670Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Larry M. Weinstein, CPA",
+    "email": "larry@weinstein-cpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-82d43cb40a58/",
+    "subject": "Built Larry M. Weinstein, CPA a website — take a look",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:01:54.239Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "J & J Business Services",
+    "email": "melissa@jjbusinessservice.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-ec97864c8e4f/",
+    "subject": "Built J & J Business Services a website — take a look",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:02:17.581Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "frank@carrolls.com",
+    "name": "Carroll's Office Furniture",
+    "email": "frank@carrolls.com",
+    "industry": "furniture stores",
+    "siteUrl": "https://levelupdemo.github.io/site-3f21ada897a6/",
+    "subject": "Last note about Carroll's Office Furniture's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:02:37.538Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "djmitchell@naturalhealthhouston.com",
+    "name": "Kennedy Tyer D.C.",
+    "email": "djmitchell@naturalhealthhouston.com",
+    "industry": "chiropractors",
+    "siteUrl": "https://levelupdemo.github.io/site-f2d36f4aea61/",
+    "subject": "Last note about Kennedy Tyer D.C.'s website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:02:42.347Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "zach@solutionsstores.com",
+    "name": "Westheimer Pest Experts",
+    "email": "zach@solutionsstores.com",
+    "industry": "pest control companies",
+    "siteUrl": "https://levelupdemo.github.io/site-a5f7fed08ae9/",
+    "subject": "Last note about Westheimer Pest Experts's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:02:47.682Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "william@turbohomeservices.com",
+    "name": "Turbo Home Services LLC",
+    "email": "william@turbohomeservices.com",
+    "industry": "HVAC companies",
+    "siteUrl": "https://levelupdemo.github.io/site-35853d5749b7/",
+    "subject": "Last note about Turbo Home Services LLC's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:02:52.473Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "larry.pirkle@warrenaverett.com",
+    "name": "Pirkle Larry CPA",
+    "email": "larry.pirkle@warrenaverett.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-ba64776e69bc/",
+    "subject": "Last note about Pirkle Larry CPA's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:02:57.768Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "charles.yancy@yahoo.com",
+    "name": "Charles Yancy Tax Consultant",
+    "email": "charles.yancy@yahoo.com",
+    "industry": "tax preparation services",
+    "siteUrl": "https://levelupdemo.github.io/site-65e79e731cdc/",
+    "subject": "Following up — Charles Yancy Tax Consultant's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:03:03.817Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "dmatehuala@yahoo.com",
+    "name": "D&V Auto Repair Complete Auto Repair",
+    "email": "dmatehuala@yahoo.com",
+    "industry": "auto repair shops",
+    "siteUrl": "https://levelupdemo.github.io/site-b9db38b1703f/",
+    "subject": "Following up — D&V Auto Repair Complete Auto Repair's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:03:08.548Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "cesar@coaleroofing.com",
+    "name": "Rainproof Roofing LLC",
+    "email": "cesar@coaleroofing.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-c7add658a311/",
+    "subject": "Following up — Rainproof Roofing LLC's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:03:13.115Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "bbogert@alpineaironline.net",
+    "name": "Alpine HVAC Repair Houston",
+    "email": "bbogert@alpineaironline.net",
+    "industry": "HVAC companies",
+    "siteUrl": "https://levelupdemo.github.io/site-f81d1601a73b/",
+    "subject": "Following up — Alpine HVAC Repair Houston's website",
+    "date": "2026-10-15",
+    "time": "2026-10-15T15:03:18.398Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
