@@ -12,7 +12,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-26T15:22:38.593Z"
   },
   {
     "type": "new",
@@ -27,7 +29,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-26T15:22:42.341Z"
   },
   {
     "type": "new",
@@ -42,7 +46,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-26T15:22:46.055Z"
   },
   {
     "type": "new",
@@ -57,7 +63,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-26T15:22:49.735Z"
   },
   {
     "type": "new",
@@ -72,7 +80,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-26T15:22:53.367Z"
   },
   {
     "type": "new",
@@ -87,7 +97,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-26T15:22:57.112Z"
   },
   {
     "type": "new",
@@ -1569,6 +1581,117 @@
     "subject": "A website for The Design Center by Brewer Carpet One Floor & Home",
     "date": "2026-10-22",
     "time": "2026-10-22T15:25:58.099Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Valir PACE",
+    "email": "jkurtzig@valir.com",
+    "industry": "personal trainers",
+    "siteUrl": "https://levelupdemo.github.io/site-ecb52c728ac6/",
+    "subject": "Built Valir PACE a website — take a look",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:13.405Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "alan@rlwco.com",
+    "name": "R L Williams & Co",
+    "email": "alan@rlwco.com",
+    "industry": "HVAC companies",
+    "siteUrl": "https://levelupdemo.github.io/site-7b0b18732736/",
+    "subject": "Following up — R L Williams & Co's website",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:38.593Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "fabian@officeexpressjanitorial.com",
+    "name": "Office Express Janitorial Services Inc",
+    "email": "fabian@officeexpressjanitorial.com",
+    "industry": "commercial cleaning companies",
+    "siteUrl": "https://levelupdemo.github.io/site-f59e7eb81ac8/",
+    "subject": "Following up — Office Express Janitorial Services Inc's website",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:42.341Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "sal@highcountryelectric.net",
+    "name": "High Country Electric",
+    "email": "sal@highcountryelectric.net",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-4529bb92ac36/",
+    "subject": "Following up — High Country Electric's website",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:46.055Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jc@airingtoncpas.com",
+    "name": "Randolph Amber CPA",
+    "email": "jc@airingtoncpas.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-6500e97eb97d/",
+    "subject": "Following up — Randolph Amber CPA's website",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:49.735Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "gerald@burrowscpa.com",
+    "name": "Gerald K. Burrows CPA, PC",
+    "email": "gerald@burrowscpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-bf9591c73e38/",
+    "subject": "Following up — Gerald K. Burrows CPA, PC's website",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:53.367Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "steven@conwayinsuranceok.com",
+    "name": "Conway Insurance",
+    "email": "steven@conwayinsuranceok.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-1987a7c8c81c/",
+    "subject": "Following up — Conway Insurance's website",
+    "date": "2026-10-26",
+    "time": "2026-10-26T15:22:57.112Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
