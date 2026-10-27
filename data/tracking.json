@@ -2461,7 +2461,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:03.895Z"
   },
   {
     "type": "new",
@@ -2552,7 +2554,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:08.024Z"
   },
   {
     "type": "new",
@@ -2567,7 +2571,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:12.427Z"
   },
   {
     "type": "new",
@@ -2582,7 +2588,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:16.242Z"
   },
   {
     "type": "new",
@@ -2597,7 +2605,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:20.243Z"
   },
   {
     "type": "new",
@@ -2612,7 +2622,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:24.734Z"
   },
   {
     "type": "new",
@@ -2627,7 +2639,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:28.717Z"
   },
   {
     "type": "new",
@@ -2642,7 +2656,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:32.566Z"
   },
   {
     "type": "new",
@@ -2657,7 +2673,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:36.823Z"
   },
   {
     "type": "new",
@@ -2672,7 +2690,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:40.829Z"
   },
   {
     "type": "new",
@@ -2687,7 +2707,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:44.654Z"
   },
   {
     "type": "new",
@@ -2702,7 +2724,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:48.542Z"
   },
   {
     "type": "new",
@@ -2717,7 +2741,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:03:52.444Z"
   },
   {
     "type": "new",
@@ -5797,6 +5823,229 @@
     "subject": "Following up — V's Barbershop - Houston River Oaks's website",
     "date": "2026-10-26",
     "time": "2026-10-26T15:06:35.420Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "5Star Plumbing & Heating",
+    "email": "abby@myfivestarplumbing.com",
+    "industry": "plumbing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-f8ef8faacc05/",
+    "subject": "Built 5Star Plumbing & Heating a website — take a look",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:02:49.519Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "pgeorgalos@gmail.com",
+    "name": "John’s Xpress Lube",
+    "email": "pgeorgalos@gmail.com",
+    "industry": "auto repair shops",
+    "siteUrl": "https://levelupdemo.github.io/site-4a61ea1a5e0e/",
+    "subject": "Following up — John’s Xpress Lube's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:03.895Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "gcooper@coopercpagroup.com",
+    "name": "Cooper CPA Group Band Jam",
+    "email": "gcooper@coopercpagroup.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-6d399cc881ff/",
+    "subject": "Following up — Cooper CPA Group Band Jam's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:08.024Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jcdugrot@electigroup.com",
+    "name": "ELECTI GROUP",
+    "email": "jcdugrot@electigroup.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-a44d337c9ca2/",
+    "subject": "Following up — ELECTI GROUP's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:12.427Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "cherri@carbonaragroup.com",
+    "name": "Carbonara Group",
+    "email": "cherri@carbonaragroup.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-c1bb9a44c494/",
+    "subject": "Following up — Carbonara Group's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:16.242Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "reese.edwards@scissorsscotch.com",
+    "name": "Scissors & Scotch",
+    "email": "reese.edwards@scissorsscotch.com",
+    "industry": "barbershops",
+    "siteUrl": "https://levelupdemo.github.io/site-225b7687e360/",
+    "subject": "Following up — Scissors & Scotch's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:20.243Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "amy@essentialtherapywellness.com",
+    "name": "Essential Therapy & Wellness",
+    "email": "amy@essentialtherapywellness.com",
+    "industry": "massage therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-698439294de2/",
+    "subject": "Following up — Essential Therapy & Wellness's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:24.734Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mnichols@avenue360.org",
+    "name": "Bering Omega Dental Clinic..",
+    "email": "mnichols@avenue360.org",
+    "industry": "dental offices",
+    "siteUrl": "https://levelupdemo.github.io/site-53f656be87ad/",
+    "subject": "Following up — Bering Omega Dental Clinic..'s website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:28.717Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "j.delapena@dlpaccounting.com",
+    "name": "DLP CPA, PLLC",
+    "email": "j.delapena@dlpaccounting.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-c853cd6d68e9/",
+    "subject": "Following up — DLP CPA, PLLC's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:32.566Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "becky.davis@compass.com",
+    "name": "Bayou City Life Group",
+    "email": "becky.davis@compass.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-3994358ea6e6/",
+    "subject": "Following up — Bayou City Life Group's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:36.823Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "amir@apexrehab.com",
+    "name": "Apex Physical Rehabilitation & Wellness - Houston Heights, TX",
+    "email": "amir@apexrehab.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-fab5c5b36d02/",
+    "subject": "Following up — Apex Physical Rehabilitation & Wellness - Houston Heights, TX's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:40.829Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "forrest@thehoustondjs.com",
+    "name": "Best DJ In Houston",
+    "email": "forrest@thehoustondjs.com",
+    "industry": "DJs",
+    "siteUrl": "https://levelupdemo.github.io/site-85058b91ca16/",
+    "subject": "Following up — Best DJ In Houston's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:44.654Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "scott@mcgrathpestcontrol.com",
+    "name": "Houston Pest Control Services,",
+    "email": "scott@mcgrathpestcontrol.com",
+    "industry": "pest control companies",
+    "siteUrl": "https://levelupdemo.github.io/site-7a51c3d05019/",
+    "subject": "Following up — Houston Pest Control Services,'s website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:48.542Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "gabrielsroofing@hotmail.com",
+    "name": "Gabriels Roofing",
+    "email": "gabrielsroofing@hotmail.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-de01db80e028/",
+    "subject": "Following up — Gabriels Roofing's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:03:52.444Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
