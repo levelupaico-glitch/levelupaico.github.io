@@ -129,7 +129,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:25.312Z"
   },
   {
     "type": "new",
@@ -144,7 +146,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:29.197Z"
   },
   {
     "type": "new",
@@ -159,7 +163,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:33.099Z"
   },
   {
     "type": "new",
@@ -174,7 +180,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:36.996Z"
   },
   {
     "type": "new",
@@ -189,7 +197,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:40.867Z"
   },
   {
     "type": "new",
@@ -204,7 +214,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:44.757Z"
   },
   {
     "type": "new",
@@ -219,7 +231,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-27T15:24:48.768Z"
   },
   {
     "type": "new",
@@ -1692,6 +1706,118 @@
     "subject": "Following up — Conway Insurance's website",
     "date": "2026-10-26",
     "time": "2026-10-26T15:22:57.112Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "season@swiftwellnessok.com",
+    "name": "Swift Physical therapy",
+    "email": "season@swiftwellnessok.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-fda086cfa50c/",
+    "subject": "Following up — Swift Physical therapy's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:25.312Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "sam@privco.com",
+    "name": "Sharper Image Lawn & Landscape",
+    "email": "sam@privco.com",
+    "industry": "landscaping companies",
+    "siteUrl": "https://levelupdemo.github.io/site-5f821c77b86c/",
+    "subject": "Following up — Sharper Image Lawn & Landscape's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:29.197Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "bill@flooring-innovations.com",
+    "name": "Custom Flooring Innovations, LLC",
+    "email": "bill@flooring-innovations.com",
+    "industry": "flooring companies",
+    "siteUrl": "https://levelupdemo.github.io/site-eb75b56d9aa5/",
+    "subject": "Following up — Custom Flooring Innovations, LLC's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:33.099Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "paul@procore.com",
+    "name": "Concrete Enterprises Inc",
+    "email": "paul@procore.com",
+    "industry": "concrete companies",
+    "siteUrl": "https://levelupdemo.github.io/site-b632b208cea5/",
+    "subject": "Following up — Concrete Enterprises Inc's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:36.996Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "brandon@genesisconcreteco.com",
+    "name": "Genesis Concrete Company Sales Manager",
+    "email": "brandon@genesisconcreteco.com",
+    "industry": "concrete companies",
+    "siteUrl": "https://levelupdemo.github.io/site-1324690ec501/",
+    "subject": "Following up — Genesis Concrete Company Sales Manager's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:40.867Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "tim@glazingconceptsinc.com",
+    "name": "Glazing Concepts Inc",
+    "email": "tim@glazingconceptsinc.com",
+    "industry": "window installation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-c5dc77f45ac6/",
+    "subject": "Following up — Glazing Concepts Inc's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:44.758Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "brian@ent-inc.com",
+    "name": "Executive Network Technologies",
+    "email": "brian@ent-inc.com",
+    "industry": "IT support companies",
+    "siteUrl": "https://levelupdemo.github.io/site-6c88f8997e36/",
+    "subject": "Following up — Executive Network Technologies's website",
+    "date": "2026-10-27",
+    "time": "2026-10-27T15:24:48.768Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
