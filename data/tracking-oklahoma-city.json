@@ -248,7 +248,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:24:48.796Z"
   },
   {
     "type": "new",
@@ -263,7 +265,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:24:52.533Z"
   },
   {
     "type": "new",
@@ -278,7 +282,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:24:56.295Z"
   },
   {
     "type": "new",
@@ -293,7 +299,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:24:59.989Z"
   },
   {
     "type": "new",
@@ -308,7 +316,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:25:03.717Z"
   },
   {
     "type": "new",
@@ -323,7 +333,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:25:07.405Z"
   },
   {
     "type": "new",
@@ -338,7 +350,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-28T15:25:11.738Z"
   },
   {
     "type": "new",
@@ -1818,6 +1832,118 @@
     "subject": "Following up — Executive Network Technologies's website",
     "date": "2026-10-27",
     "time": "2026-10-27T15:24:48.768Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lopezaccountingtaxsolutions@lopezats.com",
+    "name": "Lopez Accounting & Tax",
+    "email": "lopezaccountingtaxsolutions@lopezats.com",
+    "industry": "bookkeeping services",
+    "siteUrl": "https://levelupdemo.github.io/site-689b83d88c68/",
+    "subject": "Following up — Lopez Accounting & Tax's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:24:48.796Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "zach@flintedmond.com",
+    "name": "Flint Auto Glass",
+    "email": "zach@flintedmond.com",
+    "industry": "auto repair shops",
+    "siteUrl": "https://levelupdemo.github.io/site-5d31f0b4f689/",
+    "subject": "Following up — Flint Auto Glass's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:24:52.533Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mmartindale@promopt.org",
+    "name": "Promotion Physical Therapy",
+    "email": "mmartindale@promopt.org",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-52e2dd882a53/",
+    "subject": "Following up — Promotion Physical Therapy's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:24:56.295Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "dirk.eckroat@edmondkidsdentist.com",
+    "name": "Dr. Dirk Eckroat",
+    "email": "dirk.eckroat@edmondkidsdentist.com",
+    "industry": "dental offices",
+    "siteUrl": "https://levelupdemo.github.io/site-f244a89ebcca/",
+    "subject": "Following up — Dr. Dirk Eckroat's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:24:59.989Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "ctaff@calvintaff.com",
+    "name": "Calvin Taff Electronics Inc",
+    "email": "ctaff@calvintaff.com",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-2bf345ede68b/",
+    "subject": "Following up — Calvin Taff Electronics Inc's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:25:03.717Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "tamikamarie@tmbtaxbureau.com",
+    "name": "TMB Tax Bureau",
+    "email": "tamikamarie@tmbtaxbureau.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-fc9816d64d51/",
+    "subject": "Following up — TMB Tax Bureau's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:25:07.405Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "hjschmidt@schmidtcpa.com",
+    "name": "Schmidt & Associates PC",
+    "email": "hjschmidt@schmidtcpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-a61aaf0d262b/",
+    "subject": "Following up — Schmidt & Associates PC's website",
+    "date": "2026-10-28",
+    "time": "2026-10-28T15:25:11.738Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
