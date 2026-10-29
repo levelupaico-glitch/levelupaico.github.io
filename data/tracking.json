@@ -3042,7 +3042,7 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:20.462Z"
+    "followUp1Date": "2026-10-29T15:03:06.028Z"
   },
   {
     "type": "new",
@@ -3106,7 +3106,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:10.009Z"
   },
   {
     "type": "followup1",
@@ -3265,7 +3267,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:14.078Z"
   },
   {
     "type": "new",
@@ -3280,7 +3284,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:17.978Z"
   },
   {
     "type": "new",
@@ -3295,7 +3301,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:22.166Z"
   },
   {
     "type": "new",
@@ -3310,7 +3318,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:26.021Z"
   },
   {
     "type": "new",
@@ -3325,7 +3335,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:29.836Z"
   },
   {
     "type": "new",
@@ -3340,7 +3352,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:34.445Z"
   },
   {
     "type": "new",
@@ -3355,7 +3369,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:38.771Z"
   },
   {
     "type": "new",
@@ -3370,7 +3386,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:42.874Z"
   },
   {
     "type": "new",
@@ -3385,7 +3403,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:46.611Z"
   },
   {
     "type": "new",
@@ -3400,7 +3420,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-10-29T15:03:50.465Z"
   },
   {
     "type": "new",
@@ -6296,6 +6318,228 @@
     "subject": "Following up — Cruz Laminates & Countertops's website",
     "date": "2026-10-28",
     "time": "2026-10-28T15:04:27.840Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Greater Houston Injury Center",
+    "email": "drbrian@houstoninjurysolutions.com",
+    "industry": "chiropractors",
+    "siteUrl": "https://levelupdemo.github.io/site-00d8f2d6c4cd/",
+    "subject": "Built Greater Houston Injury Center a website — take a look",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:02:32.982Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Airline Physical Therapy and Chiropractic",
+    "email": "tarek@aahcare.com",
+    "industry": "chiropractors",
+    "siteUrl": "https://levelupdemo.github.io/site-9a7535d28ce5/",
+    "subject": "Built Airline Physical Therapy and Chiropractic a website — take a look",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:02:45.897Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Michel Amelia Wellness & Massage Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-86133dd0140b/",
+    "subject": "Following up — Michel Amelia Wellness & Massage Spa's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:06.028Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "claudia@claudiashairsalon.com",
+    "name": "Claudia Hair Salon",
+    "email": "claudia@claudiashairsalon.com",
+    "industry": "hair salons",
+    "siteUrl": "https://levelupdemo.github.io/site-ba343e2ae815/",
+    "subject": "Following up — Claudia Hair Salon's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:10.009Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "juan@jblmgmt.com",
+    "name": "Harrisburg Plaza",
+    "email": "juan@jblmgmt.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-f52a268dfb94/",
+    "subject": "Following up — Harrisburg Plaza's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:14.078Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "chethan.bachamada@masterworkelectronics.com",
+    "name": "Masterwork Systems LLC",
+    "email": "chethan.bachamada@masterworkelectronics.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-65ecc9df6d34/",
+    "subject": "Following up — Masterwork Systems LLC's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:17.978Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mguerrero@communityfamilycenters.org",
+    "name": "Community Family Center JP",
+    "email": "mguerrero@communityfamilycenters.org",
+    "industry": "daycare centers",
+    "siteUrl": "https://levelupdemo.github.io/site-bc3fc830bf7d/",
+    "subject": "Following up — Community Family Center JP's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:22.166Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "andrew.chodos@qsl.com",
+    "name": "Empire Stevedoring Inc",
+    "email": "andrew.chodos@qsl.com",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-f4d10d03ab68/",
+    "subject": "Following up — Empire Stevedoring Inc's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:26.021Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jerome@jmk5holdings.com",
+    "name": "World Gym Houston",
+    "email": "jerome@jmk5holdings.com",
+    "industry": "gyms",
+    "siteUrl": "https://levelupdemo.github.io/site-22c3013314d3/",
+    "subject": "Following up — World Gym Houston's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:29.836Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "vanessa@lotusstudioshtx.com",
+    "name": "Lotus Studios",
+    "email": "vanessa@lotusstudioshtx.com",
+    "industry": "personal trainers",
+    "siteUrl": "https://levelupdemo.github.io/site-ef6340fa5941/",
+    "subject": "Following up — Lotus Studios's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:34.445Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "ira@capitolblingboutique.com",
+    "name": "Capitol Bling Boutique",
+    "email": "ira@capitolblingboutique.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-91f1f80809f9/",
+    "subject": "Following up — Capitol Bling Boutique's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:38.771Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "tracy@tracyac.com",
+    "name": "Tracie Heating & Cooling - Plumbing's",
+    "email": "tracy@tracyac.com",
+    "industry": "plumbing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-2a9642707def/",
+    "subject": "Following up — Tracie Heating & Cooling - Plumbing's's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:42.874Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "luis@ifhouston.com",
+    "name": "Houston Quality Hardwood Floors Inc.",
+    "email": "luis@ifhouston.com",
+    "industry": "flooring companies",
+    "siteUrl": "https://levelupdemo.github.io/site-8f1ba6ad36d3/",
+    "subject": "Following up — Houston Quality Hardwood Floors Inc.'s website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:46.611Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jassmine@platinumtaxservice.net",
+    "name": "Platinum Tax Service",
+    "email": "jassmine@platinumtaxservice.net",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-d502c9ab7990/",
+    "subject": "Following up — Platinum Tax Service's website",
+    "date": "2026-10-29",
+    "time": "2026-10-29T15:03:50.465Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
