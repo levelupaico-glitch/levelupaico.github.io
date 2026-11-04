@@ -2832,7 +2832,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:03:45.894Z"
+    "followUp1Date": "2026-10-28T15:03:45.894Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:17.898Z"
   },
   {
     "type": "new",
@@ -2849,7 +2851,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:03:49.679Z"
+    "followUp1Date": "2026-10-28T15:03:49.679Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:22.489Z"
   },
   {
     "type": "new",
@@ -2866,7 +2870,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:03:53.430Z"
+    "followUp1Date": "2026-10-28T15:03:53.430Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:26.779Z"
   },
   {
     "type": "new",
@@ -2883,7 +2889,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:03:57.848Z"
+    "followUp1Date": "2026-10-28T15:03:57.848Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:30.830Z"
   },
   {
     "type": "new",
@@ -2900,7 +2908,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:01.729Z"
+    "followUp1Date": "2026-10-28T15:04:01.729Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:35.021Z"
   },
   {
     "type": "new",
@@ -2917,7 +2927,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:05.436Z"
+    "followUp1Date": "2026-10-28T15:04:05.436Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:39.330Z"
   },
   {
     "type": "new",
@@ -2934,7 +2946,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:09.222Z"
+    "followUp1Date": "2026-10-28T15:04:09.222Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:43.403Z"
   },
   {
     "type": "new",
@@ -2951,7 +2965,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:12.930Z"
+    "followUp1Date": "2026-10-28T15:04:12.930Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:47.402Z"
   },
   {
     "type": "followup2",
@@ -3080,7 +3096,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:06.028Z"
+    "followUp1Date": "2026-10-29T15:03:06.028Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:51.273Z"
   },
   {
     "type": "new",
@@ -3112,7 +3130,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:24.177Z"
+    "followUp1Date": "2026-10-28T15:04:24.177Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:55.480Z"
   },
   {
     "type": "new",
@@ -3129,7 +3149,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:04:27.840Z"
+    "followUp1Date": "2026-10-28T15:04:27.840Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:03:59.959Z"
   },
   {
     "type": "new",
@@ -3146,7 +3168,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:10.009Z"
+    "followUp1Date": "2026-10-29T15:03:10.009Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:04:04.242Z"
   },
   {
     "type": "followup1",
@@ -3307,7 +3331,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:14.078Z"
+    "followUp1Date": "2026-10-29T15:03:14.078Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:04:08.162Z"
   },
   {
     "type": "new",
@@ -3324,7 +3350,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:17.978Z"
+    "followUp1Date": "2026-10-29T15:03:17.978Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:04:12.395Z"
   },
   {
     "type": "new",
@@ -7017,6 +7045,230 @@
     "subject": "Last note about RODRIGUEZ INSURANCE BROKERS TWFG's website",
     "date": "2026-11-03",
     "time": "2026-11-03T15:02:42.611Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "scott@rootcon.com",
+    "name": "Root Consulting Inc",
+    "email": "scott@rootcon.com",
+    "industry": "IT support companies",
+    "siteUrl": "https://levelupdemo.github.io/site-ae79df322184/",
+    "subject": "Last note about Root Consulting Inc's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:17.898Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "kat@katcreechevents.com",
+    "name": "Kat Creech Events",
+    "email": "kat@katcreechevents.com",
+    "industry": "event planners",
+    "siteUrl": "https://levelupdemo.github.io/site-342c692e550c/",
+    "subject": "Last note about Kat Creech Events's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:22.489Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "michael@laundryheap.com",
+    "name": "Bell's My Own Cleaners",
+    "email": "michael@laundryheap.com",
+    "industry": "cleaning services",
+    "siteUrl": "https://levelupdemo.github.io/site-152ecbbff9bd/",
+    "subject": "Last note about Bell's My Own Cleaners's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:26.779Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "pleal@southernroofingtx.com",
+    "name": "Southern Roofing & Gutters",
+    "email": "pleal@southernroofingtx.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-9c5221101c09/",
+    "subject": "Last note about Southern Roofing & Gutters's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:30.830Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "joe@thelineagegroup.com",
+    "name": "The Lineage Group",
+    "email": "joe@thelineagegroup.com",
+    "industry": "general contractors",
+    "siteUrl": "https://levelupdemo.github.io/site-ddf30d85da8f/",
+    "subject": "Last note about The Lineage Group's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:35.021Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "walid@carthageconstruction.com",
+    "name": "Carthage Construction Inc.",
+    "email": "walid@carthageconstruction.com",
+    "industry": "general contractors",
+    "siteUrl": "https://levelupdemo.github.io/site-0860e8b62110/",
+    "subject": "Last note about Carthage Construction Inc.'s website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:39.330Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "sam@procore.com",
+    "name": "Warrior Electric",
+    "email": "sam@procore.com",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-4bc5af35413d/",
+    "subject": "Last note about Warrior Electric's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:43.403Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "vincent@norhillrealty.com",
+    "name": "Norhill Realty",
+    "email": "vincent@norhillrealty.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-3b00fa6e7080/",
+    "subject": "Last note about Norhill Realty's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:47.403Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Alice massage spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "nail salons",
+    "siteUrl": "https://levelupdemo.github.io/site-220b3eb40925/",
+    "subject": "Last note about Alice massage spa's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:51.273Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "kevin.holt@oscar-recruit.com",
+    "name": "Oscar Tech",
+    "email": "kevin.holt@oscar-recruit.com",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-700f9ca15f22/",
+    "subject": "Last note about Oscar Tech's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:55.480Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "mcruz@cruzlaminates.com",
+    "name": "Cruz Laminates & Countertops",
+    "email": "mcruz@cruzlaminates.com",
+    "industry": "flooring companies",
+    "siteUrl": "https://levelupdemo.github.io/site-9a2d22ef2d10/",
+    "subject": "Last note about Cruz Laminates & Countertops's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:03:59.959Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "claudia@claudiashairsalon.com",
+    "name": "Claudia Hair Salon",
+    "email": "claudia@claudiashairsalon.com",
+    "industry": "hair salons",
+    "siteUrl": "https://levelupdemo.github.io/site-ba343e2ae815/",
+    "subject": "Last note about Claudia Hair Salon's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:04:04.242Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "juan@jblmgmt.com",
+    "name": "Harrisburg Plaza",
+    "email": "juan@jblmgmt.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-f52a268dfb94/",
+    "subject": "Last note about Harrisburg Plaza's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:04:08.162Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "chethan.bachamada@masterworkelectronics.com",
+    "name": "Masterwork Systems LLC",
+    "email": "chethan.bachamada@masterworkelectronics.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-65ecc9df6d34/",
+    "subject": "Last note about Masterwork Systems LLC's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:04:12.395Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
