@@ -162,7 +162,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-27T15:24:29.197Z"
+    "followUp1Date": "2026-10-27T15:24:29.197Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:17.324Z"
   },
   {
     "type": "new",
@@ -179,7 +181,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-27T15:24:33.099Z"
+    "followUp1Date": "2026-10-27T15:24:33.099Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:21.155Z"
   },
   {
     "type": "new",
@@ -196,7 +200,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-27T15:24:36.996Z"
+    "followUp1Date": "2026-10-27T15:24:36.996Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:24.980Z"
   },
   {
     "type": "new",
@@ -213,7 +219,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-27T15:24:40.867Z"
+    "followUp1Date": "2026-10-27T15:24:40.867Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:28.727Z"
   },
   {
     "type": "new",
@@ -230,7 +238,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-27T15:24:44.757Z"
+    "followUp1Date": "2026-10-27T15:24:44.757Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:32.741Z"
   },
   {
     "type": "new",
@@ -247,7 +257,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-27T15:24:48.768Z"
+    "followUp1Date": "2026-10-27T15:24:48.768Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:36.527Z"
   },
   {
     "type": "new",
@@ -264,7 +276,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:24:48.796Z"
+    "followUp1Date": "2026-10-28T15:24:48.796Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-04T15:21:40.236Z"
   },
   {
     "type": "new",
@@ -2280,6 +2294,118 @@
     "subject": "Last note about Swift Physical therapy's website",
     "date": "2026-11-03",
     "time": "2026-11-03T15:23:20.283Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "sam@privco.com",
+    "name": "Sharper Image Lawn & Landscape",
+    "email": "sam@privco.com",
+    "industry": "landscaping companies",
+    "siteUrl": "https://levelupdemo.github.io/site-5f821c77b86c/",
+    "subject": "Last note about Sharper Image Lawn & Landscape's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:17.324Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "bill@flooring-innovations.com",
+    "name": "Custom Flooring Innovations, LLC",
+    "email": "bill@flooring-innovations.com",
+    "industry": "flooring companies",
+    "siteUrl": "https://levelupdemo.github.io/site-eb75b56d9aa5/",
+    "subject": "Last note about Custom Flooring Innovations, LLC's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:21.155Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "paul@procore.com",
+    "name": "Concrete Enterprises Inc",
+    "email": "paul@procore.com",
+    "industry": "concrete companies",
+    "siteUrl": "https://levelupdemo.github.io/site-b632b208cea5/",
+    "subject": "Last note about Concrete Enterprises Inc's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:24.980Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "brandon@genesisconcreteco.com",
+    "name": "Genesis Concrete Company Sales Manager",
+    "email": "brandon@genesisconcreteco.com",
+    "industry": "concrete companies",
+    "siteUrl": "https://levelupdemo.github.io/site-1324690ec501/",
+    "subject": "Last note about Genesis Concrete Company Sales Manager's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:28.727Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "tim@glazingconceptsinc.com",
+    "name": "Glazing Concepts Inc",
+    "email": "tim@glazingconceptsinc.com",
+    "industry": "window installation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-c5dc77f45ac6/",
+    "subject": "Last note about Glazing Concepts Inc's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:32.741Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "brian@ent-inc.com",
+    "name": "Executive Network Technologies",
+    "email": "brian@ent-inc.com",
+    "industry": "IT support companies",
+    "siteUrl": "https://levelupdemo.github.io/site-6c88f8997e36/",
+    "subject": "Last note about Executive Network Technologies's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:36.527Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "lopezaccountingtaxsolutions@lopezats.com",
+    "name": "Lopez Accounting & Tax",
+    "email": "lopezaccountingtaxsolutions@lopezats.com",
+    "industry": "bookkeeping services",
+    "siteUrl": "https://levelupdemo.github.io/site-689b83d88c68/",
+    "subject": "Last note about Lopez Accounting & Tax's website",
+    "date": "2026-11-04",
+    "time": "2026-11-04T15:21:40.236Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
