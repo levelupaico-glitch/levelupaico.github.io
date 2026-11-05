@@ -3096,7 +3096,7 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:06.028Z",
+    "followUp1Date": "2026-11-05T15:01:18.836Z",
     "followedUp2": true,
     "followUp2Date": "2026-11-04T15:03:51.273Z"
   },
@@ -3369,7 +3369,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:22.166Z"
+    "followUp1Date": "2026-10-29T15:03:22.166Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:00:42.301Z"
   },
   {
     "type": "new",
@@ -3386,7 +3388,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:26.021Z"
+    "followUp1Date": "2026-10-29T15:03:26.021Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:00:46.958Z"
   },
   {
     "type": "new",
@@ -3403,7 +3407,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:29.836Z"
+    "followUp1Date": "2026-10-29T15:03:29.836Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:00:54.349Z"
   },
   {
     "type": "new",
@@ -3420,7 +3426,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:34.445Z"
+    "followUp1Date": "2026-10-29T15:03:34.445Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:00:58.731Z"
   },
   {
     "type": "new",
@@ -3437,7 +3445,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:38.771Z"
+    "followUp1Date": "2026-10-29T15:03:38.771Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:01:02.780Z"
   },
   {
     "type": "new",
@@ -3454,7 +3464,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:42.874Z"
+    "followUp1Date": "2026-10-29T15:03:42.874Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:01:06.994Z"
   },
   {
     "type": "new",
@@ -3471,7 +3483,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:46.611Z"
+    "followUp1Date": "2026-10-29T15:03:46.611Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:01:10.909Z"
   },
   {
     "type": "new",
@@ -3488,7 +3502,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-29T15:03:50.465Z"
+    "followUp1Date": "2026-10-29T15:03:50.465Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:01:14.856Z"
   },
   {
     "type": "new",
@@ -3503,7 +3519,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-05T15:01:22.852Z"
   },
   {
     "type": "new",
@@ -3518,7 +3536,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-05T15:01:26.753Z"
   },
   {
     "type": "followup2",
@@ -3565,7 +3585,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-05T15:01:30.678Z"
   },
   {
     "type": "new",
@@ -3580,7 +3602,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-05T15:01:34.557Z"
   },
   {
     "type": "followup2",
@@ -4011,7 +4035,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-05T15:01:38.580Z"
   },
   {
     "type": "new",
@@ -7269,6 +7295,230 @@
     "subject": "Last note about Masterwork Systems LLC's website",
     "date": "2026-11-04",
     "time": "2026-11-04T15:04:12.395Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "mguerrero@communityfamilycenters.org",
+    "name": "Community Family Center JP",
+    "email": "mguerrero@communityfamilycenters.org",
+    "industry": "daycare centers",
+    "siteUrl": "https://levelupdemo.github.io/site-bc3fc830bf7d/",
+    "subject": "Last note about Community Family Center JP's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:00:42.301Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "andrew.chodos@qsl.com",
+    "name": "Empire Stevedoring Inc",
+    "email": "andrew.chodos@qsl.com",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-f4d10d03ab68/",
+    "subject": "Last note about Empire Stevedoring Inc's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:00:46.958Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "jerome@jmk5holdings.com",
+    "name": "World Gym Houston",
+    "email": "jerome@jmk5holdings.com",
+    "industry": "gyms",
+    "siteUrl": "https://levelupdemo.github.io/site-22c3013314d3/",
+    "subject": "Last note about World Gym Houston's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:00:54.349Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "vanessa@lotusstudioshtx.com",
+    "name": "Lotus Studios",
+    "email": "vanessa@lotusstudioshtx.com",
+    "industry": "personal trainers",
+    "siteUrl": "https://levelupdemo.github.io/site-ef6340fa5941/",
+    "subject": "Last note about Lotus Studios's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:00:58.731Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "ira@capitolblingboutique.com",
+    "name": "Capitol Bling Boutique",
+    "email": "ira@capitolblingboutique.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-91f1f80809f9/",
+    "subject": "Last note about Capitol Bling Boutique's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:02.780Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "tracy@tracyac.com",
+    "name": "Tracie Heating & Cooling - Plumbing's",
+    "email": "tracy@tracyac.com",
+    "industry": "plumbing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-2a9642707def/",
+    "subject": "Last note about Tracie Heating & Cooling - Plumbing's's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:06.994Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "luis@ifhouston.com",
+    "name": "Houston Quality Hardwood Floors Inc.",
+    "email": "luis@ifhouston.com",
+    "industry": "flooring companies",
+    "siteUrl": "https://levelupdemo.github.io/site-8f1ba6ad36d3/",
+    "subject": "Last note about Houston Quality Hardwood Floors Inc.'s website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:10.909Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "jassmine@platinumtaxservice.net",
+    "name": "Platinum Tax Service",
+    "email": "jassmine@platinumtaxservice.net",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-d502c9ab7990/",
+    "subject": "Last note about Platinum Tax Service's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:14.856Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Michel Amelia Wellness & Massage Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-86133dd0140b/",
+    "subject": "Following up — Michel Amelia Wellness & Massage Spa's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:18.836Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jsalinas@twfg.com",
+    "name": "Jennifer Salinas Insurance",
+    "email": "jsalinas@twfg.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-2ee07dd0faaf/",
+    "subject": "Following up — Jennifer Salinas Insurance's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:22.852Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "merlin@maxeyenergy.com",
+    "name": "HiTek Maxey Gas & Food Mart",
+    "email": "merlin@maxeyenergy.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-85cb2fe5d1f2/",
+    "subject": "Following up — HiTek Maxey Gas & Food Mart's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:26.753Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "ken@harristire.com",
+    "name": "Harris Tire Co",
+    "email": "ken@harristire.com",
+    "industry": "tire shops",
+    "siteUrl": "https://levelupdemo.github.io/site-1b9c62017b42/",
+    "subject": "Following up — Harris Tire Co's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:30.678Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "josh@kingplumbing.co",
+    "name": "King Plumbing Inc",
+    "email": "josh@kingplumbing.co",
+    "industry": "plumbing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-5902d8c71e64/",
+    "subject": "Following up — King Plumbing Inc's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:34.557Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "scott@scottsautorepair.com",
+    "name": "TOH Auto Repair",
+    "email": "scott@scottsautorepair.com",
+    "industry": "tire shops",
+    "siteUrl": "https://levelupdemo.github.io/site-1d731996d2eb/",
+    "subject": "Following up — TOH Auto Repair's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:01:38.580Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
