@@ -295,7 +295,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:24:52.533Z"
+    "followUp1Date": "2026-10-28T15:24:52.533Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:22:00.990Z"
   },
   {
     "type": "new",
@@ -312,7 +314,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:24:56.295Z"
+    "followUp1Date": "2026-10-28T15:24:56.295Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:22:04.925Z"
   },
   {
     "type": "new",
@@ -329,7 +333,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:24:59.989Z"
+    "followUp1Date": "2026-10-28T15:24:59.989Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:22:08.642Z"
   },
   {
     "type": "new",
@@ -346,7 +352,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:25:03.717Z"
+    "followUp1Date": "2026-10-28T15:25:03.717Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:22:12.492Z"
   },
   {
     "type": "new",
@@ -363,7 +371,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:25:07.405Z"
+    "followUp1Date": "2026-10-28T15:25:07.405Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:22:17.078Z"
   },
   {
     "type": "new",
@@ -380,7 +390,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-10-28T15:25:11.738Z"
+    "followUp1Date": "2026-10-28T15:25:11.738Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-05T15:22:20.804Z"
   },
   {
     "type": "new",
@@ -395,7 +407,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-05T15:22:24.447Z"
   },
   {
     "type": "new",
@@ -2406,6 +2420,118 @@
     "subject": "Last note about Lopez Accounting & Tax's website",
     "date": "2026-11-04",
     "time": "2026-11-04T15:21:40.236Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "zach@flintedmond.com",
+    "name": "Flint Auto Glass",
+    "email": "zach@flintedmond.com",
+    "industry": "auto repair shops",
+    "siteUrl": "https://levelupdemo.github.io/site-5d31f0b4f689/",
+    "subject": "Last note about Flint Auto Glass's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:00.990Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "mmartindale@promopt.org",
+    "name": "Promotion Physical Therapy",
+    "email": "mmartindale@promopt.org",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-52e2dd882a53/",
+    "subject": "Last note about Promotion Physical Therapy's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:04.925Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "dirk.eckroat@edmondkidsdentist.com",
+    "name": "Dr. Dirk Eckroat",
+    "email": "dirk.eckroat@edmondkidsdentist.com",
+    "industry": "dental offices",
+    "siteUrl": "https://levelupdemo.github.io/site-f244a89ebcca/",
+    "subject": "Last note about Dr. Dirk Eckroat's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:08.642Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "ctaff@calvintaff.com",
+    "name": "Calvin Taff Electronics Inc",
+    "email": "ctaff@calvintaff.com",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-2bf345ede68b/",
+    "subject": "Last note about Calvin Taff Electronics Inc's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:12.492Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "tamikamarie@tmbtaxbureau.com",
+    "name": "TMB Tax Bureau",
+    "email": "tamikamarie@tmbtaxbureau.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-fc9816d64d51/",
+    "subject": "Last note about TMB Tax Bureau's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:17.078Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "hjschmidt@schmidtcpa.com",
+    "name": "Schmidt & Associates PC",
+    "email": "hjschmidt@schmidtcpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-a61aaf0d262b/",
+    "subject": "Last note about Schmidt & Associates PC's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:20.804Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "natalie@kodacrossfitnative.com",
+    "name": "Koda CrossFit Native",
+    "email": "natalie@kodacrossfitnative.com",
+    "industry": "gyms",
+    "siteUrl": "https://levelupdemo.github.io/site-18ab9d604634/",
+    "subject": "Following up — Koda CrossFit Native's website",
+    "date": "2026-11-05",
+    "time": "2026-11-05T15:22:24.447Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
