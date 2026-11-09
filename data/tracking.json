@@ -3096,7 +3096,7 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-05T15:01:18.836Z",
+    "followUp1Date": "2026-11-09T15:01:25.161Z",
     "followedUp2": true,
     "followUp2Date": "2026-11-04T15:03:51.273Z"
   },
@@ -3521,7 +3521,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-05T15:01:22.852Z"
+    "followUp1Date": "2026-11-05T15:01:22.852Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-09T15:01:05.811Z"
   },
   {
     "type": "new",
@@ -3538,7 +3540,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-05T15:01:26.753Z"
+    "followUp1Date": "2026-11-05T15:01:26.753Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-09T15:01:09.615Z"
   },
   {
     "type": "followup2",
@@ -3587,7 +3591,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-05T15:01:30.678Z"
+    "followUp1Date": "2026-11-05T15:01:30.678Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-09T15:01:13.533Z"
   },
   {
     "type": "new",
@@ -3604,7 +3610,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-05T15:01:34.557Z"
+    "followUp1Date": "2026-11-05T15:01:34.557Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-09T15:01:17.501Z"
   },
   {
     "type": "followup2",
@@ -4037,7 +4045,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-05T15:01:38.580Z"
+    "followUp1Date": "2026-11-05T15:01:38.580Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-09T15:01:21.317Z"
   },
   {
     "type": "new",
@@ -4052,7 +4062,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-09T15:01:29.198Z"
   },
   {
     "type": "followup1",
@@ -4259,7 +4271,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-09T15:01:33.119Z"
   },
   {
     "type": "new",
@@ -4274,7 +4288,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-09T15:01:37.159Z"
   },
   {
     "type": "new",
@@ -4289,7 +4305,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-09T15:01:40.907Z"
   },
   {
     "type": "new",
@@ -4304,7 +4322,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-09T15:01:44.653Z"
   },
   {
     "type": "new",
@@ -7519,6 +7539,227 @@
     "subject": "Following up — TOH Auto Repair's website",
     "date": "2026-11-05",
     "time": "2026-11-05T15:01:38.580Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Beauty Express",
+    "email": "bluborsky@beautyexpressinc.com",
+    "industry": "hair salons",
+    "siteUrl": "https://levelupdemo.github.io/site-935efee29cf7/",
+    "subject": "A website for Beauty Express",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:00:14.067Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Chosen Generation Academy",
+    "email": "gestrella@chosengenca.com",
+    "industry": "daycare centers",
+    "siteUrl": "https://levelupdemo.github.io/site-9f25d1e3bf08/",
+    "subject": "Built Chosen Generation Academy a website — take a look",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:00:30.453Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Timber & Tile",
+    "email": "harrismicalyn@gmail.com",
+    "industry": "flooring companies",
+    "siteUrl": "https://levelupdemo.github.io/site-2b981ee5383a/",
+    "subject": "Built Timber & Tile a website — take a look",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:00:52.609Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "jsalinas@twfg.com",
+    "name": "Jennifer Salinas Insurance",
+    "email": "jsalinas@twfg.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-2ee07dd0faaf/",
+    "subject": "Last note about Jennifer Salinas Insurance's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:05.811Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "merlin@maxeyenergy.com",
+    "name": "HiTek Maxey Gas & Food Mart",
+    "email": "merlin@maxeyenergy.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-85cb2fe5d1f2/",
+    "subject": "Last note about HiTek Maxey Gas & Food Mart's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:09.615Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "ken@harristire.com",
+    "name": "Harris Tire Co",
+    "email": "ken@harristire.com",
+    "industry": "tire shops",
+    "siteUrl": "https://levelupdemo.github.io/site-1b9c62017b42/",
+    "subject": "Last note about Harris Tire Co's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:13.533Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "josh@kingplumbing.co",
+    "name": "King Plumbing Inc",
+    "email": "josh@kingplumbing.co",
+    "industry": "plumbing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-5902d8c71e64/",
+    "subject": "Last note about King Plumbing Inc's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:17.501Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "scott@scottsautorepair.com",
+    "name": "TOH Auto Repair",
+    "email": "scott@scottsautorepair.com",
+    "industry": "tire shops",
+    "siteUrl": "https://levelupdemo.github.io/site-1d731996d2eb/",
+    "subject": "Last note about TOH Auto Repair's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:21.317Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Michel Amelia Wellness & Massage Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-86133dd0140b/",
+    "subject": "Following up — Michel Amelia Wellness & Massage Spa's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:25.161Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "karl@bayareamoversinc.com",
+    "name": "Bay Area Movers",
+    "email": "karl@bayareamoversinc.com",
+    "industry": "moving companies",
+    "siteUrl": "https://levelupdemo.github.io/site-a8ca7fbea97d/",
+    "subject": "Following up — Bay Area Movers's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:29.198Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "shewett@hewettdds.com",
+    "name": "Champion Dental Group",
+    "email": "shewett@hewettdds.com",
+    "industry": "dental offices",
+    "siteUrl": "https://levelupdemo.github.io/site-497cf0ef378d/",
+    "subject": "Following up — Champion Dental Group's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:33.119Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "dmaymon@sunshinepediatricdaycenter.com",
+    "name": "Sunshine Pediatric Day Center, Houston",
+    "email": "dmaymon@sunshinepediatricdaycenter.com",
+    "industry": "daycare centers",
+    "siteUrl": "https://levelupdemo.github.io/site-e460773e3f09/",
+    "subject": "Following up — Sunshine Pediatric Day Center, Houston's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:37.159Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "oscar@rubysautoinsurance.com",
+    "name": "Rubys Insurance Agency, LLC",
+    "email": "oscar@rubysautoinsurance.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-fcc125303fc1/",
+    "subject": "Following up — Rubys Insurance Agency, LLC's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:40.907Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lhadley@lovinghandsusa.com",
+    "name": "In Loving Hands Tutoring Services",
+    "email": "lhadley@lovinghandsusa.com",
+    "industry": "tutoring services",
+    "siteUrl": "https://levelupdemo.github.io/site-b98d8c2310b0/",
+    "subject": "Following up — In Loving Hands Tutoring Services's website",
+    "date": "2026-11-09",
+    "time": "2026-11-09T15:01:44.653Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
