@@ -3096,7 +3096,7 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-09T15:01:25.161Z",
+    "followUp1Date": "2026-11-10T15:00:44.480Z",
     "followedUp2": true,
     "followUp2Date": "2026-11-04T15:03:51.273Z"
   },
@@ -4339,7 +4339,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:00:48.315Z"
   },
   {
     "type": "new",
@@ -4354,7 +4356,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:00:53.147Z"
   },
   {
     "type": "new",
@@ -4369,7 +4373,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:00:57.305Z"
   },
   {
     "type": "new",
@@ -4384,7 +4390,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:01.227Z"
   },
   {
     "type": "new",
@@ -4399,7 +4407,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:05.091Z"
   },
   {
     "type": "new",
@@ -4414,7 +4424,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:09.342Z"
   },
   {
     "type": "new",
@@ -4429,7 +4441,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:13.273Z"
   },
   {
     "type": "followup2",
@@ -4492,7 +4506,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:17.209Z"
   },
   {
     "type": "new",
@@ -4507,7 +4523,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:21.072Z"
   },
   {
     "type": "new",
@@ -4522,7 +4540,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:25.095Z"
   },
   {
     "type": "new",
@@ -4537,7 +4557,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:28.989Z"
   },
   {
     "type": "new",
@@ -4552,7 +4574,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:32.770Z"
   },
   {
     "type": "followup2",
@@ -4711,7 +4735,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:01:36.586Z"
   },
   {
     "type": "new",
@@ -7760,6 +7786,230 @@
     "subject": "Following up — In Loving Hands Tutoring Services's website",
     "date": "2026-11-09",
     "time": "2026-11-09T15:01:44.653Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Michel Amelia Wellness & Massage Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-86133dd0140b/",
+    "subject": "Following up — Michel Amelia Wellness & Massage Spa's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:00:44.480Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "john@a1roofingny.com",
+    "name": "A1 roofing",
+    "email": "john@a1roofingny.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-1da442873ef1/",
+    "subject": "Following up — A1 roofing's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:00:48.315Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "cbarrett@farmersagent.com",
+    "name": "Farmers Insurance - Charles Barrett",
+    "email": "cbarrett@farmersagent.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-e55bff89cb61/",
+    "subject": "Following up — Farmers Insurance - Charles Barrett's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:00:53.147Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "marisa.parker@vitaltherapy.care",
+    "name": "Vital Therapy & Nutrition Inc",
+    "email": "marisa.parker@vitaltherapy.care",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-801af1e84a19/",
+    "subject": "Following up — Vital Therapy & Nutrition Inc's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:00:57.305Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "gary@davistrucking.com",
+    "name": "Davis Trucking Co Inc",
+    "email": "gary@davistrucking.com",
+    "industry": "moving companies",
+    "siteUrl": "https://levelupdemo.github.io/site-f61b435761f3/",
+    "subject": "Following up — Davis Trucking Co Inc's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:01.227Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "german@gracelandscapingllc.com",
+    "name": "Grace Landscaping LLC",
+    "email": "german@gracelandscapingllc.com",
+    "industry": "landscaping companies",
+    "siteUrl": "https://levelupdemo.github.io/site-c9d1d871a5e7/",
+    "subject": "Following up — Grace Landscaping LLC's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:05.091Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "michael@crisp.co",
+    "name": "CRISP Marketing Agency",
+    "email": "michael@crisp.co",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-a65ac83eb3ee/",
+    "subject": "Following up — CRISP Marketing Agency's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:09.342Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "osiris@texastaxmultiservicesllc.com",
+    "name": "Texas Tax Multiservices",
+    "email": "osiris@texastaxmultiservicesllc.com",
+    "industry": "bookkeeping services",
+    "siteUrl": "https://levelupdemo.github.io/site-baa2401c0841/",
+    "subject": "Following up — Texas Tax Multiservices's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:13.273Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "neill@oneillscatering.com",
+    "name": "O'Neill's Catering",
+    "email": "neill@oneillscatering.com",
+    "industry": "catering companies",
+    "siteUrl": "https://levelupdemo.github.io/site-558e3a292bbb/",
+    "subject": "Following up — O'Neill's Catering's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:17.209Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "ariel@emotionsportstherapy.com",
+    "name": "E=motion Sports Therapy",
+    "email": "ariel@emotionsportstherapy.com",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-a6255a972027/",
+    "subject": "Following up — E=motion Sports Therapy's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:21.072Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mary@thelesliestudio.com",
+    "name": "The Leslie Studio (Houston)",
+    "email": "mary@thelesliestudio.com",
+    "industry": "photographers",
+    "siteUrl": "https://levelupdemo.github.io/site-b79d59a112a7/",
+    "subject": "Following up — The Leslie Studio (Houston)'s website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:25.095Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "joey@grazianoroofing.com",
+    "name": "Graziano Roofing of Texas Inc",
+    "email": "joey@grazianoroofing.com",
+    "industry": "roofing companies",
+    "siteUrl": "https://levelupdemo.github.io/site-de3304a1581d/",
+    "subject": "Following up — Graziano Roofing of Texas Inc's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:28.989Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "wcarter@wcconstructioncompany.com",
+    "name": "W C Construction",
+    "email": "wcarter@wcconstructioncompany.com",
+    "industry": "general contractors",
+    "siteUrl": "https://levelupdemo.github.io/site-7453daf41c9b/",
+    "subject": "Following up — W C Construction's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:32.770Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "alewandowski@directstaffingsol.com",
+    "name": "Direct Staffing Solutions",
+    "email": "alewandowski@directstaffingsol.com",
+    "industry": "staffing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-0685fbd8d2b4/",
+    "subject": "Following up — Direct Staffing Solutions's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:01:36.586Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
