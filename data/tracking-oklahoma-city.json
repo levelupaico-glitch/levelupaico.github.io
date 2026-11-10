@@ -494,7 +494,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:24:34.691Z"
   },
   {
     "type": "new",
@@ -509,7 +511,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:24:38.472Z"
   },
   {
     "type": "new",
@@ -524,7 +528,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:24:42.222Z"
   },
   {
     "type": "new",
@@ -539,7 +545,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:24:46.130Z"
   },
   {
     "type": "new",
@@ -554,7 +562,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:24:49.927Z"
   },
   {
     "type": "new",
@@ -569,7 +579,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-10T15:24:53.775Z"
   },
   {
     "type": "new",
@@ -2652,6 +2664,117 @@
     "subject": "Following up — Krispy krunchy Chicken's website",
     "date": "2026-11-09",
     "time": "2026-11-09T15:23:00.209Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "Sacred Flower",
+    "email": "latrease@thesacredflower.org",
+    "industry": "flower shops",
+    "siteUrl": "https://levelupdemo.github.io/site-8e7a37376a10/",
+    "subject": "Built Sacred Flower a website — take a look",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:19.554Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "develynllc@gmail.com",
+    "name": "Develyn LLC",
+    "email": "develynllc@gmail.com",
+    "industry": "catering companies",
+    "siteUrl": "https://levelupdemo.github.io/site-ebc82552fe2f/",
+    "subject": "Following up — Develyn LLC's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:34.691Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mcruz@snapfinance.com",
+    "name": "Cruz tireshop",
+    "email": "mcruz@snapfinance.com",
+    "industry": "tire shops",
+    "siteUrl": "https://levelupdemo.github.io/site-186701830dd5/",
+    "subject": "Following up — Cruz tireshop's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:38.472Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "nick@carconsul.com",
+    "name": "Team Dental Laboratory",
+    "email": "nick@carconsul.com",
+    "industry": "dental offices",
+    "siteUrl": "https://levelupdemo.github.io/site-0c1f414aa71a/",
+    "subject": "Following up — Team Dental Laboratory's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:42.222Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "cpowell@crownconstructionokc.com",
+    "name": "Crown Construction",
+    "email": "cpowell@crownconstructionokc.com",
+    "industry": "general contractors",
+    "siteUrl": "https://levelupdemo.github.io/site-231d857549e6/",
+    "subject": "Following up — Crown Construction's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:46.130Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "angela@structuralstonellc.com",
+    "name": "Structural Stone LLC",
+    "email": "angela@structuralstonellc.com",
+    "industry": "masonry companies",
+    "siteUrl": "https://levelupdemo.github.io/site-7e4696b1559d/",
+    "subject": "Following up — Structural Stone LLC's website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:49.927Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "bcole@coleokc.com",
+    "name": "Cole & Company CPA'S, P.C.",
+    "email": "bcole@coleokc.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-6b3341ff9651/",
+    "subject": "Following up — Cole & Company CPA'S, P.C.'s website",
+    "date": "2026-11-10",
+    "time": "2026-11-10T15:24:53.775Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
