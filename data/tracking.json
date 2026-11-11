@@ -3096,7 +3096,7 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-10T15:00:44.480Z",
+    "followUp1Date": "2026-11-11T15:01:51.804Z",
     "followedUp2": true,
     "followUp2Date": "2026-11-04T15:03:51.273Z"
   },
@@ -4752,7 +4752,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:01:55.763Z"
   },
   {
     "type": "new",
@@ -4767,7 +4769,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:00.529Z"
   },
   {
     "type": "followup2",
@@ -4958,7 +4962,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:04.419Z"
   },
   {
     "type": "new",
@@ -4973,7 +4979,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:08.691Z"
   },
   {
     "type": "new",
@@ -4988,7 +4996,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:12.597Z"
   },
   {
     "type": "new",
@@ -5003,7 +5013,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:16.352Z"
   },
   {
     "type": "new",
@@ -5018,7 +5030,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:20.111Z"
   },
   {
     "type": "followup2",
@@ -5177,7 +5191,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:23.935Z"
   },
   {
     "type": "new",
@@ -5192,7 +5208,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:27.939Z"
   },
   {
     "type": "new",
@@ -5207,7 +5225,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:31.723Z"
   },
   {
     "type": "new",
@@ -5222,7 +5242,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:35.592Z"
   },
   {
     "type": "new",
@@ -5237,7 +5259,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:39.379Z"
   },
   {
     "type": "new",
@@ -5252,7 +5276,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:02:43.184Z"
   },
   {
     "type": "new",
@@ -8010,6 +8036,230 @@
     "subject": "Following up — Direct Staffing Solutions's website",
     "date": "2026-11-10",
     "time": "2026-11-10T15:01:36.586Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Michel Amelia Wellness & Massage Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-86133dd0140b/",
+    "subject": "Following up — Michel Amelia Wellness & Massage Spa's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:01:51.804Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lhicks@cpahicks.com",
+    "name": "Larry M Hicks",
+    "email": "lhicks@cpahicks.com",
+    "industry": "tax preparation services",
+    "siteUrl": "https://levelupdemo.github.io/site-129d315a26eb/",
+    "subject": "Following up — Larry M Hicks's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:01:55.763Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "terry@realtor.com",
+    "name": "RE/MAX METRO",
+    "email": "terry@realtor.com",
+    "industry": "real estate agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-ba1b55f6ff59/",
+    "subject": "Following up — RE/MAX METRO's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:00.529Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "drcordova@corechiropractic.net",
+    "name": "CORE Chiropractic",
+    "email": "drcordova@corechiropractic.net",
+    "industry": "chiropractors",
+    "siteUrl": "https://levelupdemo.github.io/site-a7cdff4532a1/",
+    "subject": "Following up — CORE Chiropractic's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:04.419Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "dan@silvestriusa.com",
+    "name": "Lyons Avenue Shopping Center",
+    "email": "dan@silvestriusa.com",
+    "industry": "boutiques",
+    "siteUrl": "https://levelupdemo.github.io/site-2179a3088e1c/",
+    "subject": "Following up — Lyons Avenue Shopping Center's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:08.691Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "thomas@stronglandscaping.com",
+    "name": "Tim Landscaping",
+    "email": "thomas@stronglandscaping.com",
+    "industry": "landscaping companies",
+    "siteUrl": "https://levelupdemo.github.io/site-6950449f1e71/",
+    "subject": "Following up — Tim Landscaping's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:12.597Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "larry@weinstein-cpa.com",
+    "name": "Larry M. Weinstein, CPA",
+    "email": "larry@weinstein-cpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-82d43cb40a58/",
+    "subject": "Following up — Larry M. Weinstein, CPA's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:16.352Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "melissa@jjbusinessservice.com",
+    "name": "J & J Business Services",
+    "email": "melissa@jjbusinessservice.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-ec97864c8e4f/",
+    "subject": "Following up — J & J Business Services's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:20.111Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mary@houstoninsuranceagency.net",
+    "name": "Houston Insurance Units Agency",
+    "email": "mary@houstoninsuranceagency.net",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-10827e213dda/",
+    "subject": "Following up — Houston Insurance Units Agency's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:23.935Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "melkhalil@twfg.com",
+    "name": "Family Auto Insurance",
+    "email": "melkhalil@twfg.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-c2a1e2f0ef91/",
+    "subject": "Following up — Family Auto Insurance's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:27.939Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "eddie@newmillenniummgmt.com",
+    "name": "New Millennium Marketing & Promotional Management (N.M.M.P.M.)",
+    "email": "eddie@newmillenniummgmt.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-134ffe2bc5a3/",
+    "subject": "Following up — New Millennium Marketing & Promotional Management (N.M.M.P.M.)'s website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:31.723Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "annette@thetaxexperience.com",
+    "name": "THE TAX EXPERIENCE",
+    "email": "annette@thetaxexperience.com",
+    "industry": "bookkeeping services",
+    "siteUrl": "https://levelupdemo.github.io/site-f3992726ee1a/",
+    "subject": "Following up — THE TAX EXPERIENCE's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:35.592Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jamie@ascension.org",
+    "name": "Phoenix Ascension Health & Wellness Center",
+    "email": "jamie@ascension.org",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-e94c96d68601/",
+    "subject": "Following up — Phoenix Ascension Health & Wellness Center's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:39.379Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "stef@pinnaclerehab.net",
+    "name": "Pinnacle Rehab",
+    "email": "stef@pinnaclerehab.net",
+    "industry": "physical therapists",
+    "siteUrl": "https://levelupdemo.github.io/site-96aff62993a9/",
+    "subject": "Following up — Pinnacle Rehab's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:02:43.184Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
