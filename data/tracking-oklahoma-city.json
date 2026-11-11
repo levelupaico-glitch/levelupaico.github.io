@@ -596,7 +596,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:16.809Z"
   },
   {
     "type": "new",
@@ -611,7 +613,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:20.589Z"
   },
   {
     "type": "new",
@@ -626,7 +630,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:24.453Z"
   },
   {
     "type": "new",
@@ -641,7 +647,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:28.320Z"
   },
   {
     "type": "new",
@@ -656,7 +664,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:32.061Z"
   },
   {
     "type": "new",
@@ -671,7 +681,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:35.830Z"
   },
   {
     "type": "new",
@@ -686,7 +698,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-11T15:23:39.637Z"
   },
   {
     "type": "new",
@@ -2775,6 +2789,118 @@
     "subject": "Following up — Cole & Company CPA'S, P.C.'s website",
     "date": "2026-11-10",
     "time": "2026-11-10T15:24:53.775Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "chris@papincpa.com",
+    "name": "Christopher J. Bundros, Cpa",
+    "email": "chris@papincpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-c2f754e5374b/",
+    "subject": "Following up — Christopher J. Bundros, Cpa's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:16.809Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "tom@teddyspc.com",
+    "name": "Teddy’s Pet Service",
+    "email": "tom@teddyspc.com",
+    "industry": "pet stores",
+    "siteUrl": "https://levelupdemo.github.io/site-be990ae054da/",
+    "subject": "Following up — Teddy’s Pet Service's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:20.589Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "dselvy@dse-inc.net",
+    "name": "DSE Inc",
+    "email": "dselvy@dse-inc.net",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-71d8050c8ecf/",
+    "subject": "Following up — DSE Inc's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:24.453Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "industrialshipping@wombleco.com",
+    "name": "Womble Co",
+    "email": "industrialshipping@wombleco.com",
+    "industry": "window installation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-11557848de08/",
+    "subject": "Following up — Womble Co's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:28.320Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "marc@rizeavs.com",
+    "name": "Rize Marketing Co.",
+    "email": "marc@rizeavs.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-21d958d58632/",
+    "subject": "Following up — Rize Marketing Co.'s website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:32.061Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "duane@cookieadvantage.com",
+    "name": "Cookie Advantage",
+    "email": "duane@cookieadvantage.com",
+    "industry": "bakeries",
+    "siteUrl": "https://levelupdemo.github.io/site-206b50d3bdcf/",
+    "subject": "Following up — Cookie Advantage's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:35.830Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "rodney.spriggs@vintagestock.com",
+    "name": "Vintage Stock",
+    "email": "rodney.spriggs@vintagestock.com",
+    "industry": "pet stores",
+    "siteUrl": "https://levelupdemo.github.io/site-06ff037e82b9/",
+    "subject": "Following up — Vintage Stock's website",
+    "date": "2026-11-11",
+    "time": "2026-11-11T15:23:39.637Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
