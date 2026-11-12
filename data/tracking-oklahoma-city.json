@@ -428,7 +428,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-09T15:22:48.850Z"
+    "followUp1Date": "2026-11-09T15:22:48.850Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-12T15:23:09.394Z"
   },
   {
     "type": "new",
@@ -445,7 +447,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-09T15:22:52.596Z"
+    "followUp1Date": "2026-11-09T15:22:52.596Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-12T15:23:13.112Z"
   },
   {
     "type": "new",
@@ -462,7 +466,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-09T15:22:56.404Z"
+    "followUp1Date": "2026-11-09T15:22:56.404Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-12T15:23:16.893Z"
   },
   {
     "type": "new",
@@ -479,7 +485,9 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-09T15:23:00.209Z"
+    "followUp1Date": "2026-11-09T15:23:00.209Z",
+    "followedUp2": true,
+    "followUp2Date": "2026-11-12T15:23:20.707Z"
   },
   {
     "type": "new",
@@ -715,7 +723,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:23:24.382Z"
   },
   {
     "type": "new",
@@ -730,7 +740,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:23:28.510Z"
   },
   {
     "type": "new",
@@ -2901,6 +2913,117 @@
     "subject": "Following up — Vintage Stock's website",
     "date": "2026-11-11",
     "time": "2026-11-11T15:23:39.637Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "new",
+    "campaign": "website-outreach",
+    "name": "J Todd Clouse CPA PLLC",
+    "email": "todd@tclousecpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-0aeb2089fa15/",
+    "subject": "Built J Todd Clouse CPA PLLC a website — take a look",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:22:43.067Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "shannon@blushbootcamp.com",
+    "name": "BLUSH Boot Camp",
+    "email": "shannon@blushbootcamp.com",
+    "industry": "gyms",
+    "siteUrl": "https://levelupdemo.github.io/site-62f648f2f26e/",
+    "subject": "Last note about BLUSH Boot Camp's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:23:09.394Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "david@tedcnet.com",
+    "name": "Triple's Bar & Grill",
+    "email": "david@tedcnet.com",
+    "industry": "restaurants",
+    "siteUrl": "https://levelupdemo.github.io/site-282e1c73716a/",
+    "subject": "Last note about Triple's Bar & Grill's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:23:13.112Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "amy@castlefalls.com",
+    "name": "Castle",
+    "email": "amy@castlefalls.com",
+    "industry": "bars",
+    "siteUrl": "https://levelupdemo.github.io/site-c46da394eef9/",
+    "subject": "Last note about Castle's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:23:16.893Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup2",
+    "campaign": "website-outreach",
+    "parentEmail": "dan@krispykrunchy.com",
+    "name": "Krispy krunchy Chicken",
+    "email": "dan@krispykrunchy.com",
+    "industry": "food trucks",
+    "siteUrl": "https://levelupdemo.github.io/site-fdc3f88c74ed/",
+    "subject": "Last note about Krispy krunchy Chicken's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:23:20.707Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "damien.boehm@urbanclean.com",
+    "name": "Urban Clean",
+    "email": "damien.boehm@urbanclean.com",
+    "industry": "cleaning services",
+    "siteUrl": "https://levelupdemo.github.io/site-49f2ecadf8a8/",
+    "subject": "Following up — Urban Clean's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:23:24.382Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jack@halecpa.com",
+    "name": "Hale & Company, CPA, P.C.",
+    "email": "jack@halecpa.com",
+    "industry": "accounting firms",
+    "siteUrl": "https://levelupdemo.github.io/site-baab6c65a88c/",
+    "subject": "Following up — Hale & Company, CPA, P.C.'s website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:23:28.510Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
