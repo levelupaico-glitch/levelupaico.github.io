@@ -3096,7 +3096,7 @@
     "replyDate": null,
     "status": "sent",
     "followedUp1": true,
-    "followUp1Date": "2026-11-11T15:01:51.804Z",
+    "followUp1Date": "2026-11-12T15:01:22.912Z",
     "followedUp2": true,
     "followUp2Date": "2026-11-04T15:03:51.273Z"
   },
@@ -5293,7 +5293,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:26.666Z"
   },
   {
     "type": "new",
@@ -5308,7 +5310,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:30.689Z"
   },
   {
     "type": "new",
@@ -5323,7 +5327,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:34.697Z"
   },
   {
     "type": "new",
@@ -5338,7 +5344,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:38.462Z"
   },
   {
     "type": "new",
@@ -5353,7 +5361,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:42.177Z"
   },
   {
     "type": "new",
@@ -5368,7 +5378,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:46.063Z"
   },
   {
     "type": "new",
@@ -5383,7 +5395,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:49.745Z"
   },
   {
     "type": "new",
@@ -5398,7 +5412,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:53.525Z"
   },
   {
     "type": "new",
@@ -5413,7 +5429,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:01:57.263Z"
   },
   {
     "type": "new",
@@ -5428,7 +5446,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:02:01.336Z"
   },
   {
     "type": "new",
@@ -5443,7 +5463,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:02:05.433Z"
   },
   {
     "type": "new",
@@ -5458,7 +5480,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:02:09.307Z"
   },
   {
     "type": "new",
@@ -5473,7 +5497,9 @@
     "replied": false,
     "replyText": null,
     "replyDate": null,
-    "status": "sent"
+    "status": "sent",
+    "followedUp1": true,
+    "followUp1Date": "2026-11-12T15:02:13.096Z"
   },
   {
     "type": "new",
@@ -8260,6 +8286,230 @@
     "subject": "Following up — Pinnacle Rehab's website",
     "date": "2026-11-11",
     "time": "2026-11-11T15:02:43.184Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "lyndsey@camelliaalise.com",
+    "name": "Michel Amelia Wellness & Massage Spa",
+    "email": "lyndsey@camelliaalise.com",
+    "industry": "spas",
+    "siteUrl": "https://levelupdemo.github.io/site-86133dd0140b/",
+    "subject": "Following up — Michel Amelia Wellness & Massage Spa's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:22.912Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "ramiro@eliramelectrical.com",
+    "name": "Eliram Electrical",
+    "email": "ramiro@eliramelectrical.com",
+    "industry": "electricians",
+    "siteUrl": "https://levelupdemo.github.io/site-767f802f3e39/",
+    "subject": "Following up — Eliram Electrical's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:26.666Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "robby@vizionwindows.com",
+    "name": "Vizion Windows & Doors",
+    "email": "robby@vizionwindows.com",
+    "industry": "window installation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-db28221bb985/",
+    "subject": "Following up — Vizion Windows & Doors's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:30.689Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "wvaughan@avanawindows.com",
+    "name": "Avana Windows & Doors",
+    "email": "wvaughan@avanawindows.com",
+    "industry": "window installation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-ea7ac6f70260/",
+    "subject": "Following up — Avana Windows & Doors's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:34.697Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "royal@allatticinsulation.com",
+    "name": "All Attic Insulation",
+    "email": "royal@allatticinsulation.com",
+    "industry": "insulation companies",
+    "siteUrl": "https://levelupdemo.github.io/site-b7951d066726/",
+    "subject": "Following up — All Attic Insulation's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:38.462Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "jeffrey@sunshinerenewable.com",
+    "name": "Sunshine Renewable Solutions",
+    "email": "jeffrey@sunshinerenewable.com",
+    "industry": "solar companies",
+    "siteUrl": "https://levelupdemo.github.io/site-01f85b56e134/",
+    "subject": "Following up — Sunshine Renewable Solutions's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:42.177Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "mshekari@versacreative.com",
+    "name": "Versa Creative",
+    "email": "mshekari@versacreative.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-67c52f249c2f/",
+    "subject": "Following up — Versa Creative's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:46.063Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "patricia@boralagency.com",
+    "name": "Boral Agency",
+    "email": "patricia@boralagency.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-c3df5b64bd08/",
+    "subject": "Following up — Boral Agency's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:49.745Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "ryan@weebly.com",
+    "name": "HTX MEDIA INK",
+    "email": "ryan@weebly.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-2db12f27bec4/",
+    "subject": "Following up — HTX MEDIA INK's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:53.525Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "billy@outsourcedrm.com",
+    "name": "Outsourced Risk Managers",
+    "email": "billy@outsourcedrm.com",
+    "industry": "insurance agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-06ae4686aa06/",
+    "subject": "Following up — Outsourced Risk Managers's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:01:57.263Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "alex@beemanmarketing.com",
+    "name": "Beeman Marketing",
+    "email": "alex@beemanmarketing.com",
+    "industry": "marketing agencies",
+    "siteUrl": "https://levelupdemo.github.io/site-8137220d32f4/",
+    "subject": "Following up — Beeman Marketing's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:02:01.336Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "bwolfberg@pls247.com",
+    "name": "PLS Check Cashers",
+    "email": "bwolfberg@pls247.com",
+    "industry": "notary services",
+    "siteUrl": "https://levelupdemo.github.io/site-288a540d2792/",
+    "subject": "Following up — PLS Check Cashers's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:02:05.433Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "dpolyviou@mpmconsultings.com",
+    "name": "Fitch fitness",
+    "email": "dpolyviou@mpmconsultings.com",
+    "industry": "gyms",
+    "siteUrl": "https://levelupdemo.github.io/site-bb697d8304b9/",
+    "subject": "Following up — Fitch fitness's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:02:09.307Z",
+    "replied": false,
+    "replyText": null,
+    "replyDate": null,
+    "status": "sent"
+  },
+  {
+    "type": "followup1",
+    "campaign": "website-outreach",
+    "parentEmail": "laila@ivykids.com",
+    "name": "Ivy Kids of The Heights",
+    "email": "laila@ivykids.com",
+    "industry": "daycare centers",
+    "siteUrl": "https://levelupdemo.github.io/site-4bf0e9229a56/",
+    "subject": "Following up — Ivy Kids of The Heights's website",
+    "date": "2026-11-12",
+    "time": "2026-11-12T15:02:13.096Z",
     "replied": false,
     "replyText": null,
     "replyDate": null,
